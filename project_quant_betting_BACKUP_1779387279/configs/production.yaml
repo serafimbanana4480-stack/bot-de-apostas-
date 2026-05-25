@@ -1,0 +1,4 @@
+env: production
+kelly_multiplier: 0.25
+log_level: INFO
+max_daily_loss_pct: 3.0

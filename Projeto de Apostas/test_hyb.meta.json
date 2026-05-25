@@ -1,0 +1,37 @@
+{
+  "xgb_params": {
+    "objective": "binary:logistic",
+    "eval_metric": "logloss",
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "n_estimators": 100,
+    "reg_lambda": 1.0,
+    "reg_alpha": 0.5,
+    "min_child_weight": 10,
+    "tree_method": "hist"
+  },
+  "blend_weight": 0.3,
+  "use_calibration": true,
+  "_feature_names": [
+    "poisson_p1",
+    "poisson_pX",
+    "poisson_p2",
+    "exp_goals_home",
+    "exp_goals_away",
+    "goal_diff_exp",
+    "odd_1",
+    "odd_X",
+    "odd_2",
+    "open_odd_home",
+    "pin_close_home",
+    "month",
+    "is_weekend",
+    "implied_prob_1",
+    "odds_spread"
+  ],
+  "_training_count": 20,
+  "calibrator": null,
+  "is_calibrated": false
+}

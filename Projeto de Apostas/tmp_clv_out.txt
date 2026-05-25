@@ -1,0 +1,26 @@
+2026-05-22 01:24:32,462 [INFO] Using MOCK backtest data (1900 matches)
+2026-05-22 01:24:32,499 [INFO] Running 5 walk-forward splits on 1900 matches
+2026-05-22 01:24:32,499 [INFO] Split 1/5: train=760, test=78
+2026-05-22 01:24:32,499 [INFO] Fitting Poisson model to football data...
+2026-05-22 01:24:34,595 [INFO] Split 2/5: train=838, test=72
+2026-05-22 01:24:34,595 [INFO] Fitting Poisson model to football data...
+2026-05-22 01:24:35,418 [INFO] Split 3/5: train=910, test=87
+2026-05-22 01:24:35,418 [INFO] Fitting Poisson model to football data...
+2026-05-22 01:24:36,169 [INFO] Split 4/5: train=997, test=86
+2026-05-22 01:24:36,169 [INFO] Fitting Poisson model to football data...
+2026-05-22 01:24:36,819 [INFO] Split 5/5: train=1083, test=57
+2026-05-22 01:24:36,820 [INFO] Fitting Poisson model to football data...
+2026-05-22 01:24:37,334 [INFO] ============================================================
+2026-05-22 01:24:37,334 [INFO] CLV REPORT — MOCK data
+2026-05-22 01:24:37,335 [INFO] ============================================================
+2026-05-22 01:24:37,335 [INFO] Total matches: 1900 | Bets analyzed: 400
+2026-05-22 01:24:37,335 [INFO] Mean CLV: 5.3023% | Median CLV: 1.2634%
+2026-05-22 01:24:37,335 [INFO] % positive CLV: 55.0%
+2026-05-22 01:24:37,335 [INFO] Simulated ROI per unit: 0.1451
+2026-05-22 01:24:37,335 [INFO] --- By Side ---
+2026-05-22 01:24:37,335 [INFO]   home: 249 bets, CLV=1.752%, ROI=0.1759
+2026-05-22 01:24:37,335 [INFO]   draw: 127 bets, CLV=5.633%, ROI=0.0861
+2026-05-22 01:24:37,335 [INFO]   away: 24 bets, CLV=40.393%, ROI=0.1379
+2026-05-22 01:24:37,335 [INFO] --- By League ---
+2026-05-22 01:24:37,335 [INFO]   MOCK_PL: 400 bets, CLV=5.302%, ROI=0.1451
+2026-05-22 01:24:37,335 [INFO] PASS: Model beats closing line on average (CLV > 1%%).

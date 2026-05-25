@@ -1,0 +1,40 @@
+# Zero-cost production profile — no paid APIs required for training
+
+mode: zero_cost
+data_dir: data
+mlflow_tracking_uri: ./mlruns
+
+ingestion:
+  football:
+    primary: mock          # mock | football-data | odds-api
+    leagues: [PL, PD, SA, BL1, FL1]
+  nba:
+    primary: nba_api       # free, unlimited
+  ufc:
+    primary: ufc_scraper
+
+training:
+  football:
+    model: poisson
+    dixon_coles: true
+    calibrate: true
+    walk_forward:
+      train_days: 730
+      test_days: 90
+  validation:
+    min_bets_clv: 50
+    clv_threshold_pct: 1.0
+    leakage_corr_max: 0.8
+
+risk:
+  kelly_multiplier: 0.25
+  max_stake_pct: 0.02
+  max_daily_exposure_pct: 0.15
+
+execution:
+  paper_trading_only: true
+  betfair_sandbox: true
+
+observability:
+  reports_dir: data/reports
+  prometheus: false        # enable when docker full stack runs

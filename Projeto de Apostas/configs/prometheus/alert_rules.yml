@@ -1,0 +1,112 @@
+# Prometheus alert rules for VBQ betting system
+# Place in configs/prometheus/alert_rules.yml
+
+groups:
+  - name: vbq_circuit_breakers
+    interval: 30s
+    rules:
+      - alert: CircuitBreakerActive
+        expr: vbq_circuit_breaker_active > 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Circuit breaker {{ $labels.type }} is active"
+          description: "The {{ $labels.type }} circuit breaker has been triggered. All betting is paused."
+
+      - alert: BankrollDrawdownAlert
+        expr: vbq_drawdown_pct > 15
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Bankroll drawdown exceeds 15%"
+          description: "Current drawdown is {{ $value }}%. Consider reducing stakes or pausing."
+
+  - name: vbq_clv_edge
+    interval: 60s
+    rules:
+      - alert: CLVDropAlert
+        expr: |
+          (vbq_clv_average offset 24h - vbq_clv_average) > 0.01
+        for: 30m
+        labels:
+          severity: warning
+        annotations:
+          summary: "CLV dropped by more than 1% in 24h"
+          description: "Average CLV for {{ $labels.sport }} dropped from {{ $value }} to current level. Model edge may be deteriorating."
+
+      - alert: NegativeCLVAlert
+        expr: vbq_clv_average < 0
+        for: 2h
+        labels:
+          severity: critical
+        annotations:
+          summary: "Negative CLV detected"
+          description: "CLV for {{ $labels.sport }} is {{ $value }}%. The model is not beating the closing line."
+
+  - name: vbq_drift
+    interval: 120s
+    rules:
+      - alert: DriftPSIAlert
+        expr: vbq_drift_psi > 0.2
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Feature drift detected (PSI > 0.2)"
+          description: "Feature {{ $labels.feature }} has PSI of {{ $value }}. Model may need retraining."
+
+      - alert: ModelCollapseAlert
+        expr: vbq_model_collapse_entropy < 0.5
+        for: 30m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Model collapse detected"
+          description: "Model entropy for {{ $labels.sport }} is {{ $value }}. Predictions may be degenerate."
+
+  - name: vbq_api
+    interval: 30s
+    rules:
+      - alert: APIFailureAlert
+        expr: |
+          rate(vbq_api_errors_total[5m]) > 0.1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High API error rate"
+          description: "API {{ $labels.api }} has error rate of {{ $value }}/s for {{ $labels.error_type }}."
+
+      - alert: DataStaleAlert
+        expr: vbq_data_stale_seconds > 3600
+        for: 15m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Data is stale"
+          description: "Source {{ $labels.source }} has not been updated for {{ $value }}s (>1h)."
+
+  - name: vbq_execution
+    interval: 30s
+    rules:
+      - alert: HighRejectionRate
+        expr: |
+          rate(vbq_bets_rejected_total[1h]) / (rate(vbq_bets_placed_total[1h]) + rate(vbq_bets_rejected_total[1h])) > 0.3
+        for: 30m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Bet rejection rate exceeds 30%"
+          description: "Rejection rate for {{ $labels.sport }}/{{ $labels.bookmaker }} is high. Check limits and liquidity."
+
+      - alert: HighLatencyAlert
+        expr: |
+          histogram_quantile(0.95, rate(vbq_execution_latency_ms_bucket[5m])) > 2000
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Execution latency P95 exceeds 2s"
+          description: "P95 latency for {{ $labels.bookmaker }} is {{ $value }}ms. EV may be decaying."

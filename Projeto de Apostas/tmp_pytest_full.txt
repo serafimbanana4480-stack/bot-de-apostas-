@@ -1,0 +1,71 @@
+
+=================================== ERRORS ====================================
+___________________ ERROR collecting tests/test_advanced.py ___________________
+ImportError while importing test module 'C:\Users\rodri\Desktop\bot de apostas\Projeto de Apostas\tests\test_advanced.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Projeto de Apostas\tests\test_advanced.py:4: in <module>
+    from src.explainability.explain import DecisionTracer
+E   ModuleNotFoundError: No module named 'src'
+_____________ ERROR collecting tests/test_adversarial_trading.py ______________
+ImportError while importing test module 'C:\Users\rodri\Desktop\bot de apostas\Projeto de Apostas\tests\test_adversarial_trading.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Projeto de Apostas\tests\test_adversarial_trading.py:6: in <module>
+    from src.decision_engine.audit_logger import DecisionAuditLogger
+E   ModuleNotFoundError: No module named 'src'
+_____________________ ERROR collecting tests/test_api.py ______________________
+ImportError while importing test module 'C:\Users\rodri\Desktop\bot de apostas\Projeto de Apostas\tests\test_api.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Projeto de Apostas\tests\test_api.py:8: in <module>
+    from app.main import app
+E   ModuleNotFoundError: No module named 'app'
+_____________ ERROR collecting tests/test_api_health_dashboard.py _____________
+ImportError while importing test module 'C:\Users\rodri\Desktop\bot de apostas\Projeto de Apostas\tests\test_api_health_dashboard.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Projeto de Apostas\tests\test_api_health_dashboard.py:6: in <module>
+    from src.monitoring.api_health_dashboard import APIHealthDashboard
+E   ModuleNotFoundError: No module named 'src'
+____________ ERROR collecting tests/test_backtest_line_movement.py ____________
+ImportError while importing test module 'C:\Users\rodri\Desktop\bot de apostas\Projeto de Apostas\tests\test_backtest_line_movement.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Projeto de Apostas\tests\test_backtest_line_movement.py:2: in <module>
+    from src.decision_engine.market_aware import MarketAwareDecisionEngine
+E   ModuleNotFoundError: No module named 'src'
+_____________ ERROR collecting tests/test_backtest_objectives.py ______________
+ImportError while importing test module 'C:\Users\rodri\Desktop\bot de apostas\Projeto de Apostas\tests\test_backtest_objectives.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Projeto de Apostas\tests\test_backtest_objectives.py:8: in <module>
+    from src.ingestion.schema_validator import OddsEvent
+E   ModuleNotFoundError: No module named 'src'
+=========================== short test summary info ===========================
+ERROR Projeto de Apostas\tests\test_advanced.py
+ERROR Projeto de Apostas\tests\test_adversarial_trading.py
+ERROR Projeto de Apostas\tests\test_api.py
+ERROR Projeto de Apostas\tests\test_api_health_dashboard.py
+ERROR Projeto de Apostas\tests\test_backtest_line_movement.py
+ERROR Projeto de Apostas\tests\test_backtest_objectives.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 6 errors during collection !!!!!!!!!!!!!!!!!!!
+6 errors in 5.69s

@@ -1,0 +1,21 @@
+COMPARATIVO FINAL (4 modelos)
+===========================================================================
+v1 Poisson    ROI=  117.84%  Bets= 244  WinRate= 48.0%  CLV= 2.403%
+v2 EMA        ROI=  104.73%  Bets= 250  WinRate= 46.8%  CLV= 2.155%
+v3 Hybrid     ROI=  100.65%  Bets= 176  WinRate= 36.9%  CLV= 3.845%
+v4 Replay     ROI=  101.33%  Bets= 201  WinRate= 49.3%  CLV= 3.274%
+
+ECE:
+  v1: 0.0660
+  v2: 0.0703
+  v3: 0.0531
+  v4: 0.0696
+
+2022 FORGETTING:
+  v1: 533.69%
+  v2: 529.58%
+  v3: 868.76%
+  v4: 353.11%
+
+BEST MODEL: v1
+Regime changed: True (strong)

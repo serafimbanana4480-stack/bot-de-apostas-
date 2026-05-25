@@ -1,0 +1,39 @@
+# Minimal stack — 0€ cloud, lowest local resource use
+# Usage: docker compose -f docker-compose.minimal.yml up -d
+
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: vb-postgres-min
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-valuebetting}
+      POSTGRES_USER: ${POSTGRES_USER:-vb_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-localdev}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_min_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-vb_admin}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.12.1
+    container_name: vb-mlflow-min
+    command: >
+      mlflow server
+      --backend-store-uri sqlite:////mlflow/mlflow.db
+      --default-artifact-root /mlflow/artifacts
+      --host 0.0.0.0 --port 5000
+    ports:
+      - "5000:5000"
+    volumes:
+      - mlflow_min_data:/mlflow
+
+volumes:
+  postgres_min_data:
+  mlflow_min_data:

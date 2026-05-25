@@ -1,0 +1,23 @@
+{
+  "attack_strengths": {
+    "A": 1.3333333333333333,
+    "B": 0.6666666666666666
+  },
+  "defense_strengths": {
+    "A": 0.6666666666666666,
+    "B": 1.3333333333333333
+  },
+  "home_advantage": 1.0,
+  "home_advantage_by_league": {},
+  "global_avg_goals": 1.5,
+  "use_dixon_coles": true,
+  "use_context": true,
+  "rho": -0.05,
+  "is_calibrated": false,
+  "calibrator_1": null,
+  "calibrator_X": null,
+  "calibrator_2": null,
+  "odds_bin_calibrators": {},
+  "_training_match_count": 20,
+  "_league_match_counts": {}
+}

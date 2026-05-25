@@ -1,0 +1,37 @@
+# VBQ-UNIFIED — Minimal Docker (Zero Cost Mode)
+# Usage:
+#   docker build -f docker/Dockerfile.minimal -t vbq:latest .
+#   docker run -v ${PWD}/data:/app/data -e ZERO_COST_MODE=true vbq:latest
+
+FROM python:3.12-slim
+
+WORKDIR /app
+
+# Install system deps
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libgomp1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install uv (fast Python package manager)
+RUN pip install --no-cache-dir uv
+
+# Copy dependency definitions
+COPY pyproject.toml ./
+
+# Install dependencies using uv
+RUN uv pip install --system -e . || pip install --no-cache-dir -e .
+
+# Copy source
+COPY src/ ./src/
+COPY scripts/ ./scripts/
+COPY app/ ./app/
+COPY configs/ ./configs/
+
+# Default: run daily pipeline in zero-cost mode
+ENV ZERO_COST_MODE=true
+ENV DATA_DIR=/app/data
+ENV PAPER_TRADING_ONLY=true
+ENV PYTHONUNBUFFERED=1
+
+CMD ["python", "scripts/run_pipeline.py", "--sport", "football", "--mode", "live"]

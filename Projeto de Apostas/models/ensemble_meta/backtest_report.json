@@ -1,0 +1,108 @@
+{
+  "poisson_baseline": {
+    "n_bets": 1790,
+    "accuracy": 0.5425,
+    "roi": -0.0029,
+    "profit": -5.23,
+    "avg_odds": 1.956
+  },
+  "ensemble_without_meta": {
+    "n_bets": 1790,
+    "accuracy": 0.5045,
+    "roi": -0.0254,
+    "profit": -45.5,
+    "avg_odds": 2.248
+  },
+  "ensemble_with_meta": [
+    {
+      "threshold": 0.5,
+      "without_meta_labeling": {
+        "n_bets": 1790,
+        "accuracy": 0.5045,
+        "roi": -0.0254,
+        "profit": -45.5
+      },
+      "with_meta_labeling": {
+        "n_bets": 1790,
+        "accuracy": 0.5045,
+        "roi": -0.0254,
+        "profit": -45.5
+      },
+      "bets_filtered": 0,
+      "accuracy_lift": 0.0,
+      "roi_lift": 0.0
+    },
+    {
+      "threshold": 0.55,
+      "without_meta_labeling": {
+        "n_bets": 1790,
+        "accuracy": 0.5045,
+        "roi": -0.0254,
+        "profit": -45.5
+      },
+      "with_meta_labeling": {
+        "n_bets": 1763,
+        "accuracy": 0.5054,
+        "roi": -0.0246,
+        "profit": -43.38
+      },
+      "bets_filtered": 27,
+      "accuracy_lift": 0.0009,
+      "roi_lift": 0.0008
+    },
+    {
+      "threshold": 0.6,
+      "without_meta_labeling": {
+        "n_bets": 1790,
+        "accuracy": 0.5045,
+        "roi": -0.0254,
+        "profit": -45.5
+      },
+      "with_meta_labeling": {
+        "n_bets": 1763,
+        "accuracy": 0.5054,
+        "roi": -0.0246,
+        "profit": -43.38
+      },
+      "bets_filtered": 27,
+      "accuracy_lift": 0.0009,
+      "roi_lift": 0.0008
+    },
+    {
+      "threshold": 0.65,
+      "without_meta_labeling": {
+        "n_bets": 1790,
+        "accuracy": 0.5045,
+        "roi": -0.0254,
+        "profit": -45.5
+      },
+      "with_meta_labeling": {
+        "n_bets": 1392,
+        "accuracy": 0.5115,
+        "roi": -0.0097,
+        "profit": -13.51
+      },
+      "bets_filtered": 398,
+      "accuracy_lift": 0.007,
+      "roi_lift": 0.0157
+    },
+    {
+      "threshold": 0.7,
+      "without_meta_labeling": {
+        "n_bets": 1790,
+        "accuracy": 0.5045,
+        "roi": -0.0254,
+        "profit": -45.5
+      },
+      "with_meta_labeling": {
+        "n_bets": 0,
+        "accuracy": 0.0,
+        "roi": 0.0,
+        "profit": 0.0
+      },
+      "bets_filtered": 1790,
+      "accuracy_lift": -0.5045,
+      "roi_lift": 0.0254
+    }
+  ]
+}

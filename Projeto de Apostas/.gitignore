@@ -1,0 +1,32 @@
+# Secrets
+.env
+*.pem
+*.key
+
+# Local data lake (regenerate via scripts)
+data/bronze/
+data/silver/
+data/gold/
+data/reports/
+data/cache/
+data/**/*.parquet
+mock_football.csv
+
+# MLflow / logs
+mlruns/
+mlflow.db
+logs/
+*.log
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# IDE
+.idea/
+.vscode/

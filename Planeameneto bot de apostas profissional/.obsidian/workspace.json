@@ -1,0 +1,223 @@
+{
+  "main": {
+    "id": "d788e9f63bcf2c08",
+    "type": "split",
+    "children": [
+      {
+        "id": "38f4bbb19f0fbd52",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fc01ce91671b858b",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização de diagrama de grafo"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2f273d306738a0e4",
+    "type": "split",
+    "children": [
+      {
+        "id": "07dda30f8567930c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0a9ef286c94ea861",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de ficheiros"
+            }
+          },
+          {
+            "id": "67332773592df3eb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "23f8f4bc1015d156",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3316ca39d94cfc1d",
+    "type": "split",
+    "children": [
+      {
+        "id": "0f237ee4376a48fe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "032e5b9249cd57b8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Bem-vindo.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks para Bem-vindo"
+            }
+          },
+          {
+            "id": "767e960958de249a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Bem-vindo.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links externos de Bem-vindo"
+            }
+          },
+          {
+            "id": "fc01d8a4f0a3a023",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "3e80c839f539dde2",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas as propriedades"
+            }
+          },
+          {
+            "id": "361cafb6b9bf23aa",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Bem-vindo.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Índice de Bem-vindo"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir Quick Switcher": false,
+      "graph:Abrir Visualização de diagrama de grafo": false,
+      "canvas:Criar novo Canvas": false,
+      "daily-notes:Abrir nota de hoje": false,
+      "templates:Inserir templates": false,
+      "command-palette:Abrir paleta de comando": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "fc01ce91671b858b",
+  "lastOpenFiles": [
+    "00_Master_Index/INDEX.md",
+    "08_Risk_Management/INDEX.md",
+    "43_Multi_Sport_Expansion/EXPANSAO_UFC_MMA.md",
+    "11_MLOps/MODEL_COLLAPSE_MONITOR.md",
+    "11_MLOps/AB_TESTING_SIGNIFICANCIA.md",
+    "08_Risk_Management/RISCO_EXECUCAO_E_SLIPPAGE.md",
+    "03_Quant_Research/ANALISE_CORRELACAO_APOSTAS.md",
+    "03_Quant_Research/RANKING_APOSTAS_EV.md",
+    "03_Quant_Research/DIAGNOSTICO_POR_REGIME.md",
+    "03_Quant_Research/SIMULACAO_FLAT_STAKING.md",
+    "03_Quant_Research/POST_MORTEM_APOSTAS.md",
+    "Sem título.canvas",
+    "42_Player_Props/INDEX.md",
+    "05_Machine_Learning/CALIBRACAO_ISOTONICA.md",
+    "AUDITORIA_DOCUMENTACAO_V6_COMPLETA.md",
+    "scripts/02_build_features.py",
+    "scripts/01_ingest_historical_nba.py",
+    "notebooks",
+    "data/processed",
+    "data/raw",
+    "RELATORIO_AUDITORIA_V5_INTEGRADA.md",
+    "00_SETUP_ZERO/REQUISITOS.md",
+    "14_APIs/ODDS_GRATUITAS.md",
+    "14_APIs/NBA_API_GRATUITA.md",
+    "14_APIs/ALTERNATIVAS_GRATUITAS.md",
+    "10_Infrastructure/MONITORING_LOCAL.md",
+    "10_Infrastructure/DOCKER_LOCAL.md",
+    "10_Infrastructure/STACK_LOCAL.md",
+    "04_Data_Engineering/RATE_LIMITS.md",
+    "04_Data_Engineering/SCRAPING_LOCAL.md",
+    "04_Data_Engineering/CLV_PROXY.md",
+    "04_Data_Engineering/FONTES_GRATUITAS.md",
+    "00_SETUP_ZERO",
+    "tests/unit/__pycache__/test_kelly.cpython-314-pytest-9.0.3.pyc.30820",
+    "src/models/__pycache__/meta_model.cpython-314.pyc.1356971669648",
+    "tests/unit/__pycache__/test_feature_builders.cpython-314-pytest-9.0.3.pyc",
+    "tests/unit/__pycache__/test_feature_builders.cpython-314-pytest-9.0.3.pyc.32868"
+  ]
+}

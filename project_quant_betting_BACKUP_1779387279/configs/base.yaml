@@ -1,0 +1,4 @@
+app_name: vbq-unified
+env: base
+db_host: localhost
+max_daily_loss_pct: 5.0

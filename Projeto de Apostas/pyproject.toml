@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "vbq-unified"
+version = "4.0.0"
+description = "Quantitative Value Betting System (NBA, Football, MMA)"
+authors = ["Rodrigo <rodrigo@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.103.0"
+uvicorn = "^0.23.2"
+sqlalchemy = "^2.0.20"
+pydantic = "^2.3.0"
+xgboost = "^2.0.0"
+lightgbm = "^4.1.0"
+catboost = "^1.2.1"
+mlflow = "^2.7.1"
+prefect = "^2.13.0"
+python-telegram-bot = "^20.5"
+pydantic-settings = "^2.0.0"
+alembic = "^1.11.3"
+psycopg2-binary = "^2.9.7"
+asyncpg = "^0.28.0"
+nba-api = "^1.2.1"
+requests = "^2.31.0"
+statsmodels = "^0.14.0"
+scikit-learn = "^1.3.0"
+pyarrow = "^14.0.0"
+pyyaml = "^6.0.1"
+tenacity = "^8.2.3"
+websockets = "^12.0"
+aiohttp = "^3.9.0"
+prometheus-client = "^0.20.0"
+python-json-logger = "^2.0.7"
+optuna = "^3.5.0"
+shap = "^0.44.0"
+plotly = "^5.24.1"
+streamlit = "^1.56.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+black = "^23.9.1"
+ruff = "^0.0.287"
+mypy = "^1.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "UP"]
+ignore = []
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true

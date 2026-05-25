@@ -1,0 +1,56 @@
+2026-05-22 01:25:08,562 [INFO] BanditEnsemblePipeline initialised with 0 model(s): []
+2026-05-22 01:25:08,562 [INFO] Pipeline [football] mode=live tier_b=(sharp=True,ev=True) tier_d=(bandit=True,cf=True,rl=False,slip=True)
+2026-05-22 01:25:08,599 [INFO] Saved 1900 matches to data\bronze\matches_football_mock.parquet
+2026-05-22 01:25:08,623 [INFO] Saved 1900 matches to data\bronze\matches_football_mock.parquet
+2026-05-22 01:25:10,257 [INFO] Fitting Poisson model to football data...
+2026-05-22 01:25:11,876 [INFO] Calibrating probabilities using 3-fold Out-of-Fold cross-calibration...
+2026-05-22 01:25:12,098 [INFO] Fitting Poisson model to football data...
+2026-05-22 01:25:15,160 [INFO] Fitting Poisson model to football data...
+2026-05-22 01:25:17,973 [INFO] Fitting Poisson model to football data...
+2026-05-22 01:25:20,830 [INFO] [Team_H7 vs Team_L11] Rejected: Calibrated probability 10.36% below threshold of 35.00%
+2026-05-22 01:25:20,838 [INFO] [Team_K10 vs Team_P15] Rejected: Event already started or finished
+2026-05-22 01:25:20,842 [INFO] [Team_L11 vs Team_D3] Rejected: Calibrated probability 20.67% below threshold of 35.00%
+2026-05-22 01:25:20,851 [INFO] [Team_B1 vs Team_C2] Rejected: Calibrated probability 32.90% below threshold of 35.00%
+2026-05-22 01:25:20,856 [INFO] [Team_T19 vs Team_I8] Rejected: Event already started or finished
+2026-05-22 01:25:20,877 [INFO] [Team_S18 vs Team_K10] Rejected: Calibrated probability 31.93% below threshold of 35.00%
+2026-05-22 01:25:20,877 [INFO] [Team_S18 vs Team_K10] Rejected: Calibrated probability 32.33% below threshold of 35.00%
+2026-05-22 01:25:20,883 [INFO] [Team_L11 vs Team_M12] Rejected: Calibrated probability 31.93% below threshold of 35.00%
+2026-05-22 01:25:20,888 [INFO] [Team_P15 vs Team_R17] Rejected: Event already started or finished
+2026-05-22 01:25:20,899 [INFO] [Team_I8 vs Team_M12] Rejected: Calibrated probability 33.31% below threshold of 35.00%
+2026-05-22 01:25:20,906 [INFO] [Team_B1 vs Team_G6] Rejected: Calibrated probability 24.22% below threshold of 35.00%
+2026-05-22 01:25:20,915 [INFO] [Team_E4 vs Team_Q16] Rejected: Event already started or finished
+2026-05-22 01:25:20,919 [INFO] [Team_C2 vs Team_H7] Rejected: Estimated edge -2.11% below threshold of 3.00%
+{
+  "sport": "football",
+  "mode": "live",
+  "date": "2026-05-22",
+  "ingest": {
+    "odds_rows": 0,
+    "matches": 1900,
+    "leakage_passed": true
+  },
+  "opportunities": 0,
+  "decisions": [],
+  "bets_placed": 0,
+  "waits": 0,
+  "no_bets_with_explanation": 0,
+  "paper_bankroll": 1000.0,
+  "missed_opportunities": {
+    "total_missed": 0,
+    "total_missed_pnl": 0.0,
+    "avg_missed_pnl": 0.0,
+    "by_reason": {}
+  },
+  "tier_b": {
+    "sharp": true,
+    "dynamic_ev": true,
+    "timing": true
+  },
+  "tier_d": {
+    "bandit": true,
+    "counterfactual": true,
+    "rl_timing": false,
+    "slippage": true
+  },
+  "shadow": null
+}

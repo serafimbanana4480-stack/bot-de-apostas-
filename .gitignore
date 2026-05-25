@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.env/
+.venv/
+env/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cursor/
+
+# Caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+__pypackages__/
+
+# Dados e logs locais
+data/
+logs/
+*.db
+*.sqlite
+*.sqlite3
+mlflow.db
+
+# MLflow
+mlruns/
+
+# Modelos binários (se forem grandes)
+# models/  # comentado: talvez queiras versionar modelos pequenos
+
+# Outros
+nul
+.DS_Store
+Thumbs.db

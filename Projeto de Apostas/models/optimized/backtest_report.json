@@ -1,0 +1,53 @@
+{
+  "model": "FootballPoissonModelV2",
+  "meta_labeler": true,
+  "value_filter": "ValueBetFilterV2",
+  "kelly_fraction": 0.25,
+  "min_edge": 0.03,
+  "results": {
+    "without_meta": {
+      "total_bets": 670,
+      "win_rate": 0.3641791044776119,
+      "roi": -0.12862562779047715,
+      "profit": -967.0273334227359,
+      "final_bankroll": 32.972666577264896,
+      "max_drawdown_pct": 0.9713188651242259,
+      "sharpe": -0.06541294017905845,
+      "avg_edge": 0.1047066101077454,
+      "avg_odds": 2.7846119402985074
+    },
+    "meta_thr_0.55": {
+      "total_bets": 670,
+      "win_rate": 0.3641791044776119,
+      "roi": -0.12862562779047715,
+      "profit": -967.0273334227359,
+      "final_bankroll": 32.972666577264896,
+      "max_drawdown_pct": 0.9713188651242259,
+      "sharpe": -0.06541294017905845,
+      "avg_edge": 0.1047066101077454,
+      "avg_odds": 2.7846119402985074
+    },
+    "meta_thr_0.60": {
+      "total_bets": 661,
+      "win_rate": 0.3661119515885023,
+      "roi": -0.13322164754218965,
+      "profit": -963.077189279808,
+      "final_bankroll": 36.92281072019255,
+      "max_drawdown_pct": 0.967882848911325,
+      "sharpe": -0.06281772004426014,
+      "avg_edge": 0.10467486517638422,
+      "avg_odds": 2.7858093797276853
+    },
+    "meta_thr_0.65": {
+      "total_bets": 653,
+      "win_rate": 0.3614088820826952,
+      "roi": -0.1410508551232885,
+      "profit": -968.7736852372111,
+      "final_bankroll": 31.226314762789197,
+      "max_drawdown_pct": 0.9728379218803472,
+      "sharpe": -0.06949224748977768,
+      "avg_edge": 0.1049727834113778,
+      "avg_odds": 2.7898315467075037
+    }
+  }
+}

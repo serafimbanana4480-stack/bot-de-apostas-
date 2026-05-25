@@ -1,0 +1,8273 @@
+{
+  "attack_strengths": {
+    "Liverpool": 1.496861951646992,
+    "Monaco": 1.2331840882879646,
+    "Nice": 0.9811277084579086,
+    "Montpellier": 0.9805567186712181,
+    "Dijon": 0.6068745162770628,
+    "Brest": 0.9100293164806043,
+    "Angers": 0.7896615432612817,
+    "Marseille": 1.0677229714457923,
+    "Watford": 0.690617230467867,
+    "Crystal Palace": 0.7921268741053266,
+    "Burnley": 0.7239518690495543,
+    "Bournemouth": 0.7758359867875823,
+    "West Ham": 1.0621298877420327,
+    "Tottenham": 1.215030810470008,
+    "Leicester": 1.2147707851713212,
+    "Man United": 1.2016969550373333,
+    "Newcastle": 0.8193146355680506,
+    "Paris SG": 1.681088986487385,
+    "Strasbourg": 0.9777068312735036,
+    "Lille": 1.0140113682838818,
+    "Bayern Munich": 1.9607634472458464,
+    "Lyon": 1.270005237907971,
+    "Ath Bilbao": 0.8303859037567927,
+    "Villarreal": 1.1325954478790963,
+    "Leganes": 0.605398474148152,
+    "Everton": 0.8534021380959367,
+    "Man City": 1.6964998301996987,
+    "Southampton": 0.8995777934627874,
+    "Norwich": 0.5079615523401285,
+    "Valencia": 0.901343546653872,
+    "Aston Villa": 0.9298394254207054,
+    "Brighton": 0.7869384623315238,
+    "Arsenal": 1.0683039768108584,
+    "Dortmund": 1.6316841797368387,
+    "Mallorca": 0.737312936432092,
+    "Nantes": 0.9095781850372937,
+    "Celta": 0.8566191952796932,
+    "Bordeaux": 0.9367693509300505,
+    "Amiens": 0.811035291838426,
+    "Toulouse": 0.6083180140134107,
+    "M'gladbach": 1.254011128296719,
+    "Metz": 0.7547153272403782,
+    "Werder Bremen": 0.8561267123439446,
+    "Leverkusen": 1.3230156531835968,
+    "Freiburg": 1.0933272321962766,
+    "Nimes": 0.7694403539653294,
+    "Wolfsburg": 1.0651441892209303,
+    "Ath Madrid": 1.1293192155027816,
+    "Rennes": 1.1549274046792504,
+    "Reims": 0.7939563544268584,
+    "Betis": 0.9942149079849477,
+    "St Etienne": 0.8010091336374014,
+    "Sheffield United": 0.5931803086598435,
+    "Ein Frankfurt": 1.1913258228779342,
+    "Alaves": 0.6717874250343707,
+    "Chelsea": 1.2567437060593922,
+    "Union Berlin": 0.9837310151967062,
+    "Espanol": 0.6613553137156158,
+    "Wolves": 0.8047350775416654,
+    "Granada": 0.9109402943054162,
+    "FC Koln": 0.9627390412203456,
+    "Levante": 0.908243287719034,
+    "Getafe": 0.6819789481614833,
+    "Parma": 0.9119531018327348,
+    "Schalke 04": 0.6959091543646767,
+    "Paderborn": 0.7965469484712442,
+    "Mainz": 0.9439503459034484,
+    "Osasuna": 0.7778073413776285,
+    "Real Madrid": 1.3300120970323044,
+    "Hoffenheim": 1.1234229373207882,
+    "Fortuna Dusseldorf": 0.7857603449727665,
+    "Augsburg": 0.8465329882423849,
+    "Fiorentina": 0.9934875282457633,
+    "Barcelona": 1.4247771725091756,
+    "RB Leipzig": 1.4486160538200061,
+    "Spal": 0.5527887044137882,
+    "Torino": 0.8868333143092795,
+    "Sampdoria": 0.9166487566765931,
+    "Roma": 1.2570037313580795,
+    "Cagliari": 0.8235173700468302,
+    "Udinese": 0.8922685773425502,
+    "Hertha": 0.8945455391529021,
+    "Verona": 0.9828625576315534,
+    "Inter": 1.529238124883519,
+    "Sevilla": 1.0001289717550865,
+    "Bologna": 0.9257798776304884,
+    "Juventus": 1.2871485247058732,
+    "Milan": 1.2831513916260553,
+    "Lecce": 0.9744469381847597,
+    "Sassuolo": 1.2157564624663444,
+    "Lazio": 1.3175533433523536,
+    "Atalanta": 1.5329208087649242,
+    "Genoa": 0.7869779844491815,
+    "Napoli": 1.348163763397796,
+    "Sociedad": 0.9751725901810958,
+    "Valladolid": 0.6565297279399811,
+    "Brescia": 0.6861816826402629,
+    "Eibar": 0.6828113233005237,
+    "Lorient": 0.8117920432060336,
+    "Lens": 1.0904061271992609,
+    "Fulham": 0.5734879276092739,
+    "Cadiz": 0.7043139118987101,
+    "West Brom": 0.7039238739506795,
+    "Stuttgart": 1.0131305924012037,
+    "Leeds": 0.9936676454377109,
+    "Huesca": 0.6794875429740629,
+    "Bielefeld": 0.6023171210019455,
+    "Elche": 0.7232262170532184,
+    "Spezia": 0.888838143917014,
+    "Crotone": 0.8654902909349015,
+    "Benevento": 0.7847070824427904,
+    "Troyes": 0.7291402808233574,
+    "Brentford": 0.9240141244394042,
+    "Clermont": 0.7387914523746267,
+    "Greuther Furth": 0.6300642392118452,
+    "Bochum": 0.8172483059373075,
+    "Empoli": 0.9433164675419431,
+    "Salernitana": 0.660965275767585,
+    "Vallecano": 0.7454855920408268,
+    "Venezia": 0.6676594154337853
+  },
+  "defense_strengths": {
+    "Liverpool": 0.6683850674301213,
+    "Monaco": 0.8803462712041217,
+    "Nice": 0.8961776588173582,
+    "Montpellier": 1.0696179418599931,
+    "Dijon": 1.164114778463456,
+    "Brest": 1.0778265585598363,
+    "Angers": 0.9996251496679521,
+    "Marseille": 0.8127811766512701,
+    "Watford": 1.30528075396432,
+    "Crystal Palace": 1.0085344407126458,
+    "Burnley": 0.9936948573875736,
+    "Bournemouth": 1.200451252443623,
+    "West Ham": 1.0099857447053178,
+    "Tottenham": 0.8400682826632617,
+    "Leicester": 0.9472591767220356,
+    "Man United": 0.8768527917775302,
+    "Newcastle": 1.1241308037289788,
+    "Paris SG": 0.6441557606995183,
+    "Strasbourg": 0.930413023342389,
+    "Lille": 0.703615975217939,
+    "Bayern Munich": 0.8114494927783515,
+    "Lyon": 0.847804228256055,
+    "Ath Bilbao": 0.7528665094892736,
+    "Villarreal": 0.8468248370398609,
+    "Leganes": 0.970709830403629,
+    "Everton": 1.0549701213781835,
+    "Man City": 0.6192704134941814,
+    "Southampton": 1.1945371886734844,
+    "Norwich": 1.4557174834547377,
+    "Valencia": 0.9870551416210985,
+    "Aston Villa": 1.04289449467487,
+    "Brighton": 0.9181000606692652,
+    "Arsenal": 0.8615475817548089,
+    "Dortmund": 0.9776415855274528,
+    "Mallorca": 1.1656653098692635,
+    "Nantes": 0.9269251053323982,
+    "Celta": 0.9450277968333022,
+    "Bordeaux": 1.1971287166548499,
+    "Amiens": 1.2485140349366597,
+    "Toulouse": 1.4200469431871527,
+    "M'gladbach": 1.0842235010481251,
+    "Metz": 1.0444228161275928,
+    "Werder Bremen": 1.3017330626969388,
+    "Leverkusen": 0.927655545756312,
+    "Freiburg": 1.0124344644811891,
+    "Nimes": 1.2225440573138908,
+    "Wolfsburg": 0.9605357625608821,
+    "Ath Madrid": 0.6303548557221427,
+    "Rennes": 0.7433407321978104,
+    "Reims": 0.8091423668059508,
+    "Betis": 0.9472591767220356,
+    "St Etienne": 1.1928029501764716,
+    "Sheffield United": 0.9559246709782819,
+    "Ein Frankfurt": 1.1154208455023689,
+    "Alaves": 1.078916205321561,
+    "Chelsea": 0.7933725766990367,
+    "Union Berlin": 1.0014180711838716,
+    "Espanol": 1.0377963574648972,
+    "Wolves": 0.8684473228199708,
+    "Granada": 1.056215823971894,
+    "FC Koln": 1.2192182493429828,
+    "Levante": 1.1429130962341436,
+    "Getafe": 0.7751103347912461,
+    "Parma": 1.2749303592175647,
+    "Schalke 04": 1.4533436410049592,
+    "Paderborn": 1.5393627487912214,
+    "Mainz": 1.1353111801489977,
+    "Osasuna": 0.970709830403629,
+    "Real Madrid": 0.5763759577643348,
+    "Hoffenheim": 1.162041140572857,
+    "Fortuna Dusseldorf": 1.3580991486476304,
+    "Augsburg": 1.1913258228779342,
+    "Fiorentina": 0.9731163602236209,
+    "Barcelona": 0.751157555844331,
+    "RB Leipzig": 0.7708578006656592,
+    "Spal": 1.416804395151217,
+    "Torino": 1.1188831087786897,
+    "Sampdoria": 1.131030544794141,
+    "Roma": 0.9331996692930247,
+    "Cagliari": 1.1411473430430594,
+    "Udinese": 1.0317070357795717,
+    "Hertha": 1.255633173935588,
+    "Verona": 0.9997718689051037,
+    "Inter": 0.6846759547478656,
+    "Sevilla": 0.6446743884498408,
+    "Bologna": 1.144624425525503,
+    "Juventus": 0.7605307767648609,
+    "Milan": 0.7674305178300229,
+    "Lecce": 1.5442833096075532,
+    "Sassuolo": 1.1485671347055955,
+    "Lazio": 0.9682728491159337,
+    "Atalanta": 0.9198113899606244,
+    "Genoa": 1.1854831682441997,
+    "Napoli": 0.7921268741053266,
+    "Sociedad": 0.787458512928898,
+    "Valladolid": 0.9447949834844777,
+    "Brescia": 1.4301926744836173,
+    "Eibar": 0.9896037491055275,
+    "Lorient": 1.194927226621515,
+    "Lens": 0.9618387347484207,
+    "Fulham": 1.0077543648165843,
+    "Cadiz": 1.0281451859136277,
+    "West Brom": 1.3982821279447395,
+    "Stuttgart": 1.1874396718681444,
+    "Leeds": 1.222320589483201,
+    "Huesca": 0.9870551416210985,
+    "Bielefeld": 1.0893261862870667,
+    "Elche": 0.9977947911668723,
+    "Spezia": 1.3060608298603815,
+    "Crotone": 1.6354977655469947,
+    "Benevento": 1.382716892623331,
+    "Troyes": 0.9811410778509598,
+    "Brentford": 1.0337508475853237,
+    "Clermont": 1.2715832893844645,
+    "Greuther Furth": 1.6355703307466283,
+    "Bochum": 1.0607984586134611,
+    "Empoli": 1.3196758754416364,
+    "Salernitana": 1.429412598587556,
+    "Vallecano": 0.9433164675419431,
+    "Venezia": 1.2863684488098117
+  },
+  "home_advantage": 1.18997668997669,
+  "home_advantage_by_league": {
+    "BL1": 1.196319018404908,
+    "FL1": 1.2209944751381216,
+    "PD": 1.2963562753036435,
+    "PL": 1.1367989056087553,
+    "SA": 1.1265664160401003
+  },
+  "global_avg_goals": 1.4001490312965723,
+  "use_dixon_coles": true,
+  "use_context": true,
+  "rho": -0.05,
+  "is_calibrated": false,
+  "calibrator_1": null,
+  "calibrator_X": null,
+  "calibrator_2": null,
+  "odds_bin_calibrators": {},
+  "_training_match_count": 5368,
+  "_league_match_counts": {
+    "BL1": 918,
+    "FL1": 1037,
+    "PD": 1137,
+    "PL": 1139,
+    "SA": 1137
+  },
+  "_match_history": [
+    {
+      "date": "2021-12-16 00:00:00",
+      "home_team": "Chelsea",
+      "away_team": "Everton",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-17 00:00:00",
+      "home_team": "Bayern Munich",
+      "away_team": "Wolfsburg",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-17 00:00:00",
+      "home_team": "Celta",
+      "away_team": "Espanol",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-17 00:00:00",
+      "home_team": "Lazio",
+      "away_team": "Genoa",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-17 00:00:00",
+      "home_team": "Salernitana",
+      "away_team": "Inter",
+      "home_goals": 0,
+      "away_goals": 5,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-18 00:00:00",
+      "home_team": "Atalanta",
+      "away_team": "Roma",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-18 00:00:00",
+      "home_team": "Vallecano",
+      "away_team": "Alaves",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-18 00:00:00",
+      "home_team": "Sociedad",
+      "away_team": "Villarreal",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-18 00:00:00",
+      "home_team": "Barcelona",
+      "away_team": "Elche",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-18 00:00:00",
+      "home_team": "Sevilla",
+      "away_team": "Ath Madrid",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-18 00:00:00",
+      "home_team": "Leeds",
+      "away_team": "Arsenal",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-18 00:00:00",
+      "home_team": "Hertha",
+      "away_team": "Dortmund",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-18 00:00:00",
+      "home_team": "Bologna",
+      "away_team": "Juventus",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-18 00:00:00",
+      "home_team": "Ein Frankfurt",
+      "away_team": "Mainz",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-18 00:00:00",
+      "home_team": "Bochum",
+      "away_team": "Union Berlin",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-18 00:00:00",
+      "home_team": "RB Leipzig",
+      "away_team": "Bielefeld",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-18 00:00:00",
+      "home_team": "Cagliari",
+      "away_team": "Udinese",
+      "home_goals": 0,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-18 00:00:00",
+      "home_team": "Hoffenheim",
+      "away_team": "M'gladbach",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-18 00:00:00",
+      "home_team": "Greuther Furth",
+      "away_team": "Augsburg",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-19 00:00:00",
+      "home_team": "Getafe",
+      "away_team": "Osasuna",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-19 00:00:00",
+      "home_team": "Granada",
+      "away_team": "Mallorca",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-19 00:00:00",
+      "home_team": "Ath Bilbao",
+      "away_team": "Betis",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-19 00:00:00",
+      "home_team": "Real Madrid",
+      "away_team": "Cadiz",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-19 00:00:00",
+      "home_team": "Sampdoria",
+      "away_team": "Venezia",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-19 00:00:00",
+      "home_team": "Torino",
+      "away_team": "Verona",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-19 00:00:00",
+      "home_team": "Spezia",
+      "away_team": "Empoli",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-19 00:00:00",
+      "home_team": "FC Koln",
+      "away_team": "Stuttgart",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-19 00:00:00",
+      "home_team": "Milan",
+      "away_team": "Napoli",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-19 00:00:00",
+      "home_team": "Freiburg",
+      "away_team": "Leverkusen",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-19 00:00:00",
+      "home_team": "Newcastle",
+      "away_team": "Man City",
+      "home_goals": 0,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-19 00:00:00",
+      "home_team": "Wolves",
+      "away_team": "Chelsea",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-19 00:00:00",
+      "home_team": "Tottenham",
+      "away_team": "Liverpool",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-19 00:00:00",
+      "home_team": "Fiorentina",
+      "away_team": "Sassuolo",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-20 00:00:00",
+      "home_team": "Levante",
+      "away_team": "Valencia",
+      "home_goals": 3,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-21 00:00:00",
+      "home_team": "Sevilla",
+      "away_team": "Barcelona",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-21 00:00:00",
+      "home_team": "Genoa",
+      "away_team": "Atalanta",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-21 00:00:00",
+      "home_team": "Villarreal",
+      "away_team": "Alaves",
+      "home_goals": 5,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-21 00:00:00",
+      "home_team": "Juventus",
+      "away_team": "Cagliari",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Marseille",
+      "away_team": "Reims",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Granada",
+      "away_team": "Ath Madrid",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Ath Bilbao",
+      "away_team": "Real Madrid",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Montpellier",
+      "away_team": "Angers",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Nice",
+      "away_team": "Lens",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Monaco",
+      "away_team": "Rennes",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Troyes",
+      "away_team": "Brest",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Lyon",
+      "away_team": "Metz",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "St Etienne",
+      "away_team": "Nantes",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Napoli",
+      "away_team": "Spezia",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Bordeaux",
+      "away_team": "Lille",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Venezia",
+      "away_team": "Lazio",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Empoli",
+      "away_team": "Milan",
+      "home_goals": 2,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Sassuolo",
+      "away_team": "Bologna",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Inter",
+      "away_team": "Torino",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Roma",
+      "away_team": "Sampdoria",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Verona",
+      "away_team": "Fiorentina",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-22 00:00:00",
+      "home_team": "Lorient",
+      "away_team": "Paris SG",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-26 00:00:00",
+      "home_team": "Tottenham",
+      "away_team": "Crystal Palace",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-26 00:00:00",
+      "home_team": "Man City",
+      "away_team": "Leicester",
+      "home_goals": 6,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-26 00:00:00",
+      "home_team": "Norwich",
+      "away_team": "Arsenal",
+      "home_goals": 0,
+      "away_goals": 5,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-26 00:00:00",
+      "home_team": "West Ham",
+      "away_team": "Southampton",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-26 00:00:00",
+      "home_team": "Brighton",
+      "away_team": "Brentford",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-26 00:00:00",
+      "home_team": "Aston Villa",
+      "away_team": "Chelsea",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-27 00:00:00",
+      "home_team": "Newcastle",
+      "away_team": "Man United",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-28 00:00:00",
+      "home_team": "Southampton",
+      "away_team": "Tottenham",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-28 00:00:00",
+      "home_team": "Leicester",
+      "away_team": "Liverpool",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-28 00:00:00",
+      "home_team": "Crystal Palace",
+      "away_team": "Norwich",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-28 00:00:00",
+      "home_team": "Watford",
+      "away_team": "West Ham",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-29 00:00:00",
+      "home_team": "Brentford",
+      "away_team": "Man City",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-29 00:00:00",
+      "home_team": "Chelsea",
+      "away_team": "Brighton",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-30 00:00:00",
+      "home_team": "Man United",
+      "away_team": "Burnley",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2021-12-31 00:00:00",
+      "home_team": "Valencia",
+      "away_team": "Espanol",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-01 00:00:00",
+      "home_team": "Arsenal",
+      "away_team": "Man City",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-01 00:00:00",
+      "home_team": "Crystal Palace",
+      "away_team": "West Ham",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-01 00:00:00",
+      "home_team": "Watford",
+      "away_team": "Tottenham",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-02 00:00:00",
+      "home_team": "Mallorca",
+      "away_team": "Barcelona",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-02 00:00:00",
+      "home_team": "Leeds",
+      "away_team": "Burnley",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-02 00:00:00",
+      "home_team": "Brentford",
+      "away_team": "Aston Villa",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-02 00:00:00",
+      "home_team": "Chelsea",
+      "away_team": "Liverpool",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-02 00:00:00",
+      "home_team": "Getafe",
+      "away_team": "Real Madrid",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-02 00:00:00",
+      "home_team": "Alaves",
+      "away_team": "Sociedad",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-02 00:00:00",
+      "home_team": "Everton",
+      "away_team": "Brighton",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-02 00:00:00",
+      "home_team": "Betis",
+      "away_team": "Celta",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-02 00:00:00",
+      "home_team": "Elche",
+      "away_team": "Granada",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-02 00:00:00",
+      "home_team": "Ath Madrid",
+      "away_team": "Vallecano",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-03 00:00:00",
+      "home_team": "Man United",
+      "away_team": "Wolves",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-03 00:00:00",
+      "home_team": "Villarreal",
+      "away_team": "Levante",
+      "home_goals": 5,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-03 00:00:00",
+      "home_team": "Osasuna",
+      "away_team": "Ath Bilbao",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-03 00:00:00",
+      "home_team": "Cadiz",
+      "away_team": "Sevilla",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-06 00:00:00",
+      "home_team": "Juventus",
+      "away_team": "Napoli",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-06 00:00:00",
+      "home_team": "Sassuolo",
+      "away_team": "Genoa",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-06 00:00:00",
+      "home_team": "Milan",
+      "away_team": "Roma",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-06 00:00:00",
+      "home_team": "Spezia",
+      "away_team": "Verona",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-06 00:00:00",
+      "home_team": "Sampdoria",
+      "away_team": "Cagliari",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-06 00:00:00",
+      "home_team": "Lazio",
+      "away_team": "Empoli",
+      "home_goals": 3,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-07 00:00:00",
+      "home_team": "Bayern Munich",
+      "away_team": "M'gladbach",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-07 00:00:00",
+      "home_team": "Bordeaux",
+      "away_team": "Marseille",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-08 00:00:00",
+      "home_team": "Hoffenheim",
+      "away_team": "Augsburg",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-08 00:00:00",
+      "home_team": "Greuther Furth",
+      "away_team": "Stuttgart",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-08 00:00:00",
+      "home_team": "Levante",
+      "away_team": "Mallorca",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-08 00:00:00",
+      "home_team": "Leverkusen",
+      "away_team": "Union Berlin",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-08 00:00:00",
+      "home_team": "Freiburg",
+      "away_team": "Bielefeld",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-08 00:00:00",
+      "home_team": "RB Leipzig",
+      "away_team": "Mainz",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-08 00:00:00",
+      "home_team": "Lens",
+      "away_team": "Rennes",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-08 00:00:00",
+      "home_team": "Ein Frankfurt",
+      "away_team": "Dortmund",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-08 00:00:00",
+      "home_team": "Sociedad",
+      "away_team": "Celta",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-08 00:00:00",
+      "home_team": "Granada",
+      "away_team": "Barcelona",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-08 00:00:00",
+      "home_team": "Real Madrid",
+      "away_team": "Valencia",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Lyon",
+      "away_team": "Paris SG",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Nantes",
+      "away_team": "Monaco",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Metz",
+      "away_team": "Strasbourg",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Venezia",
+      "away_team": "Milan",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Empoli",
+      "away_team": "Sassuolo",
+      "home_goals": 1,
+      "away_goals": 5,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Verona",
+      "away_team": "Salernitana",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Inter",
+      "away_team": "Lazio",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Clermont",
+      "away_team": "Reims",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Brest",
+      "away_team": "Nice",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Napoli",
+      "away_team": "Sampdoria",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Genoa",
+      "away_team": "Spezia",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Udinese",
+      "away_team": "Atalanta",
+      "home_goals": 2,
+      "away_goals": 6,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Hertha",
+      "away_team": "FC Koln",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Bochum",
+      "away_team": "Wolfsburg",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Osasuna",
+      "away_team": "Cadiz",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Vallecano",
+      "away_team": "Betis",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Roma",
+      "away_team": "Juventus",
+      "home_goals": 3,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Sevilla",
+      "away_team": "Getafe",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Alaves",
+      "away_team": "Ath Bilbao",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-09 00:00:00",
+      "home_team": "Villarreal",
+      "away_team": "Ath Madrid",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-10 00:00:00",
+      "home_team": "Espanol",
+      "away_team": "Elche",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-11 00:00:00",
+      "home_team": "Southampton",
+      "away_team": "Brentford",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-11 00:00:00",
+      "home_team": "Cagliari",
+      "away_team": "Bologna",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-12 00:00:00",
+      "home_team": "West Ham",
+      "away_team": "Norwich",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-14 00:00:00",
+      "home_team": "Nice",
+      "away_team": "Nantes",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-14 00:00:00",
+      "home_team": "Dortmund",
+      "away_team": "Freiburg",
+      "home_goals": 5,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-14 00:00:00",
+      "home_team": "Brighton",
+      "away_team": "Crystal Palace",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "Mainz",
+      "away_team": "Bochum",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "Man City",
+      "away_team": "Chelsea",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "Norwich",
+      "away_team": "Everton",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "St Etienne",
+      "away_team": "Lens",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "Paris SG",
+      "away_team": "Brest",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "Stuttgart",
+      "away_team": "RB Leipzig",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "M'gladbach",
+      "away_team": "Leverkusen",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "FC Koln",
+      "away_team": "Bayern Munich",
+      "home_goals": 0,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "Newcastle",
+      "away_team": "Watford",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "Juventus",
+      "away_team": "Udinese",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "Wolves",
+      "away_team": "Southampton",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "Aston Villa",
+      "away_team": "Man United",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "Wolfsburg",
+      "away_team": "Hertha",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "Sampdoria",
+      "away_team": "Torino",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "Salernitana",
+      "away_team": "Lazio",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-15 00:00:00",
+      "home_team": "Union Berlin",
+      "away_team": "Hoffenheim",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "Elche",
+      "away_team": "Villarreal",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "Roma",
+      "away_team": "Cagliari",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "Atalanta",
+      "away_team": "Inter",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "Sassuolo",
+      "away_team": "Verona",
+      "home_goals": 2,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "Augsburg",
+      "away_team": "Ein Frankfurt",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "Rennes",
+      "away_team": "Bordeaux",
+      "home_goals": 6,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "Marseille",
+      "away_team": "Lille",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "Troyes",
+      "away_team": "Lyon",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "Reims",
+      "away_team": "Metz",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "Monaco",
+      "away_team": "Clermont",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "West Ham",
+      "away_team": "Leeds",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "Bielefeld",
+      "away_team": "Greuther Furth",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "Lorient",
+      "away_team": "Angers",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "Liverpool",
+      "away_team": "Brentford",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "Venezia",
+      "away_team": "Empoli",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-16 00:00:00",
+      "home_team": "Strasbourg",
+      "away_team": "Montpellier",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-17 00:00:00",
+      "home_team": "Bologna",
+      "away_team": "Napoli",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-17 00:00:00",
+      "home_team": "Fiorentina",
+      "away_team": "Genoa",
+      "home_goals": 6,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-17 00:00:00",
+      "home_team": "Milan",
+      "away_team": "Spezia",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-18 00:00:00",
+      "home_team": "Brighton",
+      "away_team": "Chelsea",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-18 00:00:00",
+      "home_team": "Betis",
+      "away_team": "Alaves",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-18 00:00:00",
+      "home_team": "Cadiz",
+      "away_team": "Espanol",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-19 00:00:00",
+      "home_team": "Brentford",
+      "away_team": "Man United",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-19 00:00:00",
+      "home_team": "Celta",
+      "away_team": "Osasuna",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-19 00:00:00",
+      "home_team": "Valencia",
+      "away_team": "Sevilla",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-19 00:00:00",
+      "home_team": "Leicester",
+      "away_team": "Tottenham",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-19 00:00:00",
+      "home_team": "Lille",
+      "away_team": "Lorient",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-19 00:00:00",
+      "home_team": "Clermont",
+      "away_team": "Strasbourg",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-19 00:00:00",
+      "home_team": "Montpellier",
+      "away_team": "Troyes",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-20 00:00:00",
+      "home_team": "Getafe",
+      "away_team": "Granada",
+      "home_goals": 4,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-21 00:00:00",
+      "home_team": "Lyon",
+      "away_team": "St Etienne",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-21 00:00:00",
+      "home_team": "Espanol",
+      "away_team": "Betis",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-21 00:00:00",
+      "home_team": "Watford",
+      "away_team": "Norwich",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-21 00:00:00",
+      "home_team": "Verona",
+      "away_team": "Bologna",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-21 00:00:00",
+      "home_team": "Ein Frankfurt",
+      "away_team": "Bielefeld",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Man United",
+      "away_team": "West Ham",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Lens",
+      "away_team": "Marseille",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Brest",
+      "away_team": "Lille",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Hoffenheim",
+      "away_team": "Dortmund",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Greuther Furth",
+      "away_team": "Mainz",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Freiburg",
+      "away_team": "Stuttgart",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Leverkusen",
+      "away_team": "Augsburg",
+      "home_goals": 5,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Southampton",
+      "away_team": "Man City",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Sevilla",
+      "away_team": "Celta",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Ath Madrid",
+      "away_team": "Valencia",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Levante",
+      "away_team": "Cadiz",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Inter",
+      "away_team": "Venezia",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Genoa",
+      "away_team": "Udinese",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Lazio",
+      "away_team": "Atalanta",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Leeds",
+      "away_team": "Newcastle",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Bochum",
+      "away_team": "FC Koln",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "M'gladbach",
+      "away_team": "Union Berlin",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Everton",
+      "away_team": "Aston Villa",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Brentford",
+      "away_team": "Wolves",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-22 00:00:00",
+      "home_team": "Villarreal",
+      "away_team": "Mallorca",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Bordeaux",
+      "away_team": "Strasbourg",
+      "home_goals": 4,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Angers",
+      "away_team": "Troyes",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Nantes",
+      "away_team": "Lorient",
+      "home_goals": 4,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Montpellier",
+      "away_team": "Monaco",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Paris SG",
+      "away_team": "Reims",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Chelsea",
+      "away_team": "Tottenham",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Napoli",
+      "away_team": "Salernitana",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "RB Leipzig",
+      "away_team": "Wolfsburg",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Crystal Palace",
+      "away_team": "Liverpool",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Arsenal",
+      "away_team": "Burnley",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Sociedad",
+      "away_team": "Getafe",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Cagliari",
+      "away_team": "Fiorentina",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Metz",
+      "away_team": "Nice",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Hertha",
+      "away_team": "Bayern Munich",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Granada",
+      "away_team": "Osasuna",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Real Madrid",
+      "away_team": "Elche",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Vallecano",
+      "away_team": "Ath Bilbao",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Torino",
+      "away_team": "Sassuolo",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Alaves",
+      "away_team": "Barcelona",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Clermont",
+      "away_team": "Rennes",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Milan",
+      "away_team": "Juventus",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Empoli",
+      "away_team": "Roma",
+      "home_goals": 2,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Leicester",
+      "away_team": "Brighton",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-23 00:00:00",
+      "home_team": "Spezia",
+      "away_team": "Sampdoria",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-01-26 00:00:00",
+      "home_team": "Angers",
+      "away_team": "St Etienne",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-01 00:00:00",
+      "home_team": "Lyon",
+      "away_team": "Marseille",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-04 00:00:00",
+      "home_team": "Marseille",
+      "away_team": "Angers",
+      "home_goals": 5,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-04 00:00:00",
+      "home_team": "Getafe",
+      "away_team": "Levante",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-04 00:00:00",
+      "home_team": "Hertha",
+      "away_team": "Bochum",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "Burnley",
+      "away_team": "Watford",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "St Etienne",
+      "away_team": "Montpellier",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "Stuttgart",
+      "away_team": "Ein Frankfurt",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "Augsburg",
+      "away_team": "Union Berlin",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "Celta",
+      "away_team": "Vallecano",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "Mallorca",
+      "away_team": "Cadiz",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "Bielefeld",
+      "away_team": "M'gladbach",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "Monaco",
+      "away_team": "Lyon",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "Elche",
+      "away_team": "Alaves",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "Mainz",
+      "away_team": "Hoffenheim",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "Bayern Munich",
+      "away_team": "RB Leipzig",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "FC Koln",
+      "away_team": "Freiburg",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "Fiorentina",
+      "away_team": "Lazio",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "Roma",
+      "away_team": "Genoa",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "Inter",
+      "away_team": "Milan",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-05 00:00:00",
+      "home_team": "Osasuna",
+      "away_team": "Sevilla",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Udinese",
+      "away_team": "Torino",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Venezia",
+      "away_team": "Napoli",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Bologna",
+      "away_team": "Empoli",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Nice",
+      "away_team": "Clermont",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Sampdoria",
+      "away_team": "Sassuolo",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Valencia",
+      "away_team": "Sociedad",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Juventus",
+      "away_team": "Verona",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Atalanta",
+      "away_team": "Cagliari",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Betis",
+      "away_team": "Villarreal",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Dortmund",
+      "away_team": "Leverkusen",
+      "home_goals": 2,
+      "away_goals": 5,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Reims",
+      "away_team": "Bordeaux",
+      "home_goals": 5,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Wolfsburg",
+      "away_team": "Greuther Furth",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Real Madrid",
+      "away_team": "Granada",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Lorient",
+      "away_team": "Lens",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Lille",
+      "away_team": "Paris SG",
+      "home_goals": 1,
+      "away_goals": 5,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Rennes",
+      "away_team": "Brest",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Troyes",
+      "away_team": "Metz",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Strasbourg",
+      "away_team": "Nantes",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-06 00:00:00",
+      "home_team": "Barcelona",
+      "away_team": "Ath Madrid",
+      "home_goals": 4,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-07 00:00:00",
+      "home_team": "Ath Bilbao",
+      "away_team": "Espanol",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-07 00:00:00",
+      "home_team": "Salernitana",
+      "away_team": "Spezia",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-08 00:00:00",
+      "home_team": "Newcastle",
+      "away_team": "Everton",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-08 00:00:00",
+      "home_team": "Burnley",
+      "away_team": "Man United",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-08 00:00:00",
+      "home_team": "West Ham",
+      "away_team": "Watford",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-09 00:00:00",
+      "home_team": "Aston Villa",
+      "away_team": "Leeds",
+      "home_goals": 3,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-09 00:00:00",
+      "home_team": "Man City",
+      "away_team": "Brentford",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-09 00:00:00",
+      "home_team": "Norwich",
+      "away_team": "Crystal Palace",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-09 00:00:00",
+      "home_team": "Tottenham",
+      "away_team": "Southampton",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-10 00:00:00",
+      "home_team": "Liverpool",
+      "away_team": "Leicester",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-10 00:00:00",
+      "home_team": "Wolves",
+      "away_team": "Arsenal",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-11 00:00:00",
+      "home_team": "Sevilla",
+      "away_team": "Elche",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-11 00:00:00",
+      "home_team": "Paris SG",
+      "away_team": "Rennes",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-11 00:00:00",
+      "home_team": "RB Leipzig",
+      "away_team": "FC Koln",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Montpellier",
+      "away_team": "Lille",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Napoli",
+      "away_team": "Inter",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Ein Frankfurt",
+      "away_team": "Wolfsburg",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Leverkusen",
+      "away_team": "Stuttgart",
+      "home_goals": 4,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "M'gladbach",
+      "away_team": "Augsburg",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Greuther Furth",
+      "away_team": "Hertha",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Freiburg",
+      "away_team": "Mainz",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Lyon",
+      "away_team": "Nice",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Cadiz",
+      "away_team": "Celta",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Bochum",
+      "away_team": "Bayern Munich",
+      "home_goals": 4,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Ath Madrid",
+      "away_team": "Getafe",
+      "home_goals": 4,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Norwich",
+      "away_team": "Man City",
+      "home_goals": 0,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Watford",
+      "away_team": "Brighton",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Man United",
+      "away_team": "Southampton",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Brentford",
+      "away_team": "Crystal Palace",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Lazio",
+      "away_team": "Bologna",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Everton",
+      "away_team": "Leeds",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Vallecano",
+      "away_team": "Osasuna",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Villarreal",
+      "away_team": "Real Madrid",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-12 00:00:00",
+      "home_team": "Torino",
+      "away_team": "Venezia",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Angers",
+      "away_team": "Strasbourg",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Alaves",
+      "away_team": "Valencia",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Burnley",
+      "away_team": "Liverpool",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Levante",
+      "away_team": "Betis",
+      "home_goals": 2,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Newcastle",
+      "away_team": "Aston Villa",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Sociedad",
+      "away_team": "Granada",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Leicester",
+      "away_team": "West Ham",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Tottenham",
+      "away_team": "Wolves",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Metz",
+      "away_team": "Marseille",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Espanol",
+      "away_team": "Barcelona",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Clermont",
+      "away_team": "St Etienne",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Lens",
+      "away_team": "Bordeaux",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Brest",
+      "away_team": "Troyes",
+      "home_goals": 5,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Monaco",
+      "away_team": "Lorient",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Genoa",
+      "away_team": "Salernitana",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Union Berlin",
+      "away_team": "Dortmund",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Hoffenheim",
+      "away_team": "Bielefeld",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Empoli",
+      "away_team": "Cagliari",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Verona",
+      "away_team": "Udinese",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Atalanta",
+      "away_team": "Juventus",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Sassuolo",
+      "away_team": "Roma",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Milan",
+      "away_team": "Sampdoria",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-13 00:00:00",
+      "home_team": "Nantes",
+      "away_team": "Reims",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-14 00:00:00",
+      "home_team": "Spezia",
+      "away_team": "Fiorentina",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-14 00:00:00",
+      "home_team": "Mallorca",
+      "away_team": "Ath Bilbao",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-15 00:00:00",
+      "home_team": "Man United",
+      "away_team": "Brighton",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-16 00:00:00",
+      "home_team": "Ath Madrid",
+      "away_team": "Levante",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-18 00:00:00",
+      "home_team": "Elche",
+      "away_team": "Vallecano",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-18 00:00:00",
+      "home_team": "Mainz",
+      "away_team": "Leverkusen",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-18 00:00:00",
+      "home_team": "Lille",
+      "away_team": "Metz",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-18 00:00:00",
+      "home_team": "Juventus",
+      "away_team": "Torino",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Nantes",
+      "away_team": "Paris SG",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Lens",
+      "away_team": "Lyon",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Real Madrid",
+      "away_team": "Alaves",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Cadiz",
+      "away_team": "Getafe",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Osasuna",
+      "away_team": "Ath Madrid",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Granada",
+      "away_team": "Villarreal",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Salernitana",
+      "away_team": "Milan",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Wolfsburg",
+      "away_team": "Hoffenheim",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Stuttgart",
+      "away_team": "Bochum",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Roma",
+      "away_team": "Verona",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "FC Koln",
+      "away_team": "Ein Frankfurt",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Aston Villa",
+      "away_team": "Watford",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "West Ham",
+      "away_team": "Newcastle",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Bielefeld",
+      "away_team": "Union Berlin",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Crystal Palace",
+      "away_team": "Chelsea",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Man City",
+      "away_team": "Tottenham",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Liverpool",
+      "away_team": "Norwich",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Southampton",
+      "away_team": "Everton",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Sampdoria",
+      "away_team": "Empoli",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Arsenal",
+      "away_team": "Brentford",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Brighton",
+      "away_team": "Burnley",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-19 00:00:00",
+      "home_team": "Augsburg",
+      "away_team": "Freiburg",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Espanol",
+      "away_team": "Sevilla",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Reims",
+      "away_team": "Brest",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Leeds",
+      "away_team": "Man United",
+      "home_goals": 2,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Wolves",
+      "away_team": "Leicester",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Dortmund",
+      "away_team": "M'gladbach",
+      "home_goals": 6,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Bayern Munich",
+      "away_team": "Greuther Furth",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "St Etienne",
+      "away_team": "Strasbourg",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Valencia",
+      "away_team": "Barcelona",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Hertha",
+      "away_team": "RB Leipzig",
+      "home_goals": 1,
+      "away_goals": 6,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Betis",
+      "away_team": "Mallorca",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Marseille",
+      "away_team": "Clermont",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Nice",
+      "away_team": "Angers",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Lorient",
+      "away_team": "Montpellier",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Rennes",
+      "away_team": "Troyes",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Bordeaux",
+      "away_team": "Monaco",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Venezia",
+      "away_team": "Genoa",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Fiorentina",
+      "away_team": "Atalanta",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Inter",
+      "away_team": "Sassuolo",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Udinese",
+      "away_team": "Lazio",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-20 00:00:00",
+      "home_team": "Ath Bilbao",
+      "away_team": "Sociedad",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-21 00:00:00",
+      "home_team": "Celta",
+      "away_team": "Levante",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-21 00:00:00",
+      "home_team": "Bologna",
+      "away_team": "Spezia",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-21 00:00:00",
+      "home_team": "Cagliari",
+      "away_team": "Napoli",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-23 00:00:00",
+      "home_team": "Burnley",
+      "away_team": "Tottenham",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-23 00:00:00",
+      "home_team": "Liverpool",
+      "away_team": "Leeds",
+      "home_goals": 6,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-23 00:00:00",
+      "home_team": "Watford",
+      "away_team": "Crystal Palace",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-24 00:00:00",
+      "home_team": "Arsenal",
+      "away_team": "Wolves",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-25 00:00:00",
+      "home_team": "Genoa",
+      "away_team": "Inter",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-25 00:00:00",
+      "home_team": "Milan",
+      "away_team": "Udinese",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-25 00:00:00",
+      "home_team": "Southampton",
+      "away_team": "Norwich",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-25 00:00:00",
+      "home_team": "Levante",
+      "away_team": "Elche",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-25 00:00:00",
+      "home_team": "Montpellier",
+      "away_team": "Rennes",
+      "home_goals": 2,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-25 00:00:00",
+      "home_team": "Hoffenheim",
+      "away_team": "Stuttgart",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Mallorca",
+      "away_team": "Valencia",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Leeds",
+      "away_team": "Tottenham",
+      "home_goals": 0,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Leverkusen",
+      "away_team": "Bielefeld",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Crystal Palace",
+      "away_team": "Burnley",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Brentford",
+      "away_team": "Newcastle",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Man United",
+      "away_team": "Watford",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Brighton",
+      "away_team": "Aston Villa",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Getafe",
+      "away_team": "Alaves",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Ath Madrid",
+      "away_team": "Celta",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Everton",
+      "away_team": "Man City",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Vallecano",
+      "away_team": "Real Madrid",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Salernitana",
+      "away_team": "Bologna",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Freiburg",
+      "away_team": "Hertha",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Greuther Furth",
+      "away_team": "FC Koln",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Strasbourg",
+      "away_team": "Nice",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "M'gladbach",
+      "away_team": "Wolfsburg",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Union Berlin",
+      "away_team": "Mainz",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Ein Frankfurt",
+      "away_team": "Bayern Munich",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Paris SG",
+      "away_team": "St Etienne",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Empoli",
+      "away_team": "Juventus",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-26 00:00:00",
+      "home_team": "Sassuolo",
+      "away_team": "Fiorentina",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Lyon",
+      "away_team": "Lille",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Troyes",
+      "away_team": "Marseille",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Monaco",
+      "away_team": "Reims",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Villarreal",
+      "away_team": "Espanol",
+      "home_goals": 5,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Brest",
+      "away_team": "Lorient",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Metz",
+      "away_team": "Nantes",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Angers",
+      "away_team": "Lens",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Clermont",
+      "away_team": "Bordeaux",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Verona",
+      "away_team": "Venezia",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Sevilla",
+      "away_team": "Betis",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "West Ham",
+      "away_team": "Wolves",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Torino",
+      "away_team": "Cagliari",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Augsburg",
+      "away_team": "Dortmund",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Lazio",
+      "away_team": "Napoli",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Spezia",
+      "away_team": "Roma",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Bochum",
+      "away_team": "RB Leipzig",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Barcelona",
+      "away_team": "Ath Bilbao",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-27 00:00:00",
+      "home_team": "Sociedad",
+      "away_team": "Osasuna",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-28 00:00:00",
+      "home_team": "Atalanta",
+      "away_team": "Sampdoria",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-02-28 00:00:00",
+      "home_team": "Granada",
+      "away_team": "Cadiz",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-01 00:00:00",
+      "home_team": "Burnley",
+      "away_team": "Leicester",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-02 00:00:00",
+      "home_team": "Mallorca",
+      "away_team": "Sociedad",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-04 00:00:00",
+      "home_team": "Bielefeld",
+      "away_team": "Augsburg",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-04 00:00:00",
+      "home_team": "Alaves",
+      "away_team": "Sevilla",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-04 00:00:00",
+      "home_team": "Lorient",
+      "away_team": "Lyon",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-04 00:00:00",
+      "home_team": "Inter",
+      "away_team": "Salernitana",
+      "home_goals": 5,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Aston Villa",
+      "away_team": "Southampton",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Osasuna",
+      "away_team": "Villarreal",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Newcastle",
+      "away_team": "Brighton",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Leicester",
+      "away_team": "Leeds",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Roma",
+      "away_team": "Atalanta",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Nice",
+      "away_team": "Paris SG",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Lens",
+      "away_team": "Brest",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Bayern Munich",
+      "away_team": "Leverkusen",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Udinese",
+      "away_team": "Sampdoria",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Burnley",
+      "away_team": "Chelsea",
+      "home_goals": 0,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Stuttgart",
+      "away_team": "M'gladbach",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Cagliari",
+      "away_team": "Lazio",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Wolfsburg",
+      "away_team": "Union Berlin",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Real Madrid",
+      "away_team": "Sociedad",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Bochum",
+      "away_team": "Greuther Furth",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Hertha",
+      "away_team": "Ein Frankfurt",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "RB Leipzig",
+      "away_team": "Freiburg",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Valencia",
+      "away_team": "Granada",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Norwich",
+      "away_team": "Brentford",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Espanol",
+      "away_team": "Getafe",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Wolves",
+      "away_team": "Crystal Palace",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-05 00:00:00",
+      "home_team": "Liverpool",
+      "away_team": "West Ham",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Man City",
+      "away_team": "Man United",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Rennes",
+      "away_team": "Angers",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Venezia",
+      "away_team": "Sassuolo",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Juventus",
+      "away_team": "Spezia",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Bologna",
+      "away_team": "Torino",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Genoa",
+      "away_team": "Empoli",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Fiorentina",
+      "away_team": "Verona",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Watford",
+      "away_team": "Arsenal",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Marseille",
+      "away_team": "Monaco",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Napoli",
+      "away_team": "Milan",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Reims",
+      "away_team": "Strasbourg",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Nantes",
+      "away_team": "Montpellier",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Bordeaux",
+      "away_team": "Troyes",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "St Etienne",
+      "away_team": "Metz",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "FC Koln",
+      "away_team": "Hoffenheim",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Cadiz",
+      "away_team": "Vallecano",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Elche",
+      "away_team": "Barcelona",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Celta",
+      "away_team": "Mallorca",
+      "home_goals": 4,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Betis",
+      "away_team": "Ath Madrid",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-06 00:00:00",
+      "home_team": "Lille",
+      "away_team": "Clermont",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-07 00:00:00",
+      "home_team": "Tottenham",
+      "away_team": "Everton",
+      "home_goals": 5,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-07 00:00:00",
+      "home_team": "Ath Bilbao",
+      "away_team": "Levante",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-10 00:00:00",
+      "home_team": "Southampton",
+      "away_team": "Newcastle",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-10 00:00:00",
+      "home_team": "Norwich",
+      "away_team": "Chelsea",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-10 00:00:00",
+      "home_team": "Wolves",
+      "away_team": "Watford",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-10 00:00:00",
+      "home_team": "Leeds",
+      "away_team": "Aston Villa",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-11 00:00:00",
+      "home_team": "Lille",
+      "away_team": "St Etienne",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-11 00:00:00",
+      "home_team": "Ath Madrid",
+      "away_team": "Cadiz",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Getafe",
+      "away_team": "Valencia",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Montpellier",
+      "away_team": "Nice",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Villarreal",
+      "away_team": "Celta",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Man United",
+      "away_team": "Tottenham",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Brighton",
+      "away_team": "Liverpool",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Brentford",
+      "away_team": "Burnley",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Troyes",
+      "away_team": "Nantes",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Sampdoria",
+      "away_team": "Juventus",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Milan",
+      "away_team": "Empoli",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Levante",
+      "away_team": "Espanol",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Salernitana",
+      "away_team": "Sassuolo",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Freiburg",
+      "away_team": "Wolfsburg",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Hoffenheim",
+      "away_team": "Bayern Munich",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Union Berlin",
+      "away_team": "Stuttgart",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "M'gladbach",
+      "away_team": "Hertha",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Spezia",
+      "away_team": "Cagliari",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-12 00:00:00",
+      "home_team": "Granada",
+      "away_team": "Elche",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Verona",
+      "away_team": "Napoli",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Ein Frankfurt",
+      "away_team": "Bochum",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Leverkusen",
+      "away_team": "FC Koln",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Atalanta",
+      "away_team": "Genoa",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Fiorentina",
+      "away_team": "Bologna",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Strasbourg",
+      "away_team": "Monaco",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Barcelona",
+      "away_team": "Osasuna",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Sociedad",
+      "away_team": "Alaves",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Vallecano",
+      "away_team": "Sevilla",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Torino",
+      "away_team": "Inter",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Udinese",
+      "away_team": "Roma",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Dortmund",
+      "away_team": "Bielefeld",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Betis",
+      "away_team": "Ath Bilbao",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Greuther Furth",
+      "away_team": "RB Leipzig",
+      "home_goals": 1,
+      "away_goals": 6,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Clermont",
+      "away_team": "Lorient",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Angers",
+      "away_team": "Reims",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Arsenal",
+      "away_team": "Leicester",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Leeds",
+      "away_team": "Norwich",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Everton",
+      "away_team": "Wolves",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Southampton",
+      "away_team": "Watford",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Brest",
+      "away_team": "Marseille",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Lyon",
+      "away_team": "Rennes",
+      "home_goals": 2,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Chelsea",
+      "away_team": "Newcastle",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "West Ham",
+      "away_team": "Aston Villa",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Metz",
+      "away_team": "Lens",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-13 00:00:00",
+      "home_team": "Paris SG",
+      "away_team": "Bordeaux",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-14 00:00:00",
+      "home_team": "Crystal Palace",
+      "away_team": "Man City",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-14 00:00:00",
+      "home_team": "Mallorca",
+      "away_team": "Real Madrid",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-14 00:00:00",
+      "home_team": "Lazio",
+      "away_team": "Venezia",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-16 00:00:00",
+      "home_team": "Mainz",
+      "away_team": "Dortmund",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-16 00:00:00",
+      "home_team": "Brighton",
+      "away_team": "Tottenham",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-16 00:00:00",
+      "home_team": "Arsenal",
+      "away_team": "Liverpool",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-17 00:00:00",
+      "home_team": "Everton",
+      "away_team": "Newcastle",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-18 00:00:00",
+      "home_team": "Ath Bilbao",
+      "away_team": "Getafe",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-18 00:00:00",
+      "home_team": "Bochum",
+      "away_team": "M'gladbach",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-18 00:00:00",
+      "home_team": "St Etienne",
+      "away_team": "Troyes",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-18 00:00:00",
+      "home_team": "Wolves",
+      "away_team": "Leeds",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-18 00:00:00",
+      "home_team": "Genoa",
+      "away_team": "Torino",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-18 00:00:00",
+      "home_team": "Sassuolo",
+      "away_team": "Spezia",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-19 00:00:00",
+      "home_team": "Osasuna",
+      "away_team": "Levante",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-19 00:00:00",
+      "home_team": "Nantes",
+      "away_team": "Lille",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-19 00:00:00",
+      "home_team": "Aston Villa",
+      "away_team": "Arsenal",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-19 00:00:00",
+      "home_team": "Lens",
+      "away_team": "Clermont",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-19 00:00:00",
+      "home_team": "Alaves",
+      "away_team": "Granada",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-19 00:00:00",
+      "home_team": "Elche",
+      "away_team": "Valencia",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-19 00:00:00",
+      "home_team": "Vallecano",
+      "away_team": "Ath Madrid",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-19 00:00:00",
+      "home_team": "Greuther Furth",
+      "away_team": "Freiburg",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-19 00:00:00",
+      "home_team": "Hertha",
+      "away_team": "Hoffenheim",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-19 00:00:00",
+      "home_team": "Inter",
+      "away_team": "Fiorentina",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-19 00:00:00",
+      "home_team": "Cagliari",
+      "away_team": "Milan",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-19 00:00:00",
+      "home_team": "Napoli",
+      "away_team": "Udinese",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-19 00:00:00",
+      "home_team": "Stuttgart",
+      "away_team": "Augsburg",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-19 00:00:00",
+      "home_team": "Mainz",
+      "away_team": "Bielefeld",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-19 00:00:00",
+      "home_team": "Bayern Munich",
+      "away_team": "Union Berlin",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "RB Leipzig",
+      "away_team": "Ein Frankfurt",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Wolfsburg",
+      "away_team": "Leverkusen",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "FC Koln",
+      "away_team": "Dortmund",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Bordeaux",
+      "away_team": "Montpellier",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Angers",
+      "away_team": "Brest",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Leicester",
+      "away_team": "Brentford",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Monaco",
+      "away_team": "Paris SG",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Lorient",
+      "away_team": "Strasbourg",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Rennes",
+      "away_team": "Metz",
+      "home_goals": 6,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Roma",
+      "away_team": "Lazio",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Espanol",
+      "away_team": "Mallorca",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Real Madrid",
+      "away_team": "Barcelona",
+      "home_goals": 0,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Cadiz",
+      "away_team": "Villarreal",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Juventus",
+      "away_team": "Salernitana",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Sevilla",
+      "away_team": "Sociedad",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Marseille",
+      "away_team": "Nice",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Reims",
+      "away_team": "Lyon",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Bologna",
+      "away_team": "Atalanta",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Tottenham",
+      "away_team": "West Ham",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Venezia",
+      "away_team": "Sampdoria",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Empoli",
+      "away_team": "Verona",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-03-20 00:00:00",
+      "home_team": "Celta",
+      "away_team": "Betis",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-01 00:00:00",
+      "home_team": "Union Berlin",
+      "away_team": "FC Koln",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Burnley",
+      "away_team": "Man City",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Levante",
+      "away_team": "Villarreal",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Getafe",
+      "away_team": "Mallorca",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Ath Madrid",
+      "away_team": "Alaves",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Liverpool",
+      "away_team": "Watford",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Celta",
+      "away_team": "Real Madrid",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Bielefeld",
+      "away_team": "Stuttgart",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Ein Frankfurt",
+      "away_team": "Greuther Furth",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Freiburg",
+      "away_team": "Bayern Munich",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Leverkusen",
+      "away_team": "Hertha",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Dortmund",
+      "away_team": "RB Leipzig",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Wolves",
+      "away_team": "Aston Villa",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Brighton",
+      "away_team": "Norwich",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Lille",
+      "away_team": "Bordeaux",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Nice",
+      "away_team": "Rennes",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Salernitana",
+      "away_team": "Torino",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Leeds",
+      "away_team": "Southampton",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Spezia",
+      "away_team": "Venezia",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Lazio",
+      "away_team": "Sassuolo",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Chelsea",
+      "away_team": "Brentford",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Man United",
+      "away_team": "Leicester",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-02 00:00:00",
+      "home_team": "Hoffenheim",
+      "away_team": "Bochum",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Troyes",
+      "away_team": "Reims",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Lyon",
+      "away_team": "Angers",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Udinese",
+      "away_team": "Cagliari",
+      "home_goals": 5,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "St Etienne",
+      "away_team": "Marseille",
+      "home_goals": 2,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Montpellier",
+      "away_team": "Brest",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Metz",
+      "away_team": "Monaco",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Clermont",
+      "away_team": "Nantes",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "West Ham",
+      "away_team": "Everton",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Atalanta",
+      "away_team": "Napoli",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Strasbourg",
+      "away_team": "Lens",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Paris SG",
+      "away_team": "Lorient",
+      "home_goals": 5,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Sampdoria",
+      "away_team": "Roma",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Tottenham",
+      "away_team": "Newcastle",
+      "home_goals": 5,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Barcelona",
+      "away_team": "Sevilla",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Granada",
+      "away_team": "Vallecano",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Fiorentina",
+      "away_team": "Empoli",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Juventus",
+      "away_team": "Inter",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Augsburg",
+      "away_team": "Wolfsburg",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Betis",
+      "away_team": "Osasuna",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Ath Bilbao",
+      "away_team": "Elche",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "Valencia",
+      "away_team": "Cadiz",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-03 00:00:00",
+      "home_team": "M'gladbach",
+      "away_team": "Mainz",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-04 00:00:00",
+      "home_team": "Verona",
+      "away_team": "Genoa",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-04 00:00:00",
+      "home_team": "Milan",
+      "away_team": "Bologna",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-04 00:00:00",
+      "home_team": "Crystal Palace",
+      "away_team": "Arsenal",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-04 00:00:00",
+      "home_team": "Sociedad",
+      "away_team": "Espanol",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-06 00:00:00",
+      "home_team": "Augsburg",
+      "away_team": "Mainz",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-06 00:00:00",
+      "home_team": "Burnley",
+      "away_team": "Everton",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-08 00:00:00",
+      "home_team": "Newcastle",
+      "away_team": "Wolves",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-08 00:00:00",
+      "home_team": "Lorient",
+      "away_team": "St Etienne",
+      "home_goals": 6,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-08 00:00:00",
+      "home_team": "Sevilla",
+      "away_team": "Granada",
+      "home_goals": 4,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-08 00:00:00",
+      "home_team": "Stuttgart",
+      "away_team": "Dortmund",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "FC Koln",
+      "away_team": "Mainz",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Wolfsburg",
+      "away_team": "Bielefeld",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Clermont",
+      "away_team": "Paris SG",
+      "home_goals": 1,
+      "away_goals": 6,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Cagliari",
+      "away_team": "Juventus",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Inter",
+      "away_team": "Verona",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Empoli",
+      "away_team": "Spezia",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Watford",
+      "away_team": "Leeds",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Cadiz",
+      "away_team": "Betis",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Mallorca",
+      "away_team": "Ath Madrid",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Villarreal",
+      "away_team": "Ath Bilbao",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Greuther Furth",
+      "away_team": "M'gladbach",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Reims",
+      "away_team": "Rennes",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Bayern Munich",
+      "away_team": "Augsburg",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Southampton",
+      "away_team": "Chelsea",
+      "home_goals": 0,
+      "away_goals": 6,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Arsenal",
+      "away_team": "Brighton",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Everton",
+      "away_team": "Man United",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Aston Villa",
+      "away_team": "Tottenham",
+      "home_goals": 0,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Hertha",
+      "away_team": "Union Berlin",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-09 00:00:00",
+      "home_team": "Real Madrid",
+      "away_team": "Getafe",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Norwich",
+      "away_team": "Burnley",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Man City",
+      "away_team": "Liverpool",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Bochum",
+      "away_team": "Leverkusen",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Leicester",
+      "away_team": "Crystal Palace",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Ein Frankfurt",
+      "away_team": "Freiburg",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Levante",
+      "away_team": "Barcelona",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Espanol",
+      "away_team": "Celta",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Osasuna",
+      "away_team": "Alaves",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "RB Leipzig",
+      "away_team": "Hoffenheim",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Roma",
+      "away_team": "Salernitana",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Brentford",
+      "away_team": "West Ham",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Torino",
+      "away_team": "Milan",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Angers",
+      "away_team": "Lille",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Napoli",
+      "away_team": "Fiorentina",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Genoa",
+      "away_team": "Lazio",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Sassuolo",
+      "away_team": "Atalanta",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Elche",
+      "away_team": "Sociedad",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Bordeaux",
+      "away_team": "Metz",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Venezia",
+      "away_team": "Udinese",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Brest",
+      "away_team": "Nantes",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Monaco",
+      "away_team": "Troyes",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Lens",
+      "away_team": "Nice",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Strasbourg",
+      "away_team": "Lyon",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-10 00:00:00",
+      "home_team": "Marseille",
+      "away_team": "Montpellier",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-11 00:00:00",
+      "home_team": "Vallecano",
+      "away_team": "Valencia",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-11 00:00:00",
+      "home_team": "Bologna",
+      "away_team": "Sampdoria",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-15 00:00:00",
+      "home_team": "Rennes",
+      "away_team": "Monaco",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-15 00:00:00",
+      "home_team": "Milan",
+      "away_team": "Genoa",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-15 00:00:00",
+      "home_team": "Sociedad",
+      "away_team": "Betis",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-15 00:00:00",
+      "home_team": "Spezia",
+      "away_team": "Inter",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "M'gladbach",
+      "away_team": "FC Koln",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Tottenham",
+      "away_team": "Brighton",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Watford",
+      "away_team": "Brentford",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Man United",
+      "away_team": "Norwich",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Augsburg",
+      "away_team": "Hertha",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Juventus",
+      "away_team": "Bologna",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Fiorentina",
+      "away_team": "Venezia",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Sampdoria",
+      "away_team": "Salernitana",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Udinese",
+      "away_team": "Empoli",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Mainz",
+      "away_team": "Stuttgart",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Lazio",
+      "away_team": "Torino",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Dortmund",
+      "away_team": "Wolfsburg",
+      "home_goals": 6,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Freiburg",
+      "away_team": "Bochum",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Valencia",
+      "away_team": "Osasuna",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Elche",
+      "away_team": "Mallorca",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Lille",
+      "away_team": "Lens",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Alaves",
+      "away_team": "Vallecano",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "St Etienne",
+      "away_team": "Brest",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Southampton",
+      "away_team": "Arsenal",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Cagliari",
+      "away_team": "Sassuolo",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-16 00:00:00",
+      "home_team": "Getafe",
+      "away_team": "Villarreal",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Bielefeld",
+      "away_team": "Bayern Munich",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Hoffenheim",
+      "away_team": "Greuther Furth",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Lyon",
+      "away_team": "Bordeaux",
+      "home_goals": 6,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Nice",
+      "away_team": "Lorient",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Metz",
+      "away_team": "Clermont",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Montpellier",
+      "away_team": "Reims",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Paris SG",
+      "away_team": "Marseille",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Sevilla",
+      "away_team": "Real Madrid",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Nantes",
+      "away_team": "Angers",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Ath Madrid",
+      "away_team": "Espanol",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Granada",
+      "away_team": "Levante",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Union Berlin",
+      "away_team": "Ein Frankfurt",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Leverkusen",
+      "away_team": "RB Leipzig",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Troyes",
+      "away_team": "Strasbourg",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "West Ham",
+      "away_team": "Burnley",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Newcastle",
+      "away_team": "Leicester",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-17 00:00:00",
+      "home_team": "Ath Bilbao",
+      "away_team": "Celta",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-18 00:00:00",
+      "home_team": "Barcelona",
+      "away_team": "Cadiz",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-18 00:00:00",
+      "home_team": "Atalanta",
+      "away_team": "Verona",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-18 00:00:00",
+      "home_team": "Napoli",
+      "away_team": "Roma",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-19 00:00:00",
+      "home_team": "Villarreal",
+      "away_team": "Valencia",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-19 00:00:00",
+      "home_team": "Betis",
+      "away_team": "Elche",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-19 00:00:00",
+      "home_team": "Liverpool",
+      "away_team": "Man United",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-19 00:00:00",
+      "home_team": "Mallorca",
+      "away_team": "Alaves",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Strasbourg",
+      "away_team": "Rennes",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Lorient",
+      "away_team": "Metz",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Man City",
+      "away_team": "Brighton",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Angers",
+      "away_team": "Paris SG",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Brest",
+      "away_team": "Lyon",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Lens",
+      "away_team": "Montpellier",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Marseille",
+      "away_team": "Nantes",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Monaco",
+      "away_team": "Nice",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Everton",
+      "away_team": "Leicester",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Osasuna",
+      "away_team": "Real Madrid",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Troyes",
+      "away_team": "Clermont",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Reims",
+      "away_team": "Lille",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Newcastle",
+      "away_team": "Crystal Palace",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Bordeaux",
+      "away_team": "St Etienne",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Udinese",
+      "away_team": "Salernitana",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Ath Madrid",
+      "away_team": "Granada",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Celta",
+      "away_team": "Getafe",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-20 00:00:00",
+      "home_team": "Chelsea",
+      "away_team": "Arsenal",
+      "home_goals": 2,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-21 00:00:00",
+      "home_team": "Espanol",
+      "away_team": "Vallecano",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-21 00:00:00",
+      "home_team": "Burnley",
+      "away_team": "Southampton",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-21 00:00:00",
+      "home_team": "Levante",
+      "away_team": "Sevilla",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-21 00:00:00",
+      "home_team": "Sociedad",
+      "away_team": "Barcelona",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-21 00:00:00",
+      "home_team": "Cadiz",
+      "away_team": "Ath Bilbao",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-22 00:00:00",
+      "home_team": "Wolfsburg",
+      "away_team": "Mainz",
+      "home_goals": 5,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "St Etienne",
+      "away_team": "Monaco",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "Lyon",
+      "away_team": "Montpellier",
+      "home_goals": 5,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "Paris SG",
+      "away_team": "Lens",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "Freiburg",
+      "away_team": "M'gladbach",
+      "home_goals": 3,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "Leicester",
+      "away_team": "Aston Villa",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "Arsenal",
+      "away_team": "Man United",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "Ein Frankfurt",
+      "away_team": "Hoffenheim",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "Man City",
+      "away_team": "Watford",
+      "home_goals": 5,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "FC Koln",
+      "away_team": "Bielefeld",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "Norwich",
+      "away_team": "Newcastle",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "RB Leipzig",
+      "away_team": "Union Berlin",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "Bayern Munich",
+      "away_team": "Dortmund",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "Inter",
+      "away_team": "Roma",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "Torino",
+      "away_team": "Spezia",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "Venezia",
+      "away_team": "Atalanta",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "Verona",
+      "away_team": "Sampdoria",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "Greuther Furth",
+      "away_team": "Leverkusen",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-23 00:00:00",
+      "home_team": "Brentford",
+      "away_team": "Tottenham",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Nantes",
+      "away_team": "Bordeaux",
+      "home_goals": 5,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Metz",
+      "away_team": "Brest",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Rennes",
+      "away_team": "Lorient",
+      "home_goals": 5,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Reims",
+      "away_team": "Marseille",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Lille",
+      "away_team": "Strasbourg",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Nice",
+      "away_team": "Troyes",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Clermont",
+      "away_team": "Angers",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Burnley",
+      "away_team": "Wolves",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Genoa",
+      "away_team": "Cagliari",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Liverpool",
+      "away_team": "Everton",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Empoli",
+      "away_team": "Napoli",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Hertha",
+      "away_team": "Stuttgart",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Salernitana",
+      "away_team": "Fiorentina",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Bologna",
+      "away_team": "Udinese",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Bochum",
+      "away_team": "Augsburg",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Chelsea",
+      "away_team": "West Ham",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Barcelona",
+      "away_team": "Vallecano",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Brighton",
+      "away_team": "Southampton",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-24 00:00:00",
+      "home_team": "Lazio",
+      "away_team": "Milan",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-25 00:00:00",
+      "home_team": "Crystal Palace",
+      "away_team": "Leeds",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-25 00:00:00",
+      "home_team": "Sassuolo",
+      "away_team": "Juventus",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-27 00:00:00",
+      "home_team": "Fiorentina",
+      "away_team": "Udinese",
+      "home_goals": 0,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-27 00:00:00",
+      "home_team": "Atalanta",
+      "away_team": "Torino",
+      "home_goals": 4,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-27 00:00:00",
+      "home_team": "Bologna",
+      "away_team": "Inter",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-28 00:00:00",
+      "home_team": "Man United",
+      "away_team": "Chelsea",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-29 00:00:00",
+      "home_team": "Union Berlin",
+      "away_team": "Greuther Furth",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-29 00:00:00",
+      "home_team": "Sevilla",
+      "away_team": "Cadiz",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-29 00:00:00",
+      "home_team": "Strasbourg",
+      "away_team": "Paris SG",
+      "home_goals": 3,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Wolves",
+      "away_team": "Brighton",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Mainz",
+      "away_team": "Bayern Munich",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Bielefeld",
+      "away_team": "Hertha",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Watford",
+      "away_team": "Burnley",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Dortmund",
+      "away_team": "Bochum",
+      "home_goals": 3,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Augsburg",
+      "away_team": "FC Koln",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Aston Villa",
+      "away_team": "Norwich",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Hoffenheim",
+      "away_team": "Freiburg",
+      "home_goals": 3,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Stuttgart",
+      "away_team": "Wolfsburg",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Southampton",
+      "away_team": "Crystal Palace",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Lens",
+      "away_team": "Nantes",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Alaves",
+      "away_team": "Villarreal",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Spezia",
+      "away_team": "Lazio",
+      "home_goals": 3,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Newcastle",
+      "away_team": "Liverpool",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Leeds",
+      "away_team": "Man City",
+      "home_goals": 0,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Cagliari",
+      "away_team": "Verona",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Ath Bilbao",
+      "away_team": "Ath Madrid",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Rennes",
+      "away_team": "St Etienne",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Napoli",
+      "away_team": "Sassuolo",
+      "home_goals": 6,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Real Madrid",
+      "away_team": "Espanol",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Sampdoria",
+      "away_team": "Genoa",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-04-30 00:00:00",
+      "home_team": "Valencia",
+      "away_team": "Levante",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Udinese",
+      "away_team": "Inter",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "West Ham",
+      "away_team": "Arsenal",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Everton",
+      "away_team": "Chelsea",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Tottenham",
+      "away_team": "Leicester",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Elche",
+      "away_team": "Osasuna",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Barcelona",
+      "away_team": "Mallorca",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Vallecano",
+      "away_team": "Sociedad",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Granada",
+      "away_team": "Celta",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Troyes",
+      "away_team": "Lille",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Roma",
+      "away_team": "Bologna",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Empoli",
+      "away_team": "Torino",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Juventus",
+      "away_team": "Venezia",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Bordeaux",
+      "away_team": "Nice",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Marseille",
+      "away_team": "Lyon",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Monaco",
+      "away_team": "Angers",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Montpellier",
+      "away_team": "Metz",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Brest",
+      "away_team": "Clermont",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Lorient",
+      "away_team": "Reims",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-01 00:00:00",
+      "home_team": "Milan",
+      "away_team": "Fiorentina",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-02 00:00:00",
+      "home_team": "M'gladbach",
+      "away_team": "RB Leipzig",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-02 00:00:00",
+      "home_team": "Man United",
+      "away_team": "Brentford",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-02 00:00:00",
+      "home_team": "Getafe",
+      "away_team": "Betis",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-02 00:00:00",
+      "home_team": "Leverkusen",
+      "away_team": "Ein Frankfurt",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-02 00:00:00",
+      "home_team": "Atalanta",
+      "away_team": "Salernitana",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-05 00:00:00",
+      "home_team": "Salernitana",
+      "away_team": "Venezia",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-06 00:00:00",
+      "home_team": "Inter",
+      "away_team": "Empoli",
+      "home_goals": 4,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-06 00:00:00",
+      "home_team": "Genoa",
+      "away_team": "Juventus",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-06 00:00:00",
+      "home_team": "Levante",
+      "away_team": "Sociedad",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-06 00:00:00",
+      "home_team": "Lille",
+      "away_team": "Monaco",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-06 00:00:00",
+      "home_team": "Bochum",
+      "away_team": "Bielefeld",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Betis",
+      "away_team": "Barcelona",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Mallorca",
+      "away_team": "Granada",
+      "home_goals": 2,
+      "away_goals": 6,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Ath Bilbao",
+      "away_team": "Valencia",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Cadiz",
+      "away_team": "Elche",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Sassuolo",
+      "away_team": "Udinese",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Hertha",
+      "away_team": "Mainz",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Liverpool",
+      "away_team": "Tottenham",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Crystal Palace",
+      "away_team": "Watford",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Brentford",
+      "away_team": "Southampton",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Brighton",
+      "away_team": "Man United",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Chelsea",
+      "away_team": "Wolves",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Burnley",
+      "away_team": "Aston Villa",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Celta",
+      "away_team": "Alaves",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "FC Koln",
+      "away_team": "Wolfsburg",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Hoffenheim",
+      "away_team": "Leverkusen",
+      "home_goals": 2,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Lazio",
+      "away_team": "Sampdoria",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Freiburg",
+      "away_team": "Union Berlin",
+      "home_goals": 1,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Torino",
+      "away_team": "Napoli",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Brest",
+      "away_team": "Strasbourg",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-07 00:00:00",
+      "home_team": "Greuther Furth",
+      "away_team": "Dortmund",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Clermont",
+      "away_team": "Montpellier",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Villarreal",
+      "away_team": "Sevilla",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Getafe",
+      "away_team": "Vallecano",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Spezia",
+      "away_team": "Atalanta",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Venezia",
+      "away_team": "Bologna",
+      "home_goals": 4,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Salernitana",
+      "away_team": "Cagliari",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Espanol",
+      "away_team": "Osasuna",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Arsenal",
+      "away_team": "Leeds",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Ath Madrid",
+      "away_team": "Real Madrid",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Leicester",
+      "away_team": "Everton",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Reims",
+      "away_team": "Lens",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Ein Frankfurt",
+      "away_team": "M'gladbach",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Verona",
+      "away_team": "Milan",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Lorient",
+      "away_team": "Marseille",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Angers",
+      "away_team": "Bordeaux",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Metz",
+      "away_team": "Lyon",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "RB Leipzig",
+      "away_team": "Augsburg",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Man City",
+      "away_team": "Newcastle",
+      "home_goals": 5,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Norwich",
+      "away_team": "West Ham",
+      "home_goals": 0,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Bayern Munich",
+      "away_team": "Stuttgart",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-08 00:00:00",
+      "home_team": "Paris SG",
+      "away_team": "Troyes",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-09 00:00:00",
+      "home_team": "Fiorentina",
+      "away_team": "Roma",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-10 00:00:00",
+      "home_team": "Aston Villa",
+      "away_team": "Liverpool",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-10 00:00:00",
+      "home_team": "Barcelona",
+      "away_team": "Celta",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-10 00:00:00",
+      "home_team": "Granada",
+      "away_team": "Ath Bilbao",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-10 00:00:00",
+      "home_team": "Valencia",
+      "away_team": "Betis",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-11 00:00:00",
+      "home_team": "Leicester",
+      "away_team": "Norwich",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-11 00:00:00",
+      "home_team": "Elche",
+      "away_team": "Ath Madrid",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-11 00:00:00",
+      "home_team": "Osasuna",
+      "away_team": "Getafe",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-11 00:00:00",
+      "home_team": "Leeds",
+      "away_team": "Chelsea",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-11 00:00:00",
+      "home_team": "Wolves",
+      "away_team": "Man City",
+      "home_goals": 1,
+      "away_goals": 5,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-11 00:00:00",
+      "home_team": "Sevilla",
+      "away_team": "Mallorca",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-11 00:00:00",
+      "home_team": "Alaves",
+      "away_team": "Espanol",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-11 00:00:00",
+      "home_team": "Nice",
+      "away_team": "St Etienne",
+      "home_goals": 4,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-11 00:00:00",
+      "home_team": "Nantes",
+      "away_team": "Rennes",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-11 00:00:00",
+      "home_team": "Watford",
+      "away_team": "Everton",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-12 00:00:00",
+      "home_team": "Tottenham",
+      "away_team": "Arsenal",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-12 00:00:00",
+      "home_team": "Sociedad",
+      "away_team": "Cadiz",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-12 00:00:00",
+      "home_team": "Vallecano",
+      "away_team": "Villarreal",
+      "home_goals": 1,
+      "away_goals": 5,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-12 00:00:00",
+      "home_team": "Real Madrid",
+      "away_team": "Levante",
+      "home_goals": 6,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Stuttgart",
+      "away_team": "FC Koln",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Espanol",
+      "away_team": "Valencia",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Montpellier",
+      "away_team": "Paris SG",
+      "home_goals": 0,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Lyon",
+      "away_team": "Nantes",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Metz",
+      "away_team": "Angers",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "St Etienne",
+      "away_team": "Reims",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Troyes",
+      "away_team": "Lens",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Rennes",
+      "away_team": "Marseille",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "M'gladbach",
+      "away_team": "Hoffenheim",
+      "home_goals": 5,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Mainz",
+      "away_team": "Ein Frankfurt",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Monaco",
+      "away_team": "Brest",
+      "home_goals": 4,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Union Berlin",
+      "away_team": "Bochum",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Verona",
+      "away_team": "Torino",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Dortmund",
+      "away_team": "Hertha",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Bielefeld",
+      "away_team": "RB Leipzig",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Augsburg",
+      "away_team": "Greuther Furth",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Leverkusen",
+      "away_team": "Freiburg",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Wolfsburg",
+      "away_team": "Bayern Munich",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Roma",
+      "away_team": "Venezia",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Udinese",
+      "away_team": "Spezia",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Empoli",
+      "away_team": "Salernitana",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Strasbourg",
+      "away_team": "Clermont",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Nice",
+      "away_team": "Lille",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-14 00:00:00",
+      "home_team": "Bordeaux",
+      "away_team": "Lorient",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Aston Villa",
+      "away_team": "Crystal Palace",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Tottenham",
+      "away_team": "Burnley",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Everton",
+      "away_team": "Brentford",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Ath Bilbao",
+      "away_team": "Osasuna",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Leeds",
+      "away_team": "Brighton",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Celta",
+      "away_team": "Elche",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Levante",
+      "away_team": "Alaves",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Betis",
+      "away_team": "Granada",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Getafe",
+      "away_team": "Barcelona",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Watford",
+      "away_team": "Leicester",
+      "home_goals": 1,
+      "away_goals": 5,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Cagliari",
+      "away_team": "Inter",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "West Ham",
+      "away_team": "Man City",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Wolves",
+      "away_team": "Norwich",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Cadiz",
+      "away_team": "Real Madrid",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Mallorca",
+      "away_team": "Vallecano",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Milan",
+      "away_team": "Atalanta",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Napoli",
+      "away_team": "Genoa",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Villarreal",
+      "away_team": "Sociedad",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Ath Madrid",
+      "away_team": "Sevilla",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-15 00:00:00",
+      "home_team": "Bologna",
+      "away_team": "Sassuolo",
+      "home_goals": 1,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-16 00:00:00",
+      "home_team": "Juventus",
+      "away_team": "Lazio",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-16 00:00:00",
+      "home_team": "Sampdoria",
+      "away_team": "Fiorentina",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-16 00:00:00",
+      "home_team": "Newcastle",
+      "away_team": "Arsenal",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-17 00:00:00",
+      "home_team": "Southampton",
+      "away_team": "Liverpool",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-19 00:00:00",
+      "home_team": "Everton",
+      "away_team": "Crystal Palace",
+      "home_goals": 3,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-19 00:00:00",
+      "home_team": "Aston Villa",
+      "away_team": "Burnley",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-19 00:00:00",
+      "home_team": "Chelsea",
+      "away_team": "Leicester",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-20 00:00:00",
+      "home_team": "Torino",
+      "away_team": "Roma",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-20 00:00:00",
+      "home_team": "Real Madrid",
+      "away_team": "Betis",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-20 00:00:00",
+      "home_team": "Vallecano",
+      "away_team": "Levante",
+      "home_goals": 2,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-21 00:00:00",
+      "home_team": "Angers",
+      "away_team": "Montpellier",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-21 00:00:00",
+      "home_team": "Lorient",
+      "away_team": "Troyes",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-21 00:00:00",
+      "home_team": "Lens",
+      "away_team": "Monaco",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-21 00:00:00",
+      "home_team": "Fiorentina",
+      "away_team": "Juventus",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-21 00:00:00",
+      "home_team": "Valencia",
+      "away_team": "Celta",
+      "home_goals": 2,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-21 00:00:00",
+      "home_team": "Clermont",
+      "away_team": "Lyon",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-21 00:00:00",
+      "home_team": "Brest",
+      "away_team": "Bordeaux",
+      "home_goals": 2,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-21 00:00:00",
+      "home_team": "Lille",
+      "away_team": "Rennes",
+      "home_goals": 2,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-21 00:00:00",
+      "home_team": "Paris SG",
+      "away_team": "Metz",
+      "home_goals": 5,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-21 00:00:00",
+      "home_team": "Marseille",
+      "away_team": "Strasbourg",
+      "home_goals": 4,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-21 00:00:00",
+      "home_team": "Nantes",
+      "away_team": "St Etienne",
+      "home_goals": 1,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-21 00:00:00",
+      "home_team": "Reims",
+      "away_team": "Nice",
+      "home_goals": 2,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-21 00:00:00",
+      "home_team": "Genoa",
+      "away_team": "Bologna",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-21 00:00:00",
+      "home_team": "Lazio",
+      "away_team": "Verona",
+      "home_goals": 3,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-21 00:00:00",
+      "home_team": "Atalanta",
+      "away_team": "Empoli",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Sevilla",
+      "away_team": "Ath Bilbao",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Elche",
+      "away_team": "Getafe",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Brighton",
+      "away_team": "West Ham",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Osasuna",
+      "away_team": "Mallorca",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Barcelona",
+      "away_team": "Villarreal",
+      "home_goals": 0,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Sociedad",
+      "away_team": "Ath Madrid",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Alaves",
+      "away_team": "Cadiz",
+      "home_goals": 0,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Sassuolo",
+      "away_team": "Milan",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Salernitana",
+      "away_team": "Udinese",
+      "home_goals": 0,
+      "away_goals": 4,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Granada",
+      "away_team": "Espanol",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Spezia",
+      "away_team": "Napoli",
+      "home_goals": 0,
+      "away_goals": 3,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Venezia",
+      "away_team": "Cagliari",
+      "home_goals": 0,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Inter",
+      "away_team": "Sampdoria",
+      "home_goals": 3,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Liverpool",
+      "away_team": "Wolves",
+      "home_goals": 3,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Leicester",
+      "away_team": "Southampton",
+      "home_goals": 4,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Chelsea",
+      "away_team": "Watford",
+      "home_goals": 2,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Crystal Palace",
+      "away_team": "Man United",
+      "home_goals": 1,
+      "away_goals": 0,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Arsenal",
+      "away_team": "Everton",
+      "home_goals": 5,
+      "away_goals": 1,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Brentford",
+      "away_team": "Leeds",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Burnley",
+      "away_team": "Newcastle",
+      "home_goals": 1,
+      "away_goals": 2,
+      "result": "X"
+    },
+    {
+      "date": "2022-05-22 00:00:00",
+      "home_team": "Norwich",
+      "away_team": "Tottenham",
+      "home_goals": 0,
+      "away_goals": 5,
+      "result": "X"
+    }
+  ]
+}
