@@ -42,9 +42,14 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.refresh_data:
-        from src.ingestion.mock_football_data import ensure_mock_dataset
-        ensure_mock_dataset(os.getenv("DATA_DIR", "data"), force=True)
-        logger.info("Mock data refreshed with open/close odds")
+        logger.info("Refreshing real data from football-data.co.uk...")
+        from src.ingestion.real_data_pipeline import RealDataPipeline
+        pipeline = RealDataPipeline()
+        df = pipeline.build_training_dataset(
+            seasons=["2223", "2324"],
+            leagues=["E0", "E1", "D1", "D2", "F1", "F2", "I1", "I2", "N1", "P1"],
+        )
+        logger.info("Real data refreshed: %d matches", len(df))
 
     target = date.fromisoformat(args.date) if args.date else date.today()
     kwargs = dict(

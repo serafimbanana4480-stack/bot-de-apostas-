@@ -4,6 +4,7 @@ Football Hybrid Model — Poisson baseline + XGBoost second stage.
 Architecture:
 1. FootballPoissonModel generates structural features (expected goals, probs)
 2. XGBoost learns residual patterns (form, head-to-head, market context)
+   - Updated to multi-class (Home, Draw, Away) for full mathematical rigor.
 3. Final prediction = calibrated blend of Poisson + XGBoost
 4. Supports warm-start incremental training via xgb.train(xgb_model=prev)
 """
@@ -47,9 +48,12 @@ class FootballHybridModel:
         use_calibration: bool = True,
     ):
         self.poisson = poisson or FootballPoissonModel(use_dixon_coles=True)
+        
+        # Default to multi:softprob for proper 3-way soccer outcome modeling
         self.xgb_params = xgb_params or {
-            "objective": "binary:logistic",
-            "eval_metric": "logloss",
+            "objective": "multi:softprob",
+            "num_class": 3,
+            "eval_metric": "mlogloss",
             "max_depth": 4,
             "learning_rate": 0.05,
             "subsample": 0.8,
@@ -64,7 +68,11 @@ class FootballHybridModel:
         self.use_calibration = use_calibration
 
         self.xgb_model: Optional[xgb.Booster] = None
+        
+        # Calibrators for each class
         self.calibrator = IsotonicRegression(out_of_bounds="clip")
+        self.calibrator_X = IsotonicRegression(out_of_bounds="clip")
+        self.calibrator_2 = IsotonicRegression(out_of_bounds="clip")
         self.is_calibrated = False
 
         # Training history for incremental updates
@@ -127,7 +135,13 @@ class FootballHybridModel:
         X = self._build_features(df, fit_poisson=False)
         self._feature_names = list(X.columns)
 
-        y = (df[target_col].astype(str) == "1").astype(int).values if target_col in df.columns else np.ones(len(df))
+        is_multiclass = self.xgb_params.get("objective", "multi:softprob") in ("multi:softprob", "multi:softmax")
+        if is_multiclass:
+            outcome_map = {"1": 0, "X": 1, "2": 2}
+            y = df[target_col].astype(str).map(outcome_map).fillna(1).astype(int).values if target_col in df.columns else np.ones(len(df))
+            self.xgb_params["num_class"] = 3
+        else:
+            y = (df[target_col].astype(str) == "1").astype(int).values if target_col in df.columns else np.ones(len(df))
 
         # 3. Train XGBoost
         dtrain = xgb.DMatrix(X.values, label=y, feature_names=self._feature_names)
@@ -159,19 +173,6 @@ class FootballHybridModel:
     ) -> Dict[str, Any]:
         """
         Incrementally update the hybrid model.
-
-        1. Update Poisson via EMA
-        2. Build features for new data (using updated Poisson)
-        3. Warm-start XGBoost with new data
-        4. Optionally recalibrate
-
-        Args:
-            ewc_lambda: Elastic Weight Consolidation strength.
-                        0 = no EWC (standard warm-start)
-                        >0 = mix old buffer with new data to prevent forgetting
-            df_old_buffer: Historical data buffer for EWC distillation.
-                           If provided and ewc_lambda > 0, these samples are
-                           mixed with new data with weight proportional to ewc_lambda.
         """
         if df_new.empty:
             return {"updated": False, "reason": "empty_data"}
@@ -191,7 +192,12 @@ class FootballHybridModel:
                     X_new[col] = 0.0
             X_new = X_new[self._feature_names]
 
-        y_new = (df_new["actual_outcome"].astype(str) == "1").astype(int).values if "actual_outcome" in df_new.columns else np.ones(n_new)
+        is_multiclass = self.xgb_params.get("objective", "multi:softprob") in ("multi:softprob", "multi:softmax")
+        if is_multiclass:
+            outcome_map = {"1": 0, "X": 1, "2": 2}
+            y_new = df_new["actual_outcome"].astype(str).map(outcome_map).fillna(1).astype(int).values if "actual_outcome" in df_new.columns else np.ones(n_new)
+        else:
+            y_new = (df_new["actual_outcome"].astype(str) == "1").astype(int).values if "actual_outcome" in df_new.columns else np.ones(n_new)
 
         # 3. Warm-start XGBoost
         if self.xgb_model is not None:
@@ -204,7 +210,10 @@ class FootballHybridModel:
                     if col not in X_old.columns:
                         X_old[col] = 0.0
                 X_old = X_old[self._feature_names]
-                y_old = (old_sample["actual_outcome"].astype(str) == "1").astype(int).values if "actual_outcome" in old_sample.columns else np.ones(len(old_sample))
+                if is_multiclass:
+                    y_old = old_sample["actual_outcome"].astype(str).map(outcome_map).fillna(1).astype(int).values if "actual_outcome" in old_sample.columns else np.ones(len(old_sample))
+                else:
+                    y_old = (old_sample["actual_outcome"].astype(str) == "1").astype(int).values if "actual_outcome" in old_sample.columns else np.ones(len(old_sample))
 
                 # Combine
                 X_combined = pd.concat([X_new, X_old], ignore_index=True)
@@ -291,63 +300,138 @@ class FootballHybridModel:
             X_pred[0, i] = feat.get(col, 0.0)
 
         dtest = xgb.DMatrix(X_pred, feature_names=self._feature_names)
-        xgb_prob = self.xgb_model.predict(dtest)[0] if self.xgb_model else poisson_probs["1"]
+        
+        is_multiclass = self.xgb_params.get("objective", "multi:softprob") in ("multi:softprob", "multi:softmax")
+        
+        if is_multiclass:
+            if self.xgb_model:
+                xgb_probs = self.xgb_model.predict(dtest)[0]
+            else:
+                xgb_probs = np.array([poisson_probs["1"], poisson_probs["X"], poisson_probs["2"]])
 
-        # Blend Poisson and XGBoost
-        blended_p1 = (1 - self.blend_weight) * poisson_probs["1"] + self.blend_weight * xgb_prob
+            # Blend Poisson and XGBoost
+            blended_p1 = (1 - self.blend_weight) * poisson_probs["1"] + self.blend_weight * xgb_probs[0]
+            blended_pX = (1 - self.blend_weight) * poisson_probs["X"] + self.blend_weight * xgb_probs[1]
+            blended_p2 = (1 - self.blend_weight) * poisson_probs["2"] + self.blend_weight * xgb_probs[2]
 
-        # Normalize: preserve relative ratios of X and 2 from Poisson
-        total_poisson_non1 = poisson_probs["X"] + poisson_probs["2"]
-        if total_poisson_non1 > 0:
-            blended_pX = (1 - blended_p1) * (poisson_probs["X"] / total_poisson_non1)
-            blended_p2 = (1 - blended_p1) * (poisson_probs["2"] / total_poisson_non1)
-        else:
-            blended_pX = (1 - blended_p1) / 2
-            blended_p2 = (1 - blended_p1) / 2
+            probs = {"1": blended_p1, "X": blended_pX, "2": blended_p2}
 
-        probs = {"1": blended_p1, "X": blended_pX, "2": blended_p2}
+            # Apply isotonic calibration for each outcome
+            if apply_calibration and self.is_calibrated:
+                try:
+                    p1_cal = float(self.calibrator.transform([probs["1"]])[0])
+                    pX_cal = float(self.calibrator_X.transform([probs["X"]])[0])
+                    p2_cal = float(self.calibrator_2.transform([probs["2"]])[0])
+                    
+                    total = p1_cal + pX_cal + p2_cal
+                    if total > 0:
+                        probs = {"1": p1_cal / total, "X": pX_cal / total, "2": p2_cal / total}
+                except Exception:
+                    pass
 
-        # Apply isotonic calibration
-        if apply_calibration and self.is_calibrated:
-            p1_cal = float(self.calibrator.transform([probs["1"]])[0])
-            # Renormalize
-            scale = p1_cal / probs["1"] if probs["1"] > 0 else 1.0
-            probs = {
-                "1": p1_cal,
-                "X": min(probs["X"] * scale, 1.0 - p1_cal) if scale < 1.0 else probs["X"],
-                "2": 1.0 - p1_cal - min(probs["X"] * scale, 1.0 - p1_cal) if scale < 1.0 else 1.0 - p1_cal - probs["X"],
+            return {
+                "1": probs["1"],
+                "X": probs["X"],
+                "2": probs["2"],
+                "expected_goals_home": poisson_probs["expected_goals_home"],
+                "expected_goals_away": poisson_probs["expected_goals_away"],
+                "poisson_p1": poisson_probs["1"],
+                "xgb_p1": xgb_probs[0],
+                "xgb_pX": xgb_probs[1],
+                "xgb_p2": xgb_probs[2],
             }
+        else:
+            xgb_prob = self.xgb_model.predict(dtest)[0] if self.xgb_model else poisson_probs["1"]
 
-        return {
-            "1": probs["1"],
-            "X": probs["X"],
-            "2": probs["2"],
-            "expected_goals_home": poisson_probs["expected_goals_home"],
-            "expected_goals_away": poisson_probs["expected_goals_away"],
-            "poisson_p1": poisson_probs["1"],
-            "xgb_p1": xgb_prob,
-        }
+            # Blend Poisson and XGBoost
+            blended_p1 = (1 - self.blend_weight) * poisson_probs["1"] + self.blend_weight * xgb_prob
+
+            # Normalize: preserve relative ratios of X and 2 from Poisson
+            total_poisson_non1 = poisson_probs["X"] + poisson_probs["2"]
+            if total_poisson_non1 > 0:
+                blended_pX = (1 - blended_p1) * (poisson_probs["X"] / total_poisson_non1)
+                blended_p2 = (1 - blended_p1) * (poisson_probs["2"] / total_poisson_non1)
+            else:
+                blended_pX = (1 - blended_p1) / 2
+                blended_p2 = (1 - blended_p1) / 2
+
+            probs = {"1": blended_p1, "X": blended_pX, "2": blended_p2}
+
+            # Apply isotonic calibration
+            if apply_calibration and self.is_calibrated:
+                p1_cal = float(self.calibrator.transform([probs["1"]])[0])
+                # Renormalize
+                scale = p1_cal / probs["1"] if probs["1"] > 0 else 1.0
+                probs = {
+                    "1": p1_cal,
+                    "X": min(probs["X"] * scale, 1.0 - p1_cal) if scale < 1.0 else probs["X"],
+                    "2": 1.0 - p1_cal - min(probs["X"] * scale, 1.0 - p1_cal) if scale < 1.0 else 1.0 - p1_cal - probs["X"],
+                }
+
+            return {
+                "1": probs["1"],
+                "X": probs["X"],
+                "2": probs["2"],
+                "expected_goals_home": poisson_probs["expected_goals_home"],
+                "expected_goals_away": poisson_probs["expected_goals_away"],
+                "poisson_p1": poisson_probs["1"],
+                "xgb_p1": xgb_prob,
+            }
 
     def _calibrate(self, df: pd.DataFrame, X: np.ndarray, y: np.ndarray):
         """Fit isotonic calibrator out-of-fold using temporal splits."""
-        oof_preds = np.zeros(len(df))
-        oof_splits = temporal_oof_split(
-            df, n_splits=3, embargo_days=2, time_col=None
-        )
-        for train_idx, val_idx in oof_splits:
-            dtrain_fold = xgb.DMatrix(
-                X[train_idx], label=y[train_idx], feature_names=self._feature_names
+        is_multiclass = self.xgb_params.get("objective", "multi:softprob") in ("multi:softprob", "multi:softmax")
+        
+        if is_multiclass:
+            oof_preds = np.zeros((len(df), 3))
+            oof_splits = temporal_oof_split(
+                df, n_splits=3, embargo_days=2, time_col=None
             )
-            fold_model = xgb.train(
-                {k: v for k, v in self.xgb_params.items() if k != "n_estimators"},
-                dtrain_fold,
-                num_boost_round=self.xgb_params.get("n_estimators", 100),
-            )
-            dval = xgb.DMatrix(X[val_idx], feature_names=self._feature_names)
-            oof_preds[val_idx] = fold_model.predict(dval)
+            for train_idx, val_idx in oof_splits:
+                dtrain_fold = xgb.DMatrix(
+                    X[train_idx], label=y[train_idx], feature_names=self._feature_names
+                )
+                fold_model = xgb.train(
+                    {k: v for k, v in self.xgb_params.items() if k != "n_estimators"},
+                    dtrain_fold,
+                    num_boost_round=self.xgb_params.get("n_estimators", 100),
+                )
+                dval = xgb.DMatrix(X[val_idx], feature_names=self._feature_names)
+                oof_preds[val_idx] = fold_model.predict(dval)
 
-        self.calibrator.fit(oof_preds, y)
-        self.is_calibrated = True
+            # Fit individual calibrators
+            valid_1 = (oof_preds[:, 0] > 0) & (oof_preds[:, 0] < 1)
+            if valid_1.sum() > 10:
+                self.calibrator.fit(oof_preds[valid_1, 0], (y[valid_1] == 0).astype(int))
+                
+            valid_X = (oof_preds[:, 1] > 0) & (oof_preds[:, 1] < 1)
+            if valid_X.sum() > 10:
+                self.calibrator_X.fit(oof_preds[valid_X, 1], (y[valid_X] == 1).astype(int))
+
+            valid_2 = (oof_preds[:, 2] > 0) & (oof_preds[:, 2] < 1)
+            if valid_2.sum() > 10:
+                self.calibrator_2.fit(oof_preds[valid_2, 2], (y[valid_2] == 2).astype(int))
+                
+            self.is_calibrated = True
+        else:
+            oof_preds = np.zeros(len(df))
+            oof_splits = temporal_oof_split(
+                df, n_splits=3, embargo_days=2, time_col=None
+            )
+            for train_idx, val_idx in oof_splits:
+                dtrain_fold = xgb.DMatrix(
+                    X[train_idx], label=y[train_idx], feature_names=self._feature_names
+                )
+                fold_model = xgb.train(
+                    {k: v for k, v in self.xgb_params.items() if k != "n_estimators"},
+                    dtrain_fold,
+                    num_boost_round=self.xgb_params.get("n_estimators", 100),
+                )
+                dval = xgb.DMatrix(X[val_idx], feature_names=self._feature_names)
+                oof_preds[val_idx] = fold_model.predict(dval)
+
+            self.calibrator.fit(oof_preds, y)
+            self.is_calibrated = True
 
     def save(self, path: str):
         """Serialize model to disk using JSON + XGBoost native format."""
@@ -371,6 +455,8 @@ class FootballHybridModel:
             "_feature_names": self._feature_names,
             "_training_count": self._training_count,
             "calibrator": isotonic_to_dict(self.calibrator) if self.is_calibrated else None,
+            "calibrator_X": isotonic_to_dict(self.calibrator_X) if (self.is_calibrated and hasattr(self, 'calibrator_X')) else None,
+            "calibrator_2": isotonic_to_dict(self.calibrator_2) if (self.is_calibrated and hasattr(self, 'calibrator_2')) else None,
             "is_calibrated": self.is_calibrated,
         }
         meta_path = base_path.with_suffix(".meta.json")
@@ -399,8 +485,13 @@ class FootballHybridModel:
         model._training_count = meta.get("_training_count", 0)
         model.is_calibrated = meta.get("is_calibrated", False)
 
-        if model.is_calibrated and meta.get("calibrator"):
-            model.calibrator = isotonic_from_dict(meta["calibrator"])
+        if model.is_calibrated:
+            if meta.get("calibrator"):
+                model.calibrator = isotonic_from_dict(meta["calibrator"])
+            if meta.get("calibrator_X"):
+                model.calibrator_X = isotonic_from_dict(meta["calibrator_X"])
+            if meta.get("calibrator_2"):
+                model.calibrator_2 = isotonic_from_dict(meta["calibrator_2"])
 
         # Load XGBoost booster
         xgb_path = base_path.with_suffix(".xgb.json")

@@ -245,8 +245,8 @@ class LinUCBEnsemble:
         }
 
     def save(self, path: str) -> None:
-        """Save bandit state to disk."""
-        import pickle
+        """Save bandit state to disk using joblib + SHA-256."""
+        from src.ml.safe_io import safe_save
         state = {
             "n_arms": self.n_arms,
             "context_dim": self.context_dim,
@@ -259,15 +259,13 @@ class LinUCBEnsemble:
             "arm_counts": self._arm_counts.tolist(),
             "total_updates": self._total_updates,
         }
-        with open(path, "wb") as f:
-            pickle.dump(state, f)
+        safe_save(state, path)
         logger.info("LinUCB bandit saved to %s", path)
 
     def load(self, path: str) -> LinUCBEnsemble:
-        """Load bandit state from disk."""
-        import pickle
-        with open(path, "rb") as f:
-            state = pickle.load(f)
+        """Load bandit state from disk using joblib + SHA-256."""
+        from src.ml.safe_io import safe_load
+        state = safe_load(path)
 
         self.n_arms = state["n_arms"]
         self.context_dim = state["context_dim"]

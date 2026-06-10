@@ -33,9 +33,8 @@ def isotonic_from_dict(data: Dict[str, Any]) -> IsotonicRegression:
     model.increasing_ = data["increasing_"]
     model.X_thresholds_ = np.array(data["X_thresholds_"], dtype=float)
     model.y_thresholds_ = np.array(data["y_thresholds_"], dtype=float)
-    # f_ is computed from thresholds in older sklearn versions; keep compatibility
-    if hasattr(model, "f_"):
-        model.f_ = model.y_thresholds_
+    # Rebuild the interpolation function used by transform/predict
+    model._build_f(model.X_thresholds_, model.y_thresholds_)
     return model
 
 

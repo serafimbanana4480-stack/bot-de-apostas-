@@ -145,15 +145,15 @@ async def send_signal_alert(signal_data: Dict[str, Any]) -> bool:
     """
     Sends value bet alert message to the configured channel/chat id.
     """
-    token = settings.TELEGRAM_BOT_TOKEN
     chat_id = settings.TELEGRAM_CHAT_ID
 
-    if not token or not chat_id:
+    if not settings.TELEGRAM_BOT_TOKEN or not chat_id:
         logger.warning("Telegram Bot Token or Chat ID not configured. Broadcast skipped.")
         return False
 
     try:
-        bot = Bot(token=token)
+        # Pass token directly without intermediate variable to avoid stack trace exposure
+        bot = Bot(token=settings.TELEGRAM_BOT_TOKEN)
         emoji = "🔥 SINAL DE VALOR DETECTADO 🔥" if signal_data.get("approved") else "⚠️ ALERTA: VALOR SEM AUTORIZAÇÃO META-LABEL"
         
         message = (

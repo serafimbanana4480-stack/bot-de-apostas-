@@ -3,8 +3,8 @@
 Unified ZERO-COST training CLI for the betting bot.
 
 Usage:
-  poetry run python scripts/train_bot.py football --source mock
-  poetry run python scripts/train_bot.py football --source football-data --calibrate
+  poetry run python scripts/train_bot.py football --source football-data-co-uk --calibrate
+  poetry run python scripts/train_bot.py football --source football-data-co-uk --walk-forward
   poetry run python scripts/train_bot.py football --walk-forward
   poetry run python scripts/train_bot.py report --clv
 """
@@ -41,16 +41,10 @@ def load_football_df(store: LocalDataStore, source: str) -> pd.DataFrame:
                 "scripts/ingest_free_data.py --source football-data"
             )
     elif source in {"mock", "backtest"}:
-        # Zero-cost mock dataset with realistic open/close odds.
-        # Keep both aliases for backward compatibility with older scripts.
-        df = store.load_matches("football_mock")
-        if df.empty:
-            df = store.load_matches("football_backtest")
-        if df.empty:
-            raise FileNotFoundError(
-                "No mock/backtest data. Run: "
-                "scripts/ingest_free_data.py --source mock --sport football"
-            )
+        raise ValueError(
+            "MOCK DATA IS NOT ALLOWED. Use 'football-data-co-uk' for real historical odds. "
+            "Run: scripts/ingest_free_data.py --source football-data-co-uk --sport football"
+        )
     elif source in {"football-real-odds", "football-data-co-uk", "real-odds", "real"}:
         # Real Pinnacle open/close odds from football-data.co.uk.
         df = store.load_matches("football_real_odds")
@@ -62,7 +56,7 @@ def load_football_df(store: LocalDataStore, source: str) -> pd.DataFrame:
     else:
         raise ValueError(
             "Unknown source: "
-            f"{source}. Use 'football-data', 'football-real-odds', 'mock' or 'backtest'."
+            f"{source}. Use 'football-data' or 'football-data-co-uk' (recommended)."
         )
     df["date"] = pd.to_datetime(df["date"])
     return df.sort_values("date").reset_index(drop=True)

@@ -20,7 +20,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.data.local_store import LocalDataStore
-from src.ingestion.mock_football_data import ensure_mock_dataset
+from src.ingestion.real_data_pipeline import ensure_real_data_exists
 from src.ml.models.football_poisson import FootballPoissonModel
 from src.mlops.shadow_controller import LiveShadowController
 
@@ -49,7 +49,8 @@ def main() -> int:
     print("=" * 70 + "\n")
 
     # 1. Load data
-    df = ensure_mock_dataset(str(PROJECT_ROOT / "data"), force=False)
+    path = ensure_real_data_exists(str(PROJECT_ROOT / "data"))
+    df = pd.read_parquet(path)
     df["date"] = pd.to_datetime(df["date"])
 
     # 2. Load champion

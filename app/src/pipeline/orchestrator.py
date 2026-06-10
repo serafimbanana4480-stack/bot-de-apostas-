@@ -170,16 +170,18 @@ class PipelineOrchestrator:
                 champion_id="champion_poisson",
                 challenger_id="challenger_poisson",
             )
-            # Train a simple challenger on last 50% of data
+            # Train a simple challenger on first 50% of data (past only)
             try:
-                from src.ingestion.mock_football_data import ensure_mock_dataset
+                from src.ingestion.real_data_pipeline import ensure_real_data_exists
                 import pandas as pd
-                df = ensure_mock_dataset(settings.DATA_DIR, force=False)
+                path = ensure_real_data_exists(settings.DATA_DIR)
+                df = pd.read_parquet(path)
+                df = df.sort_values("date").reset_index(drop=True)
                 split = int(len(df) * 0.5)
-                train = df.iloc[split:].copy()
+                train = df.iloc[:split].copy()
                 self._challenger_model = FootballPoissonModel(use_dixon_coles=True)
                 self._challenger_model.fit(train, calibrate=True)
-                logger.info("Shadow challenger trained on %d matches", len(train))
+                logger.info("Shadow challenger trained on %d matches (past data only)", len(train))
             except Exception as e:
                 logger.warning("Shadow challenger training failed: %s", e)
 
@@ -571,27 +573,58 @@ class PipelineOrchestrator:
             return False
 
         if settings.PAPER_TRADING_ONLY:
-            won_preview = opp.get("edge", 0) > 0.05
-            pnl = stake * 0.1 if won_preview else -stake * 0.1
+            # Look up actual result from settlement engine or data store
+            actual_result = self._get_actual_result(opp.get("match_id"))
+            if actual_result is None:
+                logger.warning(
+                    "PAPER %s stake=$%.2f — result not yet available, skipping settlement",
+                    opp.get("match_id"), stake
+                )
+                self.order_tracker.log_decision({
+                    "event_id": opp.get("match_id"),
+                    "predicted_prob": opp.get("calibrated_prob"),
+                    "edge": opp.get("edge"),
+                    "kelly_stake": opp.get("final_kelly_fraction", 0),
+                    "final_stake": stake,
+                    "odds_available": opp.get("bookmaker_odds"),
+                    "odds_used": opp.get("bookmaker_odds"),
+                    "executed": False,
+                    "result_settled": False,
+                    "human_override": False,
+                    "model_version": "paper_pending",
+                    "input_features_hash": self.sport,
+                })
+                return False
+
+            bet_side = opp.get("side", "back")
+            # Determine win based on actual result and bet side
+            won = self._determine_paper_win(bet_side, actual_result, opp)
+            odds = opp.get("bookmaker_odds", 2.0)
+            pnl = stake * (odds - 1.0) if won else -stake
             self._paper_bankroll += pnl
             self.ledger.record_transaction(
                 event_id=opp.get("match_id", ""),
                 stake=stake,
-                odds_predicted=opp.get("bookmaker_odds", 2),
-                odds_executed=opp.get("bookmaker_odds", 2),
-                won=won_preview,
+                odds_predicted=odds,
+                odds_executed=odds,
+                won=won,
             )
-            logger.info("PAPER %s stake=$%.2f bankroll=$%.2f", opp.get("match_id"), stake, self._paper_bankroll)
+            logger.info(
+                "PAPER %s stake=$%.2f won=%s pnl=$%.2f bankroll=$%.2f",
+                opp.get("match_id"), stake, won, pnl, self._paper_bankroll
+            )
             self.order_tracker.log_decision({
                 "event_id": opp.get("match_id"),
                 "predicted_prob": opp.get("calibrated_prob"),
                 "edge": opp.get("edge"),
                 "kelly_stake": opp.get("final_kelly_fraction", 0),
                 "final_stake": stake,
-                "odds_available": opp.get("bookmaker_odds"),
-                "odds_used": opp.get("bookmaker_odds"),
+                "odds_available": odds,
+                "odds_used": odds,
                 "executed": False,
-                "result_settled": False,
+                "result_settled": True,
+                "won": won,
+                "pnl": pnl,
                 "human_override": False,
                 "model_version": "paper",
                 "input_features_hash": self.sport,
@@ -804,6 +837,58 @@ class PipelineOrchestrator:
             )
 
         return result
+
+    def _get_actual_result(self, match_id: str) -> Optional[str]:
+        """Look up actual result from settlement engine or local store."""
+        try:
+            # Try result settlement first
+            result = self.settlement.get_result(match_id)
+            if result and result.get("settled"):
+                return result.get("winner")
+        except Exception:
+            pass
+        # Fallback to local data store
+        try:
+            df = self.store.load_matches(self.sport)
+            if not df.empty and "match_id" in df.columns:
+                row = df[df["match_id"] == match_id]
+                if not row.empty:
+                    return str(row.iloc[0].get("actual_outcome", ""))
+        except Exception:
+            pass
+        return None
+
+    def _determine_paper_win(self, bet_side: str, actual_result: str, opp: Dict[str, Any]) -> bool:
+        """Determine if a paper bet won based on actual result."""
+        if not actual_result:
+            return False
+        # Map actual_result to winner
+        if actual_result in ("1", "H", "HOME"):
+            winner = "HOME"
+        elif actual_result in ("2", "A", "AWAY"):
+            winner = "AWAY"
+        elif actual_result in ("X", "D", "DRAW"):
+            winner = "DRAW"
+        else:
+            winner = actual_result.upper()
+
+        # For back bets on home/away
+        if bet_side.lower() == "back":
+            selection = opp.get("selection", opp.get("team", opp.get("home_team", "")))
+            if winner == "HOME" and selection == opp.get("home_team"):
+                return True
+            if winner == "AWAY" and selection == opp.get("away_team"):
+                return True
+        elif bet_side.lower() == "lay":
+            selection = opp.get("selection", opp.get("team", opp.get("home_team", "")))
+            if winner == "HOME" and selection != opp.get("home_team"):
+                return True
+            if winner == "AWAY" and selection != opp.get("away_team"):
+                return True
+        # Default: if we bet on home and home won
+        if winner == "HOME":
+            return True
+        return False
 
     def run_backtest(
         self,

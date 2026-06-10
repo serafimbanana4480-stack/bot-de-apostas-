@@ -91,9 +91,11 @@ class WalkForwardValidator:
             train_df = split["train"]
             test_df = split["test"]
             
-            # Data leakage protection: Assert no test dates are in train dates
-            assert train_df[date_column].max() < test_df[date_column].min(), \
-                "CRITICAL: Look-ahead bias detected! Train dates overlap test dates."
+            # Data leakage protection: Raise if test dates overlap train dates
+            if train_df[date_column].max() >= test_df[date_column].min():
+                raise ValueError(
+                    "CRITICAL: Look-ahead bias detected! Train dates overlap test dates."
+                )
                 
             # 1. Fit Model
             fitted_model = model_fit_func(train_df)

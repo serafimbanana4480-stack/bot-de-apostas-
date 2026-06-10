@@ -91,12 +91,20 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
+      mlflow:
+        condition: service_started
     restart: unless-stopped
     logging:
       driver: "json-file"
       options:
         max-size: "10m"
         max-file: "3"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
     networks:
       - vb-network
 
@@ -149,11 +157,21 @@ services:
   mlflow:
     image: ghcr.io/mlflow/mlflow:v2.12.1
     container_name: vb-mlflow
-    command: mlflow server --backend-store-uri sqlite:////mlflow/mlflow.db --default-artifact-root /mlflow/artifacts --host 0.0.0.0 --port 5000
+    command: >
+      mlflow server
+      --backend-store-uri postgresql+psycopg2://${POSTGRES_USER:-vb_admin}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-valuebetting}
+      --default-artifact-root /mlflow/artifacts
+      --host 0.0.0.0
+      --port 5000
     ports:
       - "5000:5000"
     volumes:
       - mlflow_data:/mlflow
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+    depends_on:
+      postgres:
+        condition: service_healthy
     restart: unless-stopped
     logging:
       driver: "json-file"

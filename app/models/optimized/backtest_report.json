@@ -2,52 +2,155 @@
   "model": "FootballPoissonModelV2",
   "meta_labeler": true,
   "value_filter": "ValueBetFilterV2",
-  "kelly_fraction": 0.25,
+  "kelly_fraction": 0.1,
   "min_edge": 0.03,
+  "halflife": 180.0,
+  "reg_lambda": 0.3,
+  "rho": -0.05,
+  "rho_fixed": false,
+  "model_ece": 0.014684483794434938,
+  "halflife_search": {
+    "optimal_halflife": 180.0,
+    "results": {
+      "30.0": {
+        "mean": -1.0404322013814573,
+        "std": 0.006091315421440346
+      },
+      "60.0": {
+        "mean": -1.0226769929929833,
+        "std": 0.005602992014363964
+      },
+      "90.0": {
+        "mean": -1.0164641135843226,
+        "std": 0.007573637589890416
+      },
+      "120.0": {
+        "mean": -1.013817489145076,
+        "std": 0.00878074989692328
+      },
+      "180.0": {
+        "mean": -1.0115767941139746,
+        "std": 0.010075127492690262
+      }
+    },
+    "best_score": -1.0115767941139746
+  },
+  "regularization_search": {
+    "optimal_lambda": 0.3,
+    "results": {
+      "0.05": {
+        "mean": -1.022910230109198,
+        "std": 0.005931374091415004
+      },
+      "0.1": {
+        "mean": -1.0227871448621046,
+        "std": 0.005758057522728452
+      },
+      "0.15": {
+        "mean": -1.0226769929929833,
+        "std": 0.005602992014363964
+      },
+      "0.2": {
+        "mean": -1.0205777328237835,
+        "std": 0.007498452310652856
+      },
+      "0.3": {
+        "mean": -1.019877341037437,
+        "std": 0.007943328228328541
+      }
+    },
+    "best_score": -1.019877341037437
+  },
+  "overfit_diagnostic": {
+    "train_ll": -0.9849580100390666,
+    "val_ll": -1.0155809998613057,
+    "gap": 0.031090655144806117,
+    "is_overfitting": false,
+    "alert_message": null
+  },
   "results": {
     "without_meta": {
-      "total_bets": 670,
-      "win_rate": 0.3641791044776119,
-      "roi": -0.12862562779047715,
-      "profit": -967.0273334227359,
-      "final_bankroll": 32.972666577264896,
-      "max_drawdown_pct": 0.9713188651242259,
-      "sharpe": -0.06541294017905845,
-      "avg_edge": 0.1047066101077454,
-      "avg_odds": 2.7846119402985074
+      "total_bets": 417,
+      "win_rate": 0.4196642685851319,
+      "roi": -0.07687730227166038,
+      "profit": -236.74926617830693,
+      "final_bankroll": 763.2507338216928,
+      "max_drawdown_pct": 0.3117390067749658,
+      "sharpe": -0.028375171675170268,
+      "sortino": 0.0,
+      "avg_edge": 0.051810426240154396,
+      "avg_odds": 2.493093525179856
     },
     "meta_thr_0.55": {
-      "total_bets": 670,
-      "win_rate": 0.3641791044776119,
-      "roi": -0.12862562779047715,
-      "profit": -967.0273334227359,
-      "final_bankroll": 32.972666577264896,
-      "max_drawdown_pct": 0.9713188651242259,
-      "sharpe": -0.06541294017905845,
-      "avg_edge": 0.1047066101077454,
-      "avg_odds": 2.7846119402985074
+      "total_bets": 90,
+      "win_rate": 0.5777777777777777,
+      "roi": -0.05434191387705146,
+      "profit": -36.404503652467966,
+      "final_bankroll": 963.5954963475318,
+      "max_drawdown_pct": 0.10706957197923969,
+      "sharpe": -0.015660602437384197,
+      "sortino": 0.0,
+      "avg_edge": 0.04110176180994555,
+      "avg_odds": 1.7357777777777779
     },
     "meta_thr_0.60": {
-      "total_bets": 661,
-      "win_rate": 0.3661119515885023,
-      "roi": -0.13322164754218965,
-      "profit": -963.077189279808,
-      "final_bankroll": 36.92281072019255,
-      "max_drawdown_pct": 0.967882848911325,
-      "sharpe": -0.06281772004426014,
-      "avg_edge": 0.10467486517638422,
-      "avg_odds": 2.7858093797276853
+      "total_bets": 49,
+      "win_rate": 0.5714285714285714,
+      "roi": -0.06295101177607386,
+      "profit": -21.756673186685887,
+      "final_bankroll": 978.2433268133143,
+      "max_drawdown_pct": 0.05079401143282314,
+      "sharpe": -0.09379240765341107,
+      "sortino": 0.0,
+      "avg_edge": 0.037065810770282266,
+      "avg_odds": 1.6616326530612244
     },
     "meta_thr_0.65": {
-      "total_bets": 653,
-      "win_rate": 0.3614088820826952,
-      "roi": -0.1410508551232885,
-      "profit": -968.7736852372111,
-      "final_bankroll": 31.226314762789197,
-      "max_drawdown_pct": 0.9728379218803472,
-      "sharpe": -0.06949224748977768,
-      "avg_edge": 0.1049727834113778,
-      "avg_odds": 2.7898315467075037
+      "total_bets": 24,
+      "win_rate": 0.5833333333333334,
+      "roi": -0.022796772410990297,
+      "profit": -3.586628704513622,
+      "final_bankroll": 996.4133712954864,
+      "max_drawdown_pct": 0.03253704679373658,
+      "sharpe": -0.15173689079229552,
+      "sortino": 0.0,
+      "avg_edge": 0.0318106137523269,
+      "avg_odds": 1.5712499999999998
     }
-  }
+  },
+  "full_backtest_report": {
+    "roi": -0.022796772410990297,
+    "profit_factor": 0.931802976506316,
+    "sharpe": -0.15173689079229552,
+    "sortino": 0.0,
+    "brier_score": 0.22577194230253841,
+    "ece": 0.11503452609347731,
+    "clv": 0.0318106137523269,
+    "yield_per_bet": -0.14944286268806758,
+    "n_bets": 24,
+    "win_rate": 0.5833333333333334,
+    "avg_odds": 1.5712499999999998,
+    "avg_edge": 0.0318106137523269,
+    "max_drawdown": 0.03253704679373658,
+    "risk_of_ruin": 1.0,
+    "kelly_ratio": 0.0,
+    "statistical_significance": 0.7676037914915375,
+    "min_bets_for_significance": 2000,
+    "brier_reliability": 0.04173919784903459,
+    "brier_resolution": 0.056712962962962965,
+    "brier_uncertainty": 0.24305555555555555,
+    "league_breakdown": {},
+    "warnings": [
+      "Sample size 24 < 2000 \u2014 insufficient for statistical conclusions",
+      "ECE 0.1150 > 0.05 \u2014 model poorly calibrated",
+      "p-value 0.7676 >= 0.10 \u2014 ROI not statistically significant"
+    ]
+  },
+  "acceptance_check": [
+    "ECE 0.1150 > 0.05 \u2014 model is poorly calibrated",
+    "n_bets 24 < 2000 \u2014 insufficient sample size",
+    "p-value 0.7676 >= 0.10 \u2014 ROI not statistically significant",
+    "Risk of Ruin 100.00% > 10%",
+    "Brier Score 0.2258 > 0.22"
+  ]
 }

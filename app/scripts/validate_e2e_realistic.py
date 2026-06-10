@@ -23,7 +23,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from src.accounting.pnl import FinancialAccountingEngine
 from src.core.config import settings
 from src.data.local_store import LocalDataStore
-from src.ingestion.mock_football_data import ensure_mock_dataset
+from src.ingestion.real_data_pipeline import ensure_real_data_exists
 from src.ingestion.result_settlement import ResultConsensusSettlement
 from src.ml.models.football_poisson import FootballPoissonModel
 from src.pipeline.sport_strategy import get_sport_strategy
@@ -46,7 +46,8 @@ def check_api_tokens() -> dict:
 
 def generate_realistic_odds(rng: np.random.RandomState, n: int) -> pd.DataFrame:
     """Generate synthetic matches with realistic odds distributions."""
-    df = ensure_mock_dataset(str(PROJECT_ROOT / "data"), force=False)
+    path = ensure_real_data_exists(str(PROJECT_ROOT / "data"))
+    df = pd.read_parquet(path)
     df["date"] = pd.to_datetime(df["date"])
     df = df.tail(n).copy().reset_index(drop=True)
 

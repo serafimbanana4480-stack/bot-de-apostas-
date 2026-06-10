@@ -21,10 +21,12 @@ def main():
     results = {}
 
     # [1] Ingest
-    df = pd.read_parquet(PROJECT_ROOT / "data" / "bronze" / "matches_football_mock.parquet").head(n_games)
+    from src.ingestion.real_data_pipeline import ensure_real_data_exists
+    real_path = ensure_real_data_exists(str(PROJECT_ROOT / "data" / "bronze"))
+    df = pd.read_parquet(real_path).head(n_games)
     t0 = time.perf_counter()
     for _ in range(10):
-        _ = pd.read_parquet(PROJECT_ROOT / "data" / "bronze" / "matches_football_mock.parquet").head(n_games)
+        _ = pd.read_parquet(real_path).head(n_games)
     t1 = time.perf_counter()
     results["ingest_ms"] = ((t1 - t0) * 1000) / 10
 
@@ -48,7 +50,7 @@ def main():
         "odd_home": np.random.uniform(1.3, 2.5, n_games),
         "odd_away": np.random.uniform(1.3, 2.5, n_games),
         "odd_draw": np.random.uniform(2.5, 4.0, n_games),
-        "bookmaker": "mock",
+        "bookmaker": "pinnacle",
     })
     t0 = time.perf_counter()
     feats = p.run(games, odds)

@@ -26,22 +26,22 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 
-def load_mock_football_games(n_rows: int = 100) -> Any:
-    """Load or generate mock football game data for benchmarking."""
+def load_real_football_games(n_rows: int = 100) -> Any:
+    """Load real football game data for benchmarking."""
     import pandas as pd
+    from src.ingestion.real_data_pipeline import ensure_real_data_exists
 
-    store_path = PROJECT_ROOT / "data" / "bronze" / "matches_football_mock.parquet"
-    if store_path.exists():
+    try:
+        store_path = ensure_real_data_exists(str(PROJECT_ROOT / "data" / "bronze"))
         df = pd.read_parquet(store_path)
         if len(df) >= n_rows:
             return df.head(n_rows).copy()
-
-    # Generate synthetic data
-    rng = np.random.RandomState(42)
-    teams = [f"Team_{i}" for i in range(20)]
-    rows = []
-    base_date = pd.Timestamp("2024-01-01")
-    for i in range(n_rows):
+        return df.copy()
+    except RuntimeError as e:
+        raise RuntimeError(
+            f"No real data available for benchmarking: {e}. "
+            "Run: scripts/ingest_real_data.py --seasons 2122 2223 2324"
+        )
         home = teams[i % 20]
         away = teams[(i + 1) % 20]
         rows.append({
@@ -66,7 +66,7 @@ def benchmark_feature_pipeline(games_df: Any, odds_df: Any = None) -> Dict[str, 
             "odd_home": np.random.uniform(1.5, 3.0, len(games_df)),
             "odd_away": np.random.uniform(1.5, 3.0, len(games_df)),
             "odd_draw": np.random.uniform(2.5, 4.0, len(games_df)),
-            "bookmaker": "mock",
+            "bookmaker": "pinnacle",
         })
 
     pipeline = FeaturePipeline(include_weather=False)
@@ -182,8 +182,8 @@ def main() -> int:
     print(f"  VBQ PERFORMANCE BENCHMARK — {n_rows} rows")
     print(f"{'='*70}\n")
 
-    print("[1/4] Loading mock data...")
-    games_df = load_mock_football_games(n_rows)
+    print("[1/4] Loading real data...")
+    games_df = load_real_football_games(n_rows)
     print(f"      Loaded {len(games_df)} games")
 
     print("\n[2/4] Benchmarking FeaturePipeline...")

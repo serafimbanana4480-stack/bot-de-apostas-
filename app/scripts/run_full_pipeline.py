@@ -46,7 +46,7 @@ def run_cmd(cmd: list[str], description: str) -> dict:
     return {"success": success, "stdout": result.stdout, "stderr": result.stderr}
 
 
-def train_phase(source: str = "mock") -> dict:
+def train_phase(source: str = "football-data") -> dict:
     """Train model and generate CLV report."""
     results = {}
     results["ingest"] = run_cmd(
@@ -97,7 +97,7 @@ def daily_phase() -> dict:
 def main() -> int:
     parser = argparse.ArgumentParser(description="VBQ Full Pipeline")
     parser.add_argument("--mode", choices=["train", "backtest", "live", "daily", "all"], default="train")
-    parser.add_argument("--source", choices=["mock", "football-data"], default="mock")
+    parser.add_argument("--source", choices=["football-data"], default="football-data")
     args = parser.parse_args()
 
     logger.info("VBQ Full Pipeline — mode=%s, source=%s", args.mode, args.source)

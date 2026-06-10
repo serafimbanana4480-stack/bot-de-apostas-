@@ -3,9 +3,12 @@
 Ingest FREE data sources into local Parquet lake (0€).
 
 Usage:
-  poetry run python scripts/ingest_free_data.py --sport football --source mock
-  poetry run python scripts/ingest_free_data.py --sport football --source football-data
+  poetry run python scripts/ingest_free_data.py --sport football --source football-data-co-uk --seasons 2223,2324
+  poetry run python scripts/ingest_free_data.py --sport football --source football-data --leagues PL,PD,SA
   poetry run python scripts/ingest_free_data.py --sport nba
+
+NO MOCK DATA IS GENERATED OR ALLOWED.
+If data is unavailable, the script fails explicitly.
 """
 from __future__ import annotations
 
@@ -22,7 +25,6 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.data.local_store import LocalDataStore
 from src.ingestion.football_data_co_uk import FootballDataCoUkClient
 from src.ingestion.football_data_org import FootballDataOrgClient
-from src.ingestion.mock_football_data import ensure_mock_dataset
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("ingest_free_data")
@@ -49,17 +51,6 @@ def _drop_real_odds_columns(df: pd.DataFrame) -> pd.DataFrame:
     return df.drop(columns=keep)
 
 
-def ingest_football_mock(store: LocalDataStore) -> int:
-    df = ensure_mock_dataset(str(store.root), force=False)
-    store.save_matches(df, source="football_mock")
-    # Keep the historical backtest alias in sync for scripts that still read it.
-    store.save_matches(df, source="football_backtest")
-    csv_path = store.root / "mock_football.csv"
-    df.to_csv(csv_path, index=False)
-    logger.info("Mock football: %s matches", len(df))
-    return len(df)
-
-
 def ingest_football_data_org(
     store: LocalDataStore,
     leagues: str,
@@ -82,7 +73,10 @@ def ingest_football_data_org(
             df = cached
 
     if df.empty:
-        logger.warning("No data from football-data.org — use --source mock or set FOOTBALL_DATA_ORG_TOKEN")
+        logger.error(
+            "No data from football-data.org — set FOOTBALL_DATA_ORG_TOKEN env var "
+            "or use --source football-data-co-uk for historical odds."
+        )
         return 0
 
     df = _apply_date_window(df, start, end)
@@ -100,7 +94,7 @@ def ingest_football_data_co_uk(store: LocalDataStore, leagues: str, seasons: str
     client = FootballDataCoUkClient(cache_dir=str(store.root / "cache" / "fdcouk"))
     df = client.fetch_multiple_seasons(leagues=league_list, seasons=season_list)
     if df.empty:
-        logger.warning("No data from football-data.co.uk — check connectivity")
+        logger.error("No data from football-data.co.uk — check connectivity")
         return 0
     store.save_matches(df, source="football_real_odds")
     logger.info("Saved %d matches with real Pinnacle odds to football_real_odds", len(df))
@@ -121,8 +115,8 @@ def main() -> None:
     parser.add_argument("--sport", choices=["football", "nba", "ufc"], default="football")
     parser.add_argument(
         "--source",
-        choices=["mock", "football-data", "football-data-co-uk", "parquet"],
-        default="mock",
+        choices=["football-data", "football-data-co-uk", "parquet"],
+        default="football-data-co-uk",
         help="football-data = football-data.org (no odds); football-data-co-uk = real Pinnacle odds",
     )
     parser.add_argument("--start", help="Inclusive start date (YYYY-MM-DD) for football-data source")
@@ -133,7 +127,8 @@ def main() -> None:
         default=6.0,
         help="Requested delay between API calls for football-data.org (minimum 6.0s enforced)",
     )
-    parser.add_argument("--leagues", default="PL,PD,SA,BL1,FL1")
+    parser.add_argument("--leagues", default="E0,E1,D1,D2,F1,F2,I1,I2,N1,P1",
+                        help="Leagues to fetch (default: less efficient leagues + top 5)")
     parser.add_argument("--seasons", default="1920,2021,2122,2223,2324",
                         help="Seasons to fetch (football-data-co-uk only), e.g. 2223,2324")
     parser.add_argument("--data-dir", default=os.getenv("DATA_DIR", "data"))
@@ -143,9 +138,7 @@ def main() -> None:
     count = 0
 
     if args.sport == "football":
-        if args.source == "mock":
-            count = ingest_football_mock(store)
-        elif args.source == "football-data":
+        if args.source == "football-data":
             count = ingest_football_data_org(
                 store,
                 args.leagues,
@@ -156,7 +149,7 @@ def main() -> None:
         elif args.source == "football-data-co-uk":
             count = ingest_football_data_co_uk(store, args.leagues, args.seasons)
         else:
-            df = store.load_matches("football_mock")
+            df = store.load_matches("football_real_odds")
             count = len(df)
             logger.info("Loaded existing parquet: %s rows", count)
     elif args.sport == "nba":

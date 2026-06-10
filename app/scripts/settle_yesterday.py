@@ -32,12 +32,13 @@ def settle_football_yesterday(store: LocalDataStore, settle_date: date) -> dict:
     fetcher = ResultFetcher()
     api_results = fetcher.fetch_football_results(settle_date)
 
-    df = store.load_matches("football_mock")
+    df = store.load_matches("football_real_odds")
     if df.empty:
-        path = store.root / "mock_football.csv"
-        if path.exists():
-            df = pd.read_csv(path)
-        else:
+        from src.ingestion.real_data_pipeline import ensure_real_data_exists
+        try:
+            path = ensure_real_data_exists(str(store.root))
+            df = pd.read_parquet(path)
+        except RuntimeError:
             return {"settled": 0, "reason": "no_match_data"}
 
     df["date"] = pd.to_datetime(df["date"])

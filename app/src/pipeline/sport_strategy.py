@@ -65,7 +65,7 @@ class FootballStrategy(SportStrategy):
         self.store = LocalDataStore(settings.DATA_DIR)
         self.model: Optional[FootballPoissonModel] = None
         self.odds_ingestor = OddsIngestor()
-        self.line_shopper = LineShopper(use_mock=not settings.ODDS_API_KEY)
+        self.line_shopper = LineShopper()
         self.value_filter = ValueBetFilter(
             min_probability=0.35,
             min_edge=0.03,
@@ -80,9 +80,9 @@ class FootballStrategy(SportStrategy):
         self.portfolio = PortfolioOptimizer(min_edge=0.03)
 
     def _load_matches(self) -> pd.DataFrame:
-        from src.ingestion.mock_football_data import ensure_mock_dataset
-        df = ensure_mock_dataset(str(self.store.root), force=False)
-        self.store.save_matches(df, "football_mock")
+        from src.ingestion.real_data_pipeline import ensure_real_data_exists
+        path = ensure_real_data_exists(str(self.store.root))
+        df = pd.read_parquet(path)
         df["date"] = pd.to_datetime(df["date"])
         return df.sort_values("date")
 

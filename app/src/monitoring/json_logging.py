@@ -112,9 +112,12 @@ def setup_json_logging(
     json_handler = JSONLogHandler(service_name=service_name)
     root_logger.addHandler(json_handler)
 
-    # Optional: also write to file
+    # Optional: also write to file with rotation
     if log_file:
-        file_handler = logging.FileHandler(log_file, encoding="utf-8")
+        from logging.handlers import RotatingFileHandler
+        file_handler = RotatingFileHandler(
+            log_file, encoding="utf-8", maxBytes=5_000_000, backupCount=5
+        )
         file_handler.setFormatter(JSONFormatter(service_name=service_name))
         root_logger.addHandler(file_handler)
 

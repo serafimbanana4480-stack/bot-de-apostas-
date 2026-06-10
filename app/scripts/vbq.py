@@ -183,7 +183,7 @@ def main():
     # --- train ---
     train_p = sub.add_parser("train", help="Train a model")
     train_p.add_argument("sport", choices=["football", "nba", "ufc"])
-    train_p.add_argument("--source", default="mock", choices=["mock", "football-data", "parquet"])
+    train_p.add_argument("--source", default="football-data-co-uk", choices=["football-data", "football-data-co-uk", "parquet"])
     train_p.add_argument("--objective", default="logloss", choices=["logloss", "clv"])
     train_p.add_argument("--walk-forward", action="store_true")
     train_p.add_argument("--calibrate", action="store_true", default=True)

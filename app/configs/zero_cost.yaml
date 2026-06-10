@@ -6,8 +6,8 @@ mlflow_tracking_uri: ./mlruns
 
 ingestion:
   football:
-    primary: mock          # mock | football-data | odds-api
-    leagues: [PL, PD, SA, BL1, FL1]
+    primary: football-data  # football-data | odds-api
+    leagues: [E1, D2, F2, I2, N1, P1]  # Less efficient leagues = priority
   nba:
     primary: nba_api       # free, unlimited
   ufc:

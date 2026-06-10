@@ -48,7 +48,7 @@ class HeadlineItem:
 
     def __post_init__(self):
         if not self.hash:
-            self.hash = hashlib.md5(f"{self.url}:{self.text}".encode()).hexdigest()[:12]
+            self.hash = hashlib.sha256(f"{self.url}:{self.text}".encode()).hexdigest()[:12]
 
 
 # RSS feed URLs by sport (free, no API key required)

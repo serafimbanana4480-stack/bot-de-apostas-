@@ -1,6 +1,6 @@
 import logging
 import os
-import pickle
+
 import sys
 from typing import Any, Dict, Tuple
 
@@ -286,11 +286,12 @@ class ModelTrainer:
             }
             
             os.makedirs("models", exist_ok=True)
-            model_path = "models/nba_unified_pipeline.pkl"
-            with open(model_path, "wb") as f:
-                pickle.dump(artifacts, f)
-                
+            model_path = "models/nba_unified_pipeline.joblib"
+            from src.ml.safe_io import safe_save
+            safe_save(artifacts, model_path)
+
             mlflow.log_artifact(model_path)
+            mlflow.log_artifact(model_path + ".sha256")
             logger.info(f"Pipeline models saved and logged to MLflow successfully at {model_path}.")
             
             return artifacts

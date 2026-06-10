@@ -46,9 +46,20 @@ class PredictResponse(BaseModel):
     meta_prob: float
     stake_pct: float
 
+class _FeaturesSchema(BaseModel):
+    """Strict schema for prediction features to prevent injection."""
+    elo_diff: float = 0.0
+    rest_diff: float = 0.0
+    win_rate_5_diff: float = 0.0
+    market_overround: float = 0.04
+    form_home: float = 0.0
+    form_away: float = 0.0
+    h2h_home_win_rate: float = 0.0
+    days_since_last: float = 0.0
+
 class SignalGenerateRequest(BaseModel):
     game_id: str
-    features: Dict[str, Any]
+    features: _FeaturesSchema
     odds_home: float
     odds_away: float
     base_bankroll: Optional[float] = 1000.0
@@ -89,7 +100,7 @@ async def generate_signal(request: SignalGenerateRequest, db: Session = Depends(
     try:
         # 1. Run inference
         res = prediction_engine.predict_match(
-            features=request.features,
+            features=request.features.model_dump(),
             odds_home=request.odds_home,
             odds_away=request.odds_away
         )
@@ -103,36 +114,40 @@ async def generate_signal(request: SignalGenerateRequest, db: Session = Depends(
         )
         db.add(pred_row)
 
-        # 3. If there is a bet side, persist Signal Row
+        # 3. If there is a bet side, persist Signal Row inside a single transaction
         signal_row = None
         stake_size = 0.0
-        if res["bet_side"] is not None:
-            # We construct signal_id as SIG-{game_id}
-            sig_id = f"SIG-{request.game_id}"
+        try:
+            if res["bet_side"] is not None:
+                # We construct signal_id as SIG-{game_id}
+                sig_id = f"SIG-{request.game_id}"
+                
+                # Remove any existing signal with the same ID to prevent duplication issues in local testing
+                existing_sig = db.query(Signal).filter_by(signal_id=sig_id).first()
+                if existing_sig:
+                    db.delete(existing_sig)
+
+                stake_size = float(request.base_bankroll) * res["stake_pct"]
+
+                signal_row = Signal(
+                    signal_id=sig_id,
+                    game_id=request.game_id,
+                    predicted_prob=Decimal(str(round(res["selected_prob"], 4))),
+                    bookmaker_odds=Decimal(str(round(res["selected_odds"], 4))),
+                    expected_edge=Decimal(str(round(res["expected_edge"], 4))),
+                    stake_size=Decimal(str(round(stake_size, 2))),
+                    approved=res["meta_approved"],
+                    status="pending"
+                )
+                db.add(signal_row)
             
-            # Remove any existing signal with the same ID to prevent duplication issues in local testing
-            existing_sig = db.query(Signal).filter_by(signal_id=sig_id).first()
-            if existing_sig:
-                db.delete(existing_sig)
-                db.commit()
+            db.commit()
+        except Exception as db_err:
+            db.rollback()
+            logger.error(f"Database transaction failed: {db_err}")
+            raise HTTPException(status_code=500, detail="Database transaction failed")
 
-            stake_size = float(request.base_bankroll) * res["stake_pct"]
-
-            signal_row = Signal(
-                signal_id=sig_id,
-                game_id=request.game_id,
-                predicted_prob=Decimal(str(round(res["selected_prob"], 4))),
-                bookmaker_odds=Decimal(str(round(res["selected_odds"], 4))),
-                expected_edge=Decimal(str(round(res["expected_edge"], 4))),
-                stake_size=Decimal(str(round(stake_size, 2))),
-                approved=res["meta_approved"],
-                status="pending"
-            )
-            db.add(signal_row)
-        
-        db.commit()
-
-        # Broadcast to Telegram if a signal was generated
+        # Broadcast to Telegram if a signal was generated (outside DB transaction)
         if signal_row is not None:
             sig_dict = {
                 "game_id": request.game_id,

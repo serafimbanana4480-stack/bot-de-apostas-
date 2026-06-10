@@ -44,10 +44,9 @@ SIDE_MAP = {
 def ensure_data(store: LocalDataStore, source: str = "auto") -> pd.DataFrame:
     """
     Load match data for CLV analysis.
-    
-    source='auto'  — try real odds first, fall back to mock
+
+    source='auto'  — try real odds first, fail if unavailable
     source='real'  — require football_real_odds (from football-data.co.uk)
-    source='mock'  — use football_mock / football_backtest (simulated odds)
     """
     df = pd.DataFrame()
 
@@ -55,24 +54,16 @@ def ensure_data(store: LocalDataStore, source: str = "auto") -> pd.DataFrame:
         df = store.load_matches("football_real_odds")
         if not df.empty:
             logger.info("Using REAL Pinnacle odds (%d matches)", len(df))
-        elif source == "real":
+        else:
             raise FileNotFoundError(
                 "No real odds data. Run: scripts/ingest_free_data.py "
                 "--source football-data-co-uk --sport football"
             )
 
-    if df.empty and source in ("auto", "mock"):
-        df = store.load_matches("football_mock")
-        if df.empty:
-            df = store.load_matches("football_backtest")
-        if not df.empty:
-            logger.info("Using MOCK backtest data (%d matches)", len(df))
-
     if df.empty:
         raise FileNotFoundError(
             "No data for CLV. Run first:\n"
-            "  scripts/ingest_free_data.py --source football-data-co-uk --sport football\n"
-            "  OR: scripts/ingest_free_data.py --source mock --sport football"
+            "  scripts/ingest_free_data.py --source football-data-co-uk --sport football"
         )
 
     df["date"] = pd.to_datetime(df["date"])

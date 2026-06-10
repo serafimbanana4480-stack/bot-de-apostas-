@@ -1,5 +1,5 @@
 import logging
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 
 logger = logging.getLogger("settlement")
 
@@ -14,7 +14,8 @@ class SettlementRulesEngine:
     def verify_and_settle(
         self, 
         source_a_data: Dict[str, Any], 
-        source_b_data: Dict[str, Any]
+        source_b_data: Dict[str, Any],
+        sport: str = "football"
     ) -> Dict[str, Any]:
         """
         Compares results from source A and source B.
@@ -53,8 +54,13 @@ class SettlementRulesEngine:
         elif away_a > home_a:
             winner = "AWAY"
         else:
-            # Draw (if applicable, e.g. football)
-            winner = "DRAW"
+            # Draw handling by sport
+            if sport.lower() in ("nba", "basketball", "mma", "ufc", "tennis"):
+                # These sports do not end in draws (overtime or decision)
+                winner = "HOME_OT" if home_a > away_a else "AWAY_OT"
+                logger.warning(f"Unexpected tie in {sport} game {game_id} — marking as OT/decision required")
+            else:
+                winner = "DRAW"
             
         return {
             "settled": True,
@@ -64,3 +70,9 @@ class SettlementRulesEngine:
             "away_score": away_a,
             "reason": "Verified cross-source parity"
         }
+
+    def get_result(self, match_id: str) -> Optional[Dict[str, Any]]:
+        """Retrieve settled result for a match if available."""
+        # This is a stub — in production this would query a result database/API
+        logger.debug("get_result stub called for %s", match_id)
+        return None

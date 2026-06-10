@@ -18,8 +18,9 @@ class ABTestingEngine:
         """
         Deterministically routes an event to Champion or Challenger using hash of event_id.
         Ensures consistent routing for the same game across multiple requests.
+        Uses SHA-256 instead of MD5 for better collision resistance.
         """
-        event_hash = int(hashlib.md5(event_id.encode("utf-8")).hexdigest(), 16)
+        event_hash = int(hashlib.sha256(event_id.encode("utf-8")).hexdigest(), 16)
         value = (event_hash % 1000) / 1000.0
         
         if value < self.split_ratio:

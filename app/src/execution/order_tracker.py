@@ -6,14 +6,22 @@ from typing import Any, Dict, Optional
 
 logger = logging.getLogger("execution")
 
+try:
+    from filelock import FileLock
+    _HAS_FILELOCK = True
+except ImportError:
+    _HAS_FILELOCK = False
+
 class OrderTracker:
     """
     Tracks and logs bet execution details with strict structured audit trails.
     Includes slippage calculation and bet rejection handling.
+    Uses file locking for concurrent safety.
     """
     def __init__(self, audit_log_path: str = "models/execution_audit.jsonl"):
         self.audit_log_path = audit_log_path
         os.makedirs(os.path.dirname(self.audit_log_path), exist_ok=True)
+        self._lock_path = self.audit_log_path + ".lock"
 
     def log_decision(self, decision_log: Dict[str, Any]) -> None:
         """
@@ -29,9 +37,14 @@ class OrderTracker:
         log_entry = {k: decision_log.get(k, None) for k in required_keys}
         if not log_entry["timestamp"]:
             log_entry["timestamp"] = datetime.now(timezone.utc).isoformat()
-            
-        with open(self.audit_log_path, "a") as f:
-            f.write(json.dumps(log_entry) + "\n")
+
+        if _HAS_FILELOCK:
+            with FileLock(self._lock_path, timeout=5):
+                with open(self.audit_log_path, "a") as f:
+                    f.write(json.dumps(log_entry) + "\n")
+        else:
+            with open(self.audit_log_path, "a") as f:
+                f.write(json.dumps(log_entry) + "\n")
         logger.info(f"Execution decision logged for event {log_entry['event_id']}")
 
     def calculate_slippage(self, odds_predicted: float, odds_executed: float) -> float:

@@ -13,7 +13,7 @@ class ValueBetFilter:
         self,
         min_edge: float = 0.05,            # Minimum model edge (5%)
         min_odd: float = 1.50,             # Minimum decimal odds
-        min_probability: float = 0.60,      # Minimum calibrated probability (60%)
+        min_probability: float = 0.0,      # Removed the arbitrary 60% probability floor
         max_time_to_event_hours: float = 48.0, # Freshness window
         max_adverse_line_drop_2h: float = 0.03, # 3% maximum adverse drop in odds (sharp money against us)
         max_odds: float = 5.0,

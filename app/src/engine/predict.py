@@ -1,6 +1,5 @@
 import logging
 import os
-import pickle
 from typing import Any, Dict
 
 import numpy as np
@@ -16,7 +15,7 @@ class PredictionEngine:
     and Meta-Labeling secondary filters. Calculates expected edge and
     Kelly sizing for value betting.
     """
-    def __init__(self, model_path: str = "models/nba_unified_pipeline.pkl"):
+    def __init__(self, model_path: str = "models/nba_unified_pipeline.joblib"):
         self.model_path = model_path
         self.artifacts = None
         self._load_model()
@@ -32,11 +31,11 @@ class PredictionEngine:
                 raise RuntimeError(f"Model pkl missing and auto-train failed: {e}")
 
         try:
-            with open(self.model_path, "rb") as f:
-                self.artifacts = pickle.load(f)
-            logger.info("PredictionEngine model pipeline loaded successfully.")
+            from src.ml.safe_io import safe_load
+            self.artifacts = safe_load(self.model_path)
+            logger.info("PredictionEngine model pipeline loaded successfully (integrity verified).")
         except Exception as e:
-            logger.error(f"Error loading model pkl: {e}")
+            logger.error(f"Error loading model: {e}")
             raise e
 
     def _train_default_model(self) -> None:

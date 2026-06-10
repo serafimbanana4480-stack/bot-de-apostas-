@@ -29,14 +29,21 @@ app.include_router(api_router)
 allowed_origins = [
     origin.strip() 
     for origin in os.getenv("ALLOWED_ORIGINS", "http://localhost:3000,http://localhost:8000").split(",")
-] if "os" in globals() else ["*"]
+    if origin.strip()
+]
+
+# Reject startup with open CORS in production
+if settings.ENVIRONMENT.lower() in ("production", "staging", "live") and (not allowed_origins or allowed_origins == ["*"]):
+    raise RuntimeError(
+        "SECURITY: ALLOWED_ORIGINS must be explicitly set to specific domains in production."
+    )
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=allowed_origins or ["*"],
+    allow_origins=allowed_origins or ["http://localhost:3000"],
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST"],
+    allow_headers=["Authorization", "Content-Type", "X-API-Key"],
 )
 
 @app.middleware("http")

@@ -80,6 +80,7 @@ class ValueBetFilterV2:
         odds = opportunity.get("odds", 1.0)
         pinnacle_odds = opportunity.get("pinnacle_odds")
         clv = opportunity.get("clv_pct", 0.0)
+        commission_rate = opportunity.get("commission_rate", 0.0)
 
         metrics = {
             "model_prob": model_prob,
@@ -94,8 +95,9 @@ class ValueBetFilterV2:
         if odds <= 1.0 or model_prob <= 0 or model_prob >= 1:
             return False, "Invalid odds or probability", metrics
 
-        # 1. Calcular implied probability e edge
-        implied_prob = 1.0 / odds
+        # 1. Calcular implied probability e edge AFTER commission
+        net_odds = 1.0 + (odds - 1.0) * (1.0 - commission_rate)
+        implied_prob = 1.0 / net_odds
         metrics["implied_prob"] = implied_prob
 
         edge = model_prob - implied_prob

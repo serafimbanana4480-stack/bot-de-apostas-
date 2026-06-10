@@ -52,7 +52,7 @@ class Settings(BaseSettings):
     
     # Database (with validation alias for environment compatibility)
     DB_USER: str = Field(default="vb_admin", validation_alias="POSTGRES_USER")
-    DB_PASS: str = Field(default="postgres", validation_alias="POSTGRES_PASSWORD")
+    DB_PASS: str = Field(default="", validation_alias="POSTGRES_PASSWORD")
     DB_HOST: str = Field(default="localhost", validation_alias="POSTGRES_HOST")
     DB_PORT: int = Field(default=5432, validation_alias="POSTGRES_PORT")
     DB_NAME: str = Field(default="valuebetting", validation_alias="POSTGRES_DB")
@@ -97,14 +97,14 @@ class Settings(BaseSettings):
     PREFECT_API_DATABASE_CONNECTION_URL: str = Field(default="", validation_alias="PREFECT_API_DATABASE_CONNECTION_URL")
 
     # MLflow
-    MLFLOW_TRACKING_URI: str = Field(default="sqlite:///mlflow.db", validation_alias="MLFLOW_TRACKING_URI")
+    MLFLOW_TRACKING_URI: str = Field(default="", validation_alias="MLFLOW_TRACKING_URI")
     MLFLOW_EXPERIMENT_NAME: str = Field(default="nba_value_betting", validation_alias="MLFLOW_EXPERIMENT_NAME")
 
 settings = Settings()
 
 
 def _check_default_secrets():
-    """Warn if default/unsafe secrets are detected in production-like environments."""
+    """Refuse to start if default/unsafe secrets are detected in ANY environment."""
     import logging
     logger = logging.getLogger(__name__)
     unsafe_defaults = []
@@ -114,17 +114,12 @@ def _check_default_secrets():
         unsafe_defaults.append("JWT_SECRET_KEY")
     if settings.ENCRYPTION_KEY in ("", "secret"):
         unsafe_defaults.append("ENCRYPTION_KEY")
-    if unsafe_defaults and settings.ENVIRONMENT.lower() in ("production", "staging", "live"):
+    if unsafe_defaults:
         logger.error(
             "SECURITY: Default secrets detected for %s in %s environment. Refuse to start.",
             unsafe_defaults, settings.ENVIRONMENT
         )
         raise RuntimeError(f"Default secrets detected: {unsafe_defaults}. Set secure values before starting.")
-    elif unsafe_defaults:
-        logger.warning(
-            "SECURITY: Default secrets detected for %s. Do not use in production.",
-            unsafe_defaults
-        )
 
 
 check_default_secrets = _check_default_secrets

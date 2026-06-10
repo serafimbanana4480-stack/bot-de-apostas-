@@ -24,7 +24,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.data.local_store import LocalDataStore
-from src.ingestion.mock_football_data import ensure_mock_dataset
+from src.ingestion.real_data_pipeline import ensure_real_data_exists
 from src.ml.models.football_poisson import FootballPoissonModel
 from src.ml.models.football_hybrid import FootballHybridModel
 from src.ml.training.regime_change_detector import RegimeChangeDetector, ReplayBuffer
@@ -35,7 +35,8 @@ from src.validation.walk_forward import WalkForwardValidator
 
 def load_or_generate_data() -> pd.DataFrame:
     """Load existing mock data or generate fresh."""
-    df = ensure_mock_dataset(str(PROJECT_ROOT / "data"), force=False)
+    path = ensure_real_data_exists(str(PROJECT_ROOT / "data"))
+    df = pd.read_parquet(path)
     df["date"] = pd.to_datetime(df["date"])
     return df.sort_values("date").reset_index(drop=True)
 
