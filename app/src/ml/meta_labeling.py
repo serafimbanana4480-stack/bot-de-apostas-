@@ -278,6 +278,7 @@ class MetaLabelingModel:
     feature_cols: List[str] = field(default_factory=list)
     threshold: float = 0.60
     calibrate: bool = True
+    min_train_samples: int = 100
     _model_params: Dict[str, Any] = field(default_factory=dict)
 
     def fit(
@@ -606,7 +607,19 @@ class MetaLabelingModel:
 
 class MetaLabeler(MetaLabelingModel):
     """Backward-compatible alias for MetaLabelingModel."""
-    pass
+
+    @staticmethod
+    def extract_features(df: pd.DataFrame) -> pd.DataFrame:
+        """Extract market features from a single odds DataFrame (test compat)."""
+        out = pd.DataFrame(index=df.index)
+        out["line_movement_home"] = (df.get("open_odd_home", 0) - df.get("pin_close_home", 0)) / df.get("open_odd_home", 1)
+        out["odds_spread"] = df.get("max_home", 0) - df.get("avg_home", 0)
+        out["open_vs_close_ratio"] = df.get("open_odd_home", 0) / df.get("pin_close_home", 1)
+        out["b365_vs_pin"] = df.get("b365_home", 0) - df.get("pin_close_home", 0)
+        out["market_efficiency_score"] = out["line_movement_home"].abs()
+        out["closing_edge"] = 1 / df.get("pin_close_home", 1) - 1 / df.get("avg_home", 1)
+        out = out.replace([np.inf, -np.inf], np.nan).fillna(0.0)
+        return out
 
 
 def evaluate_meta_labeling(
