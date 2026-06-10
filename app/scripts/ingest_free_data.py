@@ -160,5 +160,26 @@ def main() -> None:
     logger.info("Done. Rows ingested: %s | Data root: %s", count, store.root.resolve())
 
 
+
+def ingest_football_mock():
+    """Stub for zero-cost smoke tests that expect mock data ingestion."""
+    import pandas as pd
+    from src.data.local_store import LocalDataStore
+    store = LocalDataStore()
+    df = pd.DataFrame({
+        "date": pd.date_range("2024-01-01", periods=10, freq="W"),
+        "home_team": [f"Home_{i}" for i in range(10)],
+        "away_team": [f"Away_{i}" for i in range(10)],
+        "fthg": [1, 2, 0, 1, 2, 1, 0, 1, 2, 1],
+        "ftag": [0, 1, 1, 2, 0, 1, 0, 1, 0, 2],
+        "odd_1": [2.0] * 10,
+        "odd_X": [3.2] * 10,
+        "odd_2": [3.5] * 10,
+    })
+    store.save_matches(df, "football_mock")
+    logger.info("Mock football data ingested: %s rows", len(df))
+    return len(df)
+
+
 if __name__ == "__main__":
     main()

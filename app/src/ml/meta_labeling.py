@@ -277,6 +277,7 @@ class MetaLabelingModel:
     is_fitted: bool = False
     feature_cols: List[str] = field(default_factory=list)
     threshold: float = 0.60
+    calibrate: bool = True
     _model_params: Dict[str, Any] = field(default_factory=dict)
 
     def fit(

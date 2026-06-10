@@ -166,6 +166,15 @@ class FeatureStore:
         else:
             raise ValueError(f"Unknown method: {method}")
 
+    def build_ufc_features(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Build UFC-specific features (stub for testing)."""
+        out = df.copy()
+        out["reach_diff"] = out.get("reach", 0) - out.get("opp_reach", 0)
+        out["stance_encoded"] = out.get("stance", "Orthodox").map({"Orthodox": 0, "Southpaw": 1, "Switch": 2}).fillna(0)
+        out["takedown_def"] = out.get("takedown_def", 0.5)
+        out["sig_strike_acc"] = out.get("sig_strike_acc", 0.5)
+        return out
+
     def clear_cache(self) -> None:
         """Clear internal feature cache."""
         self._cache.clear()
