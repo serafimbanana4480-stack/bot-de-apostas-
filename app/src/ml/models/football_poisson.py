@@ -561,29 +561,34 @@ class FootballPoissonModel:
         
         # Apply Isotonic Calibration if enabled and fitted
         if apply_calibration and self.is_calibrated:
-            # Transform and ensure scalar return
-            p1_cal = float(self.calibrator_1.transform([p1])[0])
-            pX_cal = float(self.calibrator_X.transform([pX])[0])
-            p2_cal = float(self.calibrator_2.transform([p2])[0])
-            
-            # Re-normalize after independent calibrations
-            total_cal = p1_cal + pX_cal + p2_cal
-            p1, pX, p2 = p1_cal / total_cal, pX_cal / total_cal, p2_cal / total_cal
+            try:
+                # Transform and ensure scalar return
+                p1_cal = float(self.calibrator_1.transform([p1])[0])
+                pX_cal = float(self.calibrator_X.transform([pX])[0])
+                p2_cal = float(self.calibrator_2.transform([p2])[0])
+                
+                # Re-normalize after independent calibrations
+                total_cal = p1_cal + pX_cal + p2_cal
+                if total_cal > 0:
+                    p1, pX, p2 = p1_cal / total_cal, pX_cal / total_cal, p2_cal / total_cal
 
-            if market_odds:
-                side_probs = {"1": p1, "X": pX, "2": p2}
-                for side in ("1", "X", "2"):
-                    bin_label = self._odds_bin_label(market_odds.get(side))
-                    calibrator = self.odds_bin_calibrators.get(side, {}).get(bin_label)
-                    if calibrator is not None:
-                        side_probs[side] = float(calibrator.transform([side_probs[side]])[0])
-                total_bin = side_probs["1"] + side_probs["X"] + side_probs["2"]
-                if total_bin > 0:
-                    p1, pX, p2 = (
-                        side_probs["1"] / total_bin,
-                        side_probs["X"] / total_bin,
-                        side_probs["2"] / total_bin,
-                    )
+                if market_odds:
+                    side_probs = {"1": p1, "X": pX, "2": p2}
+                    for side in ("1", "X", "2"):
+                        bin_label = self._odds_bin_label(market_odds.get(side))
+                        calibrator = self.odds_bin_calibrators.get(side, {}).get(bin_label)
+                        if calibrator is not None:
+                            side_probs[side] = float(calibrator.transform([side_probs[side]])[0])
+                    total_bin = side_probs["1"] + side_probs["X"] + side_probs["2"]
+                    if total_bin > 0:
+                        p1, pX, p2 = (
+                            side_probs["1"] / total_bin,
+                            side_probs["X"] / total_bin,
+                            side_probs["2"] / total_bin,
+                        )
+            except (ZeroDivisionError, ValueError):
+                self.logger.debug("Calibration failed, using raw probabilities")
+                pass
         
         return {
             "1": p1,

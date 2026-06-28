@@ -605,34 +605,258 @@ class MetaLabelingModel:
 # Backward compatibility wrappers
 # ---------------------------------------------------------------------------
 
-class MetaLabeler(MetaLabelingModel):
-    """Backward-compatible alias for MetaLabelingModel."""
+class MetaLabeler:
+    """
+    Standalone backward-compatible MetaLabeler for the test API.
+
+    This is a simpler, self-contained version that uses only market features
+    (line_movement_home, odds_spread, etc.) as predictors.
+
+    API (as expected by tests):
+        model = MetaLabeler(calibrate=True, min_train_samples=50)
+        model.fit(signals, market_data, n_splits=3)
+        model.predict(market_features=df_or_dict)
+        model.save(path)
+        model.load(path)
+    """
+
+    FEATURE_COLS = [
+        "line_movement_home", "odds_spread", "open_vs_close_ratio",
+        "b365_vs_pin", "market_efficiency_score", "closing_edge",
+    ]
+
+    def __init__(self, calibrate: bool = True, min_train_samples: int = 100):
+        self.calibrate = calibrate
+        self.min_train_samples = min_train_samples
+        self.is_fitted = False
+        self.meta_learner = None
+        self.isotonic_calibrator = None
+        self.feature_cols = list(self.FEATURE_COLS)
+        self.threshold = 0.60
+
+    def fit(self, signals, market_data=None, n_splits: int = 5):
+        """
+        Fit the meta-labeler.
+
+        Args:
+            signals: DataFrame with predicted_outcome, actual_outcome columns
+            market_data: DataFrame with market odds (optional in new API)
+            n_splits: Number of CV splits
+        """
+        from sklearn.ensemble import RandomForestClassifier
+        from sklearn.model_selection import TimeSeriesSplit
+
+        if market_data is not None:
+            # New API: signals + market_data
+            df_market = market_data if isinstance(market_data, pd.DataFrame) else pd.DataFrame(market_data)
+            df_signals = signals if isinstance(signals, pd.DataFrame) else pd.DataFrame(signals)
+
+            if len(df_signals) < self.min_train_samples or len(df_market) < self.min_train_samples:
+                raise ValueError(f"Need at least {self.min_train_samples} samples, got signals={len(df_signals)}, market={len(df_market)}")
+
+            # Build features from market data
+            feats = self.extract_features(df_market)
+            X = feats[self.feature_cols]
+            X = X.replace([np.inf, -np.inf], np.nan).fillna(0.0)
+
+            # Target: was the predicted outcome correct?
+            y = (df_signals["predicted_outcome"].values == df_signals["actual_outcome"].values).astype(int)
+
+            # Align lengths
+            min_len = min(len(X), len(y))
+            X = X.iloc[:min_len]
+            y = y[:min_len]
+
+            # Ensure temporal sort
+            if "date" in df_market.columns:
+                sort_idx = pd.to_datetime(df_market["date"]).argsort().values
+                X = X.iloc[sort_idx[:min_len]].reset_index(drop=True)
+                y = y[sort_idx[:min_len]]
+        else:
+            # Legacy: single DataFrame mode
+            df = signals if isinstance(signals, pd.DataFrame) else pd.DataFrame(signals)
+            if "actual_outcome" not in df.columns:
+                raise ValueError("DataFrame must have 'actual_outcome' column")
+            if len(df) < self.min_train_samples:
+                raise ValueError(f"Need at least {self.min_train_samples} samples, got {len(df)}")
+
+            feats = self.extract_features(df)
+            X = feats[self.feature_cols]
+            X = X.replace([np.inf, -np.inf], np.nan).fillna(0.0)
+            y = (feats["closing_edge"] > 0).astype(int).values
+
+        # Train random forest
+        self.meta_learner = RandomForestClassifier(
+            n_estimators=300, max_depth=8, min_samples_leaf=20,
+            random_state=42, n_jobs=-1, class_weight="balanced",
+        )
+        self.meta_learner.fit(X, y)
+        self.is_fitted = True
+
+        # Feature importance
+        importance = {}
+        if hasattr(self.meta_learner, "feature_importances_"):
+            importance = dict(zip(self.feature_cols, map(float, self.meta_learner.feature_importances_)))
+
+        return {
+            "n_samples": int(len(y)),
+            "base_accuracy": round(float(y.mean()), 4),
+            "n_features": len(self.feature_cols),
+            "feature_importance": importance,
+            "selected_threshold": self.threshold,
+        }
+
+    def predict(self, market_features, **kwargs):
+        """Predict probability that the signal is correct."""
+        if not self.is_fitted:
+            raise RuntimeError("MetaLabeler has not been fitted yet.")
+
+        # Convert single dict to DataFrame
+        if isinstance(market_features, dict):
+            market_features = pd.DataFrame([market_features])
+
+        feats = self.extract_features(market_features)
+        X = feats[self.feature_cols]
+        X = X.replace([np.inf, -np.inf], np.nan).fillna(0.0)
+
+        probs = self.meta_learner.predict_proba(X)[:, 1]
+
+        if self.isotonic_calibrator is not None:
+            probs = self.isotonic_calibrator.transform(probs)
+
+        return np.asarray(probs)
 
     @staticmethod
     def extract_features(df: pd.DataFrame) -> pd.DataFrame:
-        """Extract market features from a single odds DataFrame (test compat)."""
+        """Extract market features from odds DataFrame."""
         out = pd.DataFrame(index=df.index)
-        out["line_movement_home"] = (df.get("open_odd_home", 0) - df.get("pin_close_home", 0)) / df.get("open_odd_home", 1)
-        out["odds_spread"] = df.get("max_home", 0) - df.get("avg_home", 0)
-        out["open_vs_close_ratio"] = df.get("open_odd_home", 0) / df.get("pin_close_home", 1)
-        out["b365_vs_pin"] = df.get("b365_home", 0) - df.get("pin_close_home", 0)
+        pin_close = df.get("pin_close_home", 1).replace(0, 1)
+        avg_home = df.get("avg_home", 1).replace(0, 1)
+        max_home = df.get("max_home", 1).replace(0, 1)
+        open_odd = df.get("open_odd_home", 1).replace(0, 1)
+        b365 = df.get("b365_home", pin_close)
+
+        out["line_movement_home"] = (open_odd - pin_close) / open_odd
+        out["odds_spread"] = max_home - avg_home
+        out["open_vs_close_ratio"] = open_odd / pin_close
+        out["b365_vs_pin"] = b365 - pin_close
         out["market_efficiency_score"] = out["line_movement_home"].abs()
-        out["closing_edge"] = 1 / df.get("pin_close_home", 1) - 1 / df.get("avg_home", 1)
+        out["closing_edge"] = 1.0 / pin_close - 1.0 / avg_home
         out = out.replace([np.inf, -np.inf], np.nan).fillna(0.0)
         return out
+
+    def save(self, path: str):
+        """Save model to disk."""
+        import json
+        from pathlib import Path
+        import joblib
+
+        path_obj = Path(path)
+        path_obj.parent.mkdir(parents=True, exist_ok=True)
+
+        model_path = path_obj.with_suffix(".joblib")
+        joblib.dump(self.meta_learner, model_path)
+
+        meta = {
+            "is_fitted": self.is_fitted,
+            "feature_cols": self.feature_cols,
+            "threshold": self.threshold,
+            "calibrate": self.calibrate,
+            "min_train_samples": self.min_train_samples,
+            "model_path": str(model_path.name),
+        }
+        meta_path = path_obj.with_suffix(".json")
+        with open(meta_path, "w", encoding="utf-8") as f:
+            json.dump(meta, f, indent=2, default=str)
+
+    @classmethod
+    def load(cls, path: str):
+        """Load model from disk."""
+        import json
+        from pathlib import Path
+        import joblib
+
+        path_obj = Path(path)
+        meta_path = path_obj.with_suffix(".json")
+        with open(meta_path, "r", encoding="utf-8") as f:
+            meta = json.load(f)
+
+        model_path = path_obj.with_suffix(".joblib")
+        meta_learner = joblib.load(model_path)
+
+        instance = cls(
+            calibrate=meta.get("calibrate", True),
+            min_train_samples=meta.get("min_train_samples", 100),
+        )
+        instance.meta_learner = meta_learner
+        instance.is_fitted = meta.get("is_fitted", False)
+        instance.feature_cols = meta.get("feature_cols", list(cls.FEATURE_COLS))
+        instance.threshold = meta.get("threshold", 0.60)
+        return instance
 
 
 def evaluate_meta_labeling(
     df_signals: pd.DataFrame,
     df_market: pd.DataFrame,
-    meta_labeler: MetaLabelingModel,
+    meta_labeler: MetaLabeler,
     threshold: float = 0.55,
     stake: float = 1.0,
 ) -> Dict[str, Any]:
-    """Backward-compatible wrapper."""
-    # Temporarily override threshold for evaluation
+    """
+    Evaluate meta-labeling performance: compare results WITH and WITHOUT filtering.
+
+    This is the backward-compatible version for the test API.
+    """
+    df_s = df_signals.reset_index(drop=True) if hasattr(df_signals, "reset_index") else df_signals
+    df_o = df_market.reset_index(drop=True) if hasattr(df_market, "reset_index") else df_market
+
+    # Align lengths
+    min_len = min(len(df_s), len(df_o))
+    df_s = df_s.iloc[:min_len]
+    df_o = df_o.iloc[:min_len]
+
+    # Determine which signals were correct
+    correct = (df_s["predicted_outcome"] == df_s["actual_outcome"])
+
+    # Map predicted outcome to odds
+    odd_map = {"1": "odd_1", "X": "odd_X", "2": "odd_2"}
+    odds_taken = pd.Series(2.0, index=df_s.index)
+    for outcome, col in odd_map.items():
+        mask = df_s["predicted_outcome"] == outcome
+        if col in df_o.columns:
+            odds_taken.loc[mask] = df_o.loc[mask, col].fillna(2.0)
+
+    def _metrics(mask: pd.Series) -> Dict[str, float]:
+        n = int(mask.sum())
+        if n == 0:
+            return {"n_bets": 0, "accuracy": 0.0, "roi": 0.0, "profit": 0.0}
+        acc = float(correct[mask].mean())
+        profit = float(
+            (correct[mask] * (odds_taken[mask] - 1.0) - (~correct[mask]) * 1.0).sum() * stake
+        )
+        roi = profit / (n * stake)
+        return {"n_bets": n, "accuracy": round(acc, 4), "roi": round(roi, 4), "profit": round(profit, 2)}
+
+    without = _metrics(pd.Series(True, index=df_s.index))
+
+    # Use meta-labeler to filter
     old_thr = meta_labeler.threshold
     meta_labeler.threshold = threshold
-    result = meta_labeler.evaluate(df_signals, df_market, stake=stake)
+    probs = meta_labeler.predict(market_features=df_o)
     meta_labeler.threshold = old_thr
-    return result
+
+    with_mask = pd.Series(probs >= threshold, index=df_s.index)
+    with_metrics = _metrics(with_mask)
+
+    reduction = (without["n_bets"] - with_metrics["n_bets"]) / max(without["n_bets"], 1)
+
+    return {
+        "threshold": threshold,
+        "without_meta_labeling": without,
+        "with_meta_labeling": with_metrics,
+        "bets_filtered": without["n_bets"] - with_metrics["n_bets"],
+        "reduction_pct": round(reduction, 4),
+        "accuracy_lift": round(with_metrics["accuracy"] - without["accuracy"], 4),
+        "roi_lift": round(with_metrics["roi"] - without["roi"], 4),
+        "is_effective": with_metrics["roi"] > without["roi"] and reduction >= 0.30,
+    }

@@ -70,3 +70,15 @@ tmp_*.txt
 test_*.json
 uv.lock
 
+
+# Pastas de limpeza
+.cursor/
+.mypy_cache/
+.pytest_cache/
+.rff_cache/
+mlruns/
+logs/
+data/
+*.db
+*.db-*
+*.sqlite*

@@ -154,9 +154,13 @@ class FootballPoissonModelV2:
             hc = (df.loc[home_mask, "away_goals"] * df.loc[home_mask, "_weight"]).sum() / hw if hw > 0 else away_goals_avg
             ac = (df.loc[away_mask, "home_goals"] * df.loc[away_mask, "_weight"]).sum() / aw if aw > 0 else away_goals_avg
 
-            # Convert to log-scale attack/defense
-            attack[idx] = np.log((hg + ag) / 2 / self.global_avg_goals + 1e-6)
-            defense[idx] = np.log(self.global_avg_goals / ((hc + ac) / 2 + 1e-6) + 1e-6)
+            # Convert to log-scale attack/defense with strong shrinkage
+            # Shrink toward 0 (league average) to prevent extreme values
+            shrink = 0.3
+            raw_ratio = (hg + ag) / 2 / max(self.global_avg_goals, 0.1)
+            attack[idx] = np.log(max(0.3, min(2.5, 1.0 + (raw_ratio - 1.0) * shrink)))
+            raw_def_ratio = self.global_avg_goals / max((hc + ac) / 2, 0.1)
+            defense[idx] = np.log(max(0.3, min(2.5, 1.0 + (raw_def_ratio - 1.0) * shrink)))
 
         # 4. Otimização MLE via L-BFGS-B
         def _nll(params):
@@ -208,7 +212,7 @@ class FootballPoissonModelV2:
         bounds += [(-2.0, 2.0)] * n_teams  # defense
         bounds += [(-0.5, 0.0)]  # rho (negative for football)
 
-        result = minimize(_nll, x0, method="L-BFGS-B", bounds=bounds, options={"maxiter": 200})
+        result = minimize(_nll, x0, method="L-BFGS-B", bounds=bounds, options={"maxiter": 5000, "ftol": 1e-6, "gtol": 1e-6})
 
         if result.success:
             self.home_advantage = result.x[0]
@@ -648,6 +652,8 @@ class FootballPoissonModelV2:
 
 def _fold_log_likelihood(model: FootballPoissonModelV2, df: pd.DataFrame) -> float:
     """Compute total log-likelihood on a validation fold."""
+    # Map result codes (H/D/A) to model outcomes (1/X/2)
+    RESULT_MAP = {"H": "1", "D": "X", "A": "2"}
     total_ll = 0.0
     n = 0
     for _, row in df.iterrows():
@@ -655,7 +661,9 @@ def _fold_log_likelihood(model: FootballPoissonModelV2, df: pd.DataFrame) -> flo
             row["home_team"], row["away_team"],
             league=row.get("league"), apply_calibration=False,
         )
-        actual = str(row.get("actual_outcome", row.get("result", "")))
+        raw_actual = str(row.get("actual_outcome", row.get("result", "")))
+        # Map H/D/A to 1/X/2
+        actual = RESULT_MAP.get(raw_actual, raw_actual)
         if actual in probs:
             total_ll += np.log(max(probs[actual], 1e-9))
             n += 1
@@ -664,6 +672,7 @@ def _fold_log_likelihood(model: FootballPoissonModelV2, df: pd.DataFrame) -> flo
 
 def _fold_brier_score(model: FootballPoissonModelV2, df: pd.DataFrame) -> float:
     """Compute average Brier score on a validation fold."""
+    RESULT_MAP = {"H": "1", "D": "X", "A": "2"}
     total_bs = 0.0
     n = 0
     for _, row in df.iterrows():
@@ -671,7 +680,8 @@ def _fold_brier_score(model: FootballPoissonModelV2, df: pd.DataFrame) -> float:
             row["home_team"], row["away_team"],
             league=row.get("league"), apply_calibration=False,
         )
-        actual = str(row.get("actual_outcome", row.get("result", "")))
+        raw_actual = str(row.get("actual_outcome", row.get("result", "")))
+        actual = RESULT_MAP.get(raw_actual, raw_actual)
         for outcome in ["1", "X", "2"]:
             y = 1.0 if actual == outcome else 0.0
             total_bs += (probs[outcome] - y) ** 2
