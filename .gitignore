@@ -52,9 +52,6 @@ mlflow.db
 # MLflow
 mlruns/
 
-# Modelos binários (se forem grandes)
-# models/  # comentado: talvez queiras versionar modelos pequenos
-
 # Outros
 nul
 .DS_Store
@@ -69,16 +66,3 @@ backups/
 tmp_*.txt
 test_*.json
 uv.lock
-
-
-# Pastas de limpeza
-.cursor/
-.mypy_cache/
-.pytest_cache/
-.rff_cache/
-mlruns/
-logs/
-data/
-*.db
-*.db-*
-*.sqlite*

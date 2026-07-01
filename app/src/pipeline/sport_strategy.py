@@ -139,19 +139,28 @@ class FootballStrategy(SportStrategy):
         matches = self._load_matches()
         return {"odds_rows": len(odds_df), "matches": len(matches), "status": "ok"}
 
-    def _ensure_model(self, df: pd.DataFrame):
-        """Carrega ou treina modelo Poisson V1 (mais robusto, sem MLE)."""
-        if self.model is not None:
+    def _ensure_model(self, df: pd.DataFrame, max_train_date=None):
+        """Carrega ou treina modelo Poisson V1 (mais robusto, sem MLE).
+
+        Args:
+            df: DataFrame com dados históricos.
+            max_train_date: Data máxima permitida para treino (evita look-ahead).
+                            Se None, usa df['date'].max() - 90 dias.
+        """
+        if self.model is not None and max_train_date is None:
             return self.model
 
         from src.ml.models.football_poisson import FootballPoissonModel
 
-        max_date = df["date"].max()
-        train = df[df["date"] < max_date - pd.Timedelta(days=90)]
+        if max_train_date is not None:
+            train = df[df["date"] < pd.Timestamp(max_train_date)]
+        else:
+            max_date = df["date"].max()
+            train = df[df["date"] < max_date - pd.Timedelta(days=90)]
 
         if len(train) < 200:
-            logger.warning("Apenas %d jogos para treino. Usando todos os dados.", len(train))
-            train = df
+            logger.warning("Apenas %d jogos para treino. Usando todos os dados disponíveis.", len(train))
+            train = df[df["date"] < (pd.Timestamp(max_train_date) if max_train_date else df["date"].max())]
 
         self.model = FootballPoissonModel(use_dixon_coles=True)
         self.model.fit(train, calibrate=True)
@@ -161,7 +170,7 @@ class FootballStrategy(SportStrategy):
     def build_opportunities(self, target_date: date, mode: str) -> List[Dict[str, Any]]:
         """Gera oportunidades de value bet filtrando por edge (V2)."""
         df = self._load_matches_backtest()
-        model = self._ensure_model(df)
+        model = self._ensure_model(df, max_train_date=target_date)
 
         # Selecionar jogos para teste
         if mode == "backtest" and target_date:

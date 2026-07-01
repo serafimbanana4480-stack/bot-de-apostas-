@@ -11,7 +11,7 @@ try:
     from src.core.config import settings
 
     # Assemble database URL with URL-encoded credentials
-    # e.g., postgresql://vb_admin:password@localhost:5432/valuebetting
+    # e.g., postgresql://vb_admin:{quote_plus(settings.DB_PASS)}@localhost:5432/valuebetting
     from urllib.parse import quote_plus
     database_url = (
         f"postgresql://{quote_plus(settings.DB_USER)}:{quote_plus(settings.DB_PASS)}@"
